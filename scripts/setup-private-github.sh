@@ -9,11 +9,11 @@
 
 set -euo pipefail
 
-REPO=""            # OWNER/NAME on github.com
-URL=""             # alternative: an existing repo URL (https or ssh)
-INVITE=""          # GitHub username of the owner to invite
-PERMISSION="admin" # collaborator permission: pull|triage|push|maintain|admin
-REMOTE="github"    # remote name; origin (ForgeJo) is left untouched
+REPO="santicartoons/marienbraeu" # OWNER/NAME on github.com
+URL=""                          # alternative: an existing repo URL (https or ssh)
+INVITE=""                       # GitHub username of the owner to invite
+PERMISSION="admin"              # collaborator permission: pull|triage|push|maintain|admin
+REMOTE="github"                 # remote name; origin (ForgeJo) is left untouched
 DO_PUSH=0
 APPLY=0
 

@@ -182,16 +182,16 @@ default it is a **dry run**. It changes nothing until `--yes` is given.
 
 ```bash
 # 1. Preview: shows every command, changes nothing
-scripts/setup-private-github.sh --repo <your-account>/marienbraeu
+scripts/setup-private-github.sh --repo santicartoons/marienbraeu
 
 # 2. Create the private repo and add the 'github' remote
-scripts/setup-private-github.sh --repo <your-account>/marienbraeu --yes
+scripts/setup-private-github.sh --repo santicartoons/marienbraeu --yes
 
 # 3. Upload the code (main branch only)
-scripts/setup-private-github.sh --repo <your-account>/marienbraeu --push --yes
+scripts/setup-private-github.sh --repo santicartoons/marienbraeu --push --yes
 
 # 4. After the owner said yes and sent their username
-scripts/setup-private-github.sh --repo <your-account>/marienbraeu \
+scripts/setup-private-github.sh --repo santicartoons/marienbraeu \
     --invite <owner-username> --permission admin --yes
 ```
 
@@ -217,12 +217,12 @@ surface.
 **With the CLI:**
 
 ```bash
-gh repo create <your-account>/marienbraeu --private --disable-wiki \
+gh repo create santicartoons/marienbraeu --private --disable-wiki \
     --description "Marienbräu website — private, not published"
-gh repo view <your-account>/marienbraeu --json visibility   # must say PRIVATE
-git remote add github git@github.com:<your-account>/marienbraeu.git
+gh repo view santicartoons/marienbraeu --json visibility   # must say PRIVATE
+git remote add github git@github.com:santicartoons/marienbraeu.git
 git push github main:main
-gh api -X PUT repos/<your-account>/marienbraeu/collaborators/<owner-username> \
+gh api -X PUT repos/santicartoons/marienbraeu/collaborators/<owner-username> \
     -f permission=admin
 ```
 

@@ -59,6 +59,7 @@ window.MB_I18N = {
     'legal.impressum.body':
       '<h3>Medieninhaber &amp; Betreiber</h3><p>Marienbräu<br>Rupertistraße 80<br>8075 Hart bei Graz, Österreich</p>' +
       '<p>Telefon: <a href="tel:+436642031953">+43 664 2031953</a><br>E-Mail: <a href="mailto:marienbraeu@gmx.at">marienbraeu@gmx.at</a></p>' +
+      '<p>Quellcode &amp; Repository: <a href="https://github.com/santicartoons/marienbraeu" target="_blank" rel="noopener">github.com/santicartoons/marienbraeu</a></p>' +
       '<h3>Unternehmensangaben</h3><p>Rechtsform, Firmenbuchnummer, UID-Nummer, Gewerbebehörde und Mitgliedschaft bei der WKO Steiermark werden vom Betreiber ergänzt (§ 5 ECG, § 25 MedienG).</p>' +
       '<p><em>Hinweis: Diese Seite ist eine Vorlage. Bitte vor Veröffentlichung vollständige Angaben einsetzen.</em></p>',
     'legal.privacy.title': 'Datenschutz',
@@ -329,6 +330,7 @@ window.MB_I18N = {
     'legal.impressum.body':
       '<h3>Owner &amp; operator</h3><p>Marienbräu<br>Rupertistraße 80<br>8075 Hart bei Graz, Austria</p>' +
       '<p>Phone: <a href="tel:+436642031953">+43 664 2031953</a><br>Email: <a href="mailto:marienbraeu@gmx.at">marienbraeu@gmx.at</a></p>' +
+      '<p>Source code &amp; repository: <a href="https://github.com/santicartoons/marienbraeu" target="_blank" rel="noopener">github.com/santicartoons/marienbraeu</a></p>' +
       '<h3>Company details</h3><p>Legal form, company register number, VAT ID, trade authority and Chamber of Commerce membership to be completed by the operator (§ 5 ECG, § 25 MedienG).</p>' +
       '<p><em>Note: this page is a template. Please insert complete details before publishing.</em></p>',
     'legal.privacy.title': 'Privacy',
