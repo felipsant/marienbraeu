@@ -33,6 +33,10 @@ assets/img/           drop-in photos (see assets/img/README.md)
 - Reservation modal with client-side validation: no past dates, no Mondays (Ruhetag), and times inside opening hours with the last seating 90 minutes before closing. On success it shows a confirmation toast.
 - The Google Maps embed loads only after a click (GDPR-friendly). Click-to-call and click-to-email links are included.
 
+## Owner handoff
+
+The site is private and unpublished. `docs/OWNER_HANDOFF.md` holds the outreach email to the owner (German and English) and the procedure for a private GitHub repository. `scripts/setup-private-github.sh` sets that repository up, refuses anything that is not private, and is a dry run unless given `--yes`.
+
 ## Before going live
 
 - **Reservations:** the form does not send anything yet. Wire it to a mail service or booking API in the `submit` handler in `assets/js/app.js`.
