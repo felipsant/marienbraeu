@@ -590,6 +590,46 @@ img, svg { display: block; max-width: 100%; }
   box-shadow: 0 6px 14px -8px rgba(229,169,59,.9);
 }
 
+/* Dish photo thumbnail (optional per dish in JSON) */
+.dish-photo-frame {
+  position: relative; width: 100%; height: 160px; border-radius: .75rem;
+  overflow: hidden; background: rgba(30,19,12,.05); border: 1px solid rgba(200,109,59,.18);
+  margin-bottom: .35rem;
+}
+.dish-photo {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform .35s ease;
+}
+.dish:hover .dish-photo {
+  transform: scale(1.04);
+}
+
+/* Dish verified Google review connection */
+.dish-review {
+  display: flex; flex-direction: column; gap: .2rem;
+  margin-top: .55rem; padding: .55rem .75rem; border-radius: .65rem;
+  background: rgba(254, 243, 199, 0.45); border-left: 3px solid #d97706;
+  text-decoration: none; color: inherit; transition: background .2s ease, transform .2s ease;
+}
+.dish-review:hover {
+  background: rgba(254, 243, 199, 0.85); transform: translateX(2px);
+}
+.dish-review-top {
+  display: flex; align-items: center; justify-content: space-between; gap: .5rem;
+}
+.dish-review-stars {
+  font-size: .75rem; color: #d97706; letter-spacing: 1px;
+}
+.dish-review-badge-text {
+  font-size: .68rem; font-weight: 600; color: #92400e; text-transform: uppercase; letter-spacing: .05em;
+}
+.dish-review-quote {
+  font-size: .78rem; font-style: italic; color: #4a3a2e; line-height: 1.35;
+}
+.dish-review-author {
+  font-size: .7rem; font-weight: 600; color: #78350f; text-align: right;
+}
+
 .tag {
   display: inline-flex; align-items: center; gap: .3rem;
   padding: .22rem .6rem; border-radius: 999px;

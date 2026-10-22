@@ -458,10 +458,13 @@
           <h2 id="menu-title" class="section-title mt-3" style="color:var(--walnut)" data-i18n="menu.title">Unsere Speisekarte</h2>
           <p class="mt-4" style="color:var(--muted)" data-i18n="menu.intro">Ehrliche steirische Wirtshausküche mit Zutaten von Bauern aus der Region — dazu unser Bier, frisch aus dem Kupferkessel.</p>
 
-          <div class="mt-5 flex justify-center">
+          <div class="mt-5 flex flex-wrap gap-2.5 justify-center">
             <button type="button" class="btn btn-ghost-dark btn-xs" data-open-modal="menu-photo">
               <svg style="width:13px;height:13px" aria-hidden="true"><use href="#i-search"/></svg><span data-i18n="menu.openPhotoModal">Originalkarte ansehen (Foto)</span>
             </button>
+            <a href="https://maps.app.goo.gl/rvDNVtdcPYVDybdy7" target="_blank" rel="noopener" class="btn btn-ghost-dark btn-xs" title="Google Maps Bewertungen">
+              <span class="text-amber-600 font-bold">4.8★</span><span>Google-Bewertungen</span>
+            </a>
           </div>
         </div>
 
@@ -494,6 +497,20 @@
         <div class="menu-seal mt-6 max-w-2xl mx-auto reveal">
           <span class="menu-seal__badge" aria-hidden="true"><svg><use href="#i-award"/></svg></span>
           <p class="leading-relaxed" data-i18n-html="menu.suppliers">🌱 <strong>Regionalität &amp; Frische:</strong> Uns sind frische Produkte sehr wichtig, weshalb wir unser Fleisch sowie unser Gemüse täglich frisch von der <strong>Fleischhauerei Schönberger, Raaba</strong> und <strong>Johannes Kapper Steirergemüse, Hart bei Graz</strong> beziehen.</p>
+        </div>
+
+        <!-- Google Reviews connection banner -->
+        <div class="mt-8 p-5 rounded-2xl max-w-2xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left reveal" style="background:rgba(254,243,199,0.55);border:1px solid rgba(217,119,6,0.25)">
+          <div class="flex items-center gap-3">
+            <span class="text-3xl text-amber-500" aria-hidden="true">★</span>
+            <div>
+              <p class="font-semibold text-sm" style="color:var(--walnut)">Haben Sie ein Lieblingsgericht im Marienbräu?</p>
+              <p class="text-xs" style="color:var(--muted)">Helfen Sie anderen Gästen und bewerten Sie unsere steirische Küche auf Google.</p>
+            </div>
+          </div>
+          <a href="https://maps.app.goo.gl/rvDNVtdcPYVDybdy7" target="_blank" rel="noopener" class="btn btn-copper btn-xs whitespace-nowrap flex-shrink-0">
+            <span>Auf Google bewerten (4.8★)</span>
+          </a>
         </div>
 
         <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-x-8 gap-y-3 text-sm reveal" style="color:var(--muted)">

@@ -279,14 +279,31 @@
       var tags = d.tags.map(function (tag) {
         return '<span class="tag tag--' + tag + '"><svg aria-hidden="true"><use href="#' + TAG_ICONS[tag] + '"/></svg>' + escapeHtml(t('tag.' + tag)) + '</span>';
       }).join('');
+      var reviewHtml = '';
+      if (d.google_review) {
+        var rText = d.google_review[lang] || d.google_review.de || d.google_review.text;
+        reviewHtml = '<a href="https://maps.app.goo.gl/rvDNVtdcPYVDybdy7" target="_blank" rel="noopener" class="dish-review" title="Google-Bewertung auf Google Maps ansehen">' +
+          '<div class="dish-review-top"><span class="dish-review-stars" aria-hidden="true">★★★★★</span><span class="dish-review-badge-text">Google Review</span></div>' +
+          '<span class="dish-review-quote">„' + escapeHtml(rText) + '“</span>' +
+          '<span class="dish-review-author">— ' + escapeHtml(d.google_review.author) + '</span>' +
+          '</a>';
+      }
+      var photoHtml = '';
+      if (d.photo) {
+        photoHtml = '<div class="dish-photo-frame mb-3">' +
+          '<img src="' + escapeHtml(d.photo) + '" alt="' + escapeHtml(copy.name) + '" class="dish-photo" loading="lazy">' +
+          '</div>';
+      }
       return '<article class="dish" style="animation-delay:' + Math.min(i * 40, 400) + 'ms">' +
         (d.star ? '<span class="dish-star">★ ' + escapeHtml(t('menu.recommend')) + '</span>' : '') +
+        photoHtml +
         '<div class="dish-head"><h3 class="dish-name">' + escapeHtml(copy.name) + '</h3><span class="dish-dots" aria-hidden="true"></span>' +
         '<span class="dish-price">' + price(d.price) + '</span></div>' +
         (size ? '<p class="dish-meta">' + escapeHtml(size) + '</p>' : '') +
         '<p class="dish-desc">' + escapeHtml(copy.desc) + '</p>' +
         (d.allergens ? '<p class="text-[11px] mt-1 tracking-wide" style="color:var(--muted);opacity:0.85">' + escapeHtml(t('menu.allergens')) + ': ' + escapeHtml(d.allergens) + '</p>' : '') +
-        '<div class="flex flex-wrap gap-1.5 mt-auto pt-1">' + tags + '</div>' +
+        reviewHtml +
+        '<div class="flex flex-wrap gap-1.5 mt-auto pt-2">' + tags + '</div>' +
         '</article>';
     }).join('');
   }
@@ -305,6 +322,37 @@
   });
   renderMenu();
   onLangChange.push(renderMenu);
+
+  // Asynchronously load external assets/data/menu.json so the owner or AI can update prices, photos, and reviews effortlessly
+  if (window.fetch) {
+    fetch('assets/data/menu.json')
+      .then(function (res) { return res.ok ? res.json() : null; })
+      .then(function (data) {
+        if (data && Array.isArray(data.dishes) && data.dishes.length) {
+          MENU = data.dishes.map(function (d) {
+            return {
+              id: d.id,
+              cat: d.category || d.cat,
+              price: d.price,
+              tags: d.tags || [],
+              star: d.star,
+              allergens: d.allergens,
+              size: d.portion || d.size,
+              photo: d.photo || null,
+              google_review: d.google_review || null,
+              de: d.name && d.name.de ? { name: d.name.de, desc: d.description.de } : (d.de || {}),
+              en: d.name && d.name.en ? { name: d.name.en, desc: d.description.en } : (d.en || {}),
+              it: d.name && d.name.it ? { name: d.name.it, desc: d.description.it } : (d.it || {}),
+              hu: d.name && d.name.hu ? { name: d.name.hu, desc: d.description.hu } : (d.hu || {}),
+              pl: d.name && d.name.pl ? { name: d.name.pl, desc: d.description.pl } : (d.pl || {}),
+              ro: d.name && d.name.ro ? { name: d.name.ro, desc: d.description.ro } : (d.ro || {})
+            };
+          });
+          renderMenu();
+        }
+      })
+      .catch(function () { /* keep built-in window.MB_MENU */ });
+  }
 
   /* ------------------------------------------------------------------------
      Reviews carousel

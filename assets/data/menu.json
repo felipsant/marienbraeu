@@ -1,0 +1,666 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-10-22",
+  "currency": "EUR",
+  "google_maps_review_url": "https://maps.app.goo.gl/rvDNVtdcPYVDybdy7",
+  "dishes": [
+    {
+      "id": "halbes-backhendl",
+      "category": "classics",
+      "price": 13.5,
+      "portion": null,
+      "allergens": "A, C, G",
+      "tags": [
+        "regional",
+        "house"
+      ],
+      "star": true,
+      "photo": null,
+      "google_review": {
+        "author": "Christina M.",
+        "rating": 5,
+        "de": "Das beste Backhendl weit und breit! Außen richtig knusprig, innen saftig — und der Erdäpfelsalat mit Kernöl ist ein Traum.",
+        "en": "The best Backhendl far and wide! Properly crispy outside, juicy inside — and the potato salad with pumpkin seed oil is a dream."
+      },
+      "name": {
+        "de": "Halbes Backhendl",
+        "en": "Half Backhendl",
+        "it": "Mezzo Backhendl"
+      },
+      "description": {
+        "de": "Knusprig herausgebackenes halbes Backhendl nach traditioneller Art.",
+        "en": "Crispy golden fried half chicken made according to traditional Styrian tavern custom.",
+        "it": "Mezzo pollo fritto croccante e dorato secondo l’autentica usanza stiriana."
+      }
+    },
+    {
+      "id": "ganzes-backhendl",
+      "category": "classics",
+      "price": 24.9,
+      "portion": null,
+      "allergens": "A, C, G",
+      "tags": [
+        "regional",
+        "house"
+      ],
+      "star": true,
+      "photo": null,
+      "google_review": {
+        "author": "Christina M.",
+        "rating": 5,
+        "de": "Perfekt herausgebackenes Backhendl — wunderbar zum Teilen mit der ganzen Familie.",
+        "en": "Perfect crispy fried chicken — wonderful for sharing with the whole family."
+      },
+      "name": {
+        "de": "Ganzes Backhendl",
+        "en": "Whole Backhendl",
+        "it": "Backhendl intero"
+      },
+      "description": {
+        "de": "Frisch herausgebackenes ganzes Backhendl — ideal zum Teilen.",
+        "en": "Crispy golden fried whole chicken — ideal for sharing at the table.",
+        "it": "Pollo intero fritto croccante e dorato — ideale da condividere al tavolo."
+      }
+    },
+    {
+      "id": "wienerschnitzel-vom-schwein",
+      "category": "classics",
+      "price": 14.9,
+      "portion": null,
+      "allergens": "A, C, G",
+      "tags": [
+        "regional",
+        "house"
+      ],
+      "star": true,
+      "photo": null,
+      "google_review": {
+        "author": "Markus H.",
+        "rating": 5,
+        "de": "Echtes Wiener Schnitzel vom Schwein in der Pfanne gebacken. Schneller und herzlicher Service!",
+        "en": "Authentic pork Wiener Schnitzel pan-fried to perfection. Fast and heartwarming service!"
+      },
+      "name": {
+        "de": "Wienerschnitzel vom Schwein",
+        "en": "Pork Wiener Schnitzel",
+        "it": "Wiener Schnitzel di maiale"
+      },
+      "description": {
+        "de": "Mit gerösteten Erdäpfeln.",
+        "en": "Crispy golden pork schnitzel, served with roasted potatoes.",
+        "it": "Cotoletta di maiale dorata e croccante, servita con patate arrosto."
+      }
+    },
+    {
+      "id": "cordon-bleu-vom-schwein",
+      "category": "classics",
+      "price": 16.9,
+      "portion": null,
+      "allergens": "A, C, G, L",
+      "tags": [
+        "regional",
+        "house"
+      ],
+      "star": false,
+      "photo": null,
+      "google_review": null,
+      "name": {
+        "de": "Cordon Bleu vom Schwein",
+        "en": "Pork Cordon Bleu",
+        "it": "Cordon Bleu di maiale"
+      },
+      "description": {
+        "de": "Mit gerösteten Erdäpfeln.",
+        "en": "Stuffed with ham and cheese, served with roasted potatoes.",
+        "it": "Farcito con prosciutto e formaggio, servito con patate arrosto."
+      }
+    },
+    {
+      "id": "schweinsbraten",
+      "category": "classics",
+      "price": 15.9,
+      "portion": null,
+      "allergens": "A, C, G, F, O",
+      "tags": [
+        "regional",
+        "house"
+      ],
+      "star": true,
+      "photo": null,
+      "google_review": {
+        "author": "Elisabeth P.",
+        "rating": 5,
+        "de": "Schweinsbraten mit krachender Schwarte und flaumigen Serviettenknödeln — wie bei der Oma. Preis-Leistung top.",
+        "en": "Roast pork with crunchy crackling and fluffy bread dumplings — just like grandma’s. Excellent value for money."
+      },
+      "name": {
+        "de": "Schweinsbraten",
+        "en": "Roast Pork (Schweinsbraten)",
+        "it": "Arrosto di maiale (Schweinsbraten)"
+      },
+      "description": {
+        "de": "Mit Bierkraut und Knödel.",
+        "en": "Tender roast pork served with beer sauerkraut and dumplings.",
+        "it": "Tenero arrosto di maiale servito con crauti alla birra e canederli."
+      }
+    },
+    {
+      "id": "schweinsripperl",
+      "category": "classics",
+      "price": 16.5,
+      "portion": null,
+      "allergens": "G, M",
+      "tags": [
+        "regional"
+      ],
+      "star": false,
+      "photo": null,
+      "google_review": null,
+      "name": {
+        "de": "Schweinsripperl",
+        "en": "Pork Ribs (Schweinsripperl)",
+        "it": "Costine di maiale (Schweinsripperl)"
+      },
+      "description": {
+        "de": "Mit Senf, Kren und Brot.",
+        "en": "Savory pork ribs served with mustard, freshly grated horseradish and bread.",
+        "it": "Succose costine di maiale servite con senape, cren fresco e pane."
+      }
+    },
+    {
+      "id": "2-stk-gebackene-kaspressknoedel",
+      "category": "classics",
+      "price": 14.9,
+      "portion": null,
+      "allergens": null,
+      "tags": [
+        "veg",
+        "house"
+      ],
+      "star": false,
+      "photo": null,
+      "google_review": null,
+      "name": {
+        "de": "2 Stk. Gebackene Kaspressknödel",
+        "en": "2 pcs. Fried Cheese Dumplings (Kaspressknödel)",
+        "it": "2 Canederli al formaggio dorati (Kaspressknödel)"
+      },
+      "description": {
+        "de": "Vegetarisch.",
+        "en": "Vegetarian specialty — 2 pan-fried Styrian cheese dumplings.",
+        "it": "Specialità vegetariana — 2 canederli al formaggio dorati in padella."
+      }
+    },
+    {
+      "id": "marienjause-fuer-1-person",
+      "category": "jause",
+      "price": 14.9,
+      "portion": null,
+      "allergens": "A, F, G",
+      "tags": [
+        "regional",
+        "house"
+      ],
+      "star": true,
+      "photo": null,
+      "google_review": {
+        "author": "Andreas G.",
+        "rating": 5,
+        "de": "Wir haben eine Feier gemacht: alles perfekt organisiert, Marienjause und Strudel waren ein Gedicht.",
+        "en": "We held a celebration here: everything perfectly organised, Marienjause platter and strudels were a delight."
+      },
+      "name": {
+        "de": "Marienjause für 1 Person",
+        "en": "Marienjause Platter (1 Person)",
+        "it": "Marienjause per 1 persona"
+      },
+      "description": {
+        "de": "Mit Schinken, Schweinskaree, Käse, Brüstl, Aufstriche, Kren und Ei, fein garniert, 2 Stück Schwarzbrot.",
+        "en": "Cold platter with ham, pork loin, cheese, pork belly, spreads, horseradish, egg, garnished, with 2 slices of rye bread.",
+        "it": "Tagliere con prosciutto, lombo di maiale, formaggio, pancetta, salse, cren e uovo, con 2 fette di pane nero."
+      }
+    },
+    {
+      "id": "kaeseplatte-vegetarisch",
+      "category": "jause",
+      "price": 12.9,
+      "portion": null,
+      "allergens": "A, C, G",
+      "tags": [
+        "veg",
+        "regional"
+      ],
+      "star": false,
+      "photo": null,
+      "google_review": null,
+      "name": {
+        "de": "Käseplatte (vegetarisch)",
+        "en": "Cheese Platter (Vegetarian)",
+        "it": "Piatto di formaggi (Vegetariano)"
+      },
+      "description": {
+        "de": "Verschiedene Käsesorten, hausgemachte Aufstriche, Kürbis, Paprika, Tomate, Gurke, Ei.",
+        "en": "Selection of regional cheeses, homemade spreads, pumpkin, bell pepper, tomato, cucumber, egg.",
+        "it": "Selezione di formaggi regionali, salse fatte in casa, zucca, peperone, pomodoro, cetriolo, uovo."
+      }
+    },
+    {
+      "id": "warmes-bruestlbrot",
+      "category": "jause",
+      "price": 10.9,
+      "portion": null,
+      "allergens": "A, L, M",
+      "tags": [
+        "regional",
+        "house"
+      ],
+      "star": false,
+      "photo": null,
+      "google_review": null,
+      "name": {
+        "de": "Warmes Brüstlbrot",
+        "en": "Warm Pork Belly Bread (Brüstlbrot)",
+        "it": "Pane caldo con pancetta (Brüstlbrot)"
+      },
+      "description": {
+        "de": "Mit Senf, Kren und Pfefferoni.",
+        "en": "Warm savory pork belly on farmhouse bread with mustard, horseradish and pickled chili.",
+        "it": "Pancetta di maiale calda su pane con senape, cren e peperoncino."
+      }
+    },
+    {
+      "id": "warmes-schweinsbratenbrot",
+      "category": "jause",
+      "price": 10.9,
+      "portion": null,
+      "allergens": "A, M",
+      "tags": [
+        "regional",
+        "house"
+      ],
+      "star": false,
+      "photo": null,
+      "google_review": null,
+      "name": {
+        "de": "Warmes Schweinsbratenbrot",
+        "en": "Warm Roast Pork Bread",
+        "it": "Pane caldo con arrosto di maiale"
+      },
+      "description": {
+        "de": "Mit Senf, Kren und Pfefferoni.",
+        "en": "Warm roast pork slices on farmhouse bread with mustard, horseradish and pickled chili.",
+        "it": "Fette di arrosto di maiale caldo su pane con senape, cren e peperoncino."
+      }
+    },
+    {
+      "id": "kaesebrot-vegetarisch",
+      "category": "jause",
+      "price": 8.9,
+      "portion": null,
+      "allergens": null,
+      "tags": [
+        "veg"
+      ],
+      "star": false,
+      "photo": null,
+      "google_review": null,
+      "name": {
+        "de": "Käsebrot (vegetarisch)",
+        "en": "Cheese Bread (Vegetarian)",
+        "it": "Pane al formaggio (Vegetariano)"
+      },
+      "description": {
+        "de": "Mit Aufstrich, Käse, Gurke, Tomate und Ei.",
+        "en": "Farmhouse bread with spread, cheese, cucumber, tomato and egg.",
+        "it": "Pane casereccio con salsa, formaggio, cetriolo, pomodoro e uovo."
+      }
+    },
+    {
+      "id": "belegtes-brot",
+      "category": "jause",
+      "price": 8.5,
+      "portion": null,
+      "allergens": null,
+      "tags": [
+        "regional"
+      ],
+      "star": false,
+      "photo": null,
+      "google_review": null,
+      "name": {
+        "de": "Belegtes Brot",
+        "en": "Loaded Cold Cut Bread",
+        "it": "Pane rustico farcito"
+      },
+      "description": {
+        "de": "Mit Leberaufstrich, Schinken, Käse, Tomate, Gurke und Ei.",
+        "en": "Rustic farmhouse bread with liver spread, ham, cheese, tomato, cucumber and egg.",
+        "it": "Pane rustico con paté di fegato, prosciutto, formaggio, pomodoro, cetriolo e uovo."
+      }
+    },
+    {
+      "id": "kaspressknoedelsuppe",
+      "category": "soups",
+      "price": 5.9,
+      "portion": null,
+      "allergens": "A, C, G, L",
+      "tags": [
+        "house",
+        "regional"
+      ],
+      "star": false,
+      "photo": null,
+      "google_review": null,
+      "name": {
+        "de": "Kaspressknödelsuppe",
+        "en": "Cheese Dumpling Soup (Kaspressknödel)",
+        "it": "Brodo con canederlo al formaggio"
+      },
+      "description": {
+        "de": "Hausgemachter Kaspressknödel in kräftiger, klarer Suppe mit Schnittlauch.",
+        "en": "Homemade pan-fried cheese dumpling in steaming clear broth with chives.",
+        "it": "Canederlo al formaggio dorato fatto in casa servito in brodo caldo con erba cipollina."
+      }
+    },
+    {
+      "id": "fritattensuppe",
+      "category": "soups",
+      "price": 5.2,
+      "portion": null,
+      "allergens": "A, C, G, L, M",
+      "tags": [
+        "house",
+        "regional"
+      ],
+      "star": false,
+      "photo": null,
+      "google_review": null,
+      "name": {
+        "de": "Fritattensuppe",
+        "en": "Fritatten Soup (Pancake Strips)",
+        "it": "Brodo con crespelle (Fritatten)"
+      },
+      "description": {
+        "de": "Klassische österreichische Suppe mit feinen Fritattenstreifen.",
+        "en": "Traditional Austrian clear broth with thin sliced pancake strips and chives.",
+        "it": "Brodo chiaro tradizionale austriaco con striscioline di crespelle ed erba cipollina."
+      }
+    },
+    {
+      "id": "backhendl-salat",
+      "category": "salads",
+      "price": 13.9,
+      "portion": null,
+      "allergens": "A, C, G, M",
+      "tags": [
+        "regional",
+        "house"
+      ],
+      "star": true,
+      "photo": null,
+      "google_review": {
+        "author": "Julia R.",
+        "rating": 5,
+        "de": "Knackiger Salat mit warmen Backhendlstreifen und echtem steirischen Kürbiskernöl. Einfach herrlich!",
+        "en": "Crisp mixed salad with warm fried chicken strips and authentic Styrian pumpkin seed oil. Simply delicious!"
+      },
+      "name": {
+        "de": "Backhendl Salat",
+        "en": "Backhendl Chicken Salad",
+        "it": "Insalata con Backhendl"
+      },
+      "description": {
+        "de": "Knusprig gebackene Hendlstreifen auf knackigen Salaten mit steirischem Kürbiskernöl.",
+        "en": "Crispy fried chicken strips on fresh salad greens with authentic Styrian pumpkin seed oil.",
+        "it": "Striscioline di pollo croccante su insalata fresca con vero olio di semi di zucca stiriano."
+      }
+    },
+    {
+      "id": "bauern-salat-brot",
+      "category": "salads",
+      "price": 9.9,
+      "portion": null,
+      "allergens": "A, C, G",
+      "tags": [
+        "regional",
+        "house"
+      ],
+      "star": false,
+      "photo": null,
+      "google_review": null,
+      "name": {
+        "de": "Bauern Salat + Brot",
+        "en": "Farmer Salad + Bread",
+        "it": "Insalata contadina + pane"
+      },
+      "description": {
+        "de": "Grüner Salat, Käferbohnen, Kartoffeln, Speck und Ei.",
+        "en": "Green salad with Styrian scarlet runner beans (Käferbohnen), potatoes, bacon and egg, served with bread.",
+        "it": "Insalata verde con fagioli Käferbohnen, patate, speck croccante e uovo, servita con pane."
+      }
+    },
+    {
+      "id": "gemischter-salat",
+      "category": "salads",
+      "price": 6.2,
+      "portion": null,
+      "allergens": null,
+      "tags": [
+        "regional"
+      ],
+      "star": false,
+      "photo": null,
+      "google_review": null,
+      "name": {
+        "de": "Gemischter Salat",
+        "en": "Mixed Seasonal Salad",
+        "it": "Insalata mista di stagione"
+      },
+      "description": {
+        "de": "Bunte Auswahl an frischen, knackigen Salaten.",
+        "en": "Colorful selection of crisp, freshly prepared seasonal side salads.",
+        "it": "Colorata selezione di insalate fresche e croccanti di stagione."
+      }
+    },
+    {
+      "id": "gruener-salat-vegetarisch",
+      "category": "salads",
+      "price": 4.9,
+      "portion": null,
+      "allergens": "M",
+      "tags": [
+        "veg"
+      ],
+      "star": false,
+      "photo": null,
+      "google_review": null,
+      "name": {
+        "de": "Grüner Salat (vegetarisch)",
+        "en": "Green Salad (Vegetarian)",
+        "it": "Insalata verde (Vegetariana)"
+      },
+      "description": {
+        "de": "Frischer, knackiger Blattsalat.",
+        "en": "Fresh crisp garden leaf salad with house vinaigrette.",
+        "it": "Fresche foglie d’insalata mista con delicata vinaigrette della casa."
+      }
+    },
+    {
+      "id": "mohnstrudel",
+      "category": "dessert",
+      "price": 6.2,
+      "portion": null,
+      "allergens": "A, C, F, G",
+      "tags": [
+        "veg",
+        "house"
+      ],
+      "star": true,
+      "photo": null,
+      "google_review": null,
+      "name": {
+        "de": "Mohnstrudel",
+        "en": "Homemade Poppy Seed Strudel",
+        "it": "Strudel ai semi di papavero fatto in casa"
+      },
+      "description": {
+        "de": "Hausgemacht mit saftiger steirischer Mohnfülle.",
+        "en": "Freshly baked with luscious poppy seed filling.",
+        "it": "Fatto in casa con morbido ripieno di semi di papavero stiriani."
+      }
+    },
+    {
+      "id": "topfen-himbeerstrudel",
+      "category": "dessert",
+      "price": 6.2,
+      "portion": null,
+      "allergens": "A, C, G",
+      "tags": [
+        "veg",
+        "house"
+      ],
+      "star": true,
+      "photo": null,
+      "google_review": null,
+      "name": {
+        "de": "Topfen-Himbeerstrudel",
+        "en": "Curd Cheese & Raspberry Strudel",
+        "it": "Strudel alla ricotta e lamponi"
+      },
+      "description": {
+        "de": "Hausgemachter Topfenstrudel verfeinert mit fruchtigen Himbeeren.",
+        "en": "Homemade fluffy Austrian Topfen curd strudel filled with raspberries.",
+        "it": "Soffice strudel fatto in casa al formaggio fresco Topfen con lamponi."
+      }
+    },
+    {
+      "id": "apfelstrudel",
+      "category": "dessert",
+      "price": 6.2,
+      "portion": null,
+      "allergens": "A, C, G",
+      "tags": [
+        "veg",
+        "house"
+      ],
+      "star": false,
+      "photo": null,
+      "google_review": {
+        "author": "Thomas W.",
+        "rating": 5,
+        "de": "Hausgemachter Strudel wie aus dem Bilderbuch, dazu ein eiskaltes Bier im Gastgarten.",
+        "en": "Homemade strudel straight out of a picture book, paired with an ice-cold beer in the garden."
+      },
+      "name": {
+        "de": "Apfelstrudel",
+        "en": "Homemade Apple Strudel",
+        "it": "Strudel di mele tradizionale"
+      },
+      "description": {
+        "de": "Klassischer hausgemachter Strudel mit steirischen Äpfeln.",
+        "en": "Classic Austrian strudel with Styrian apples and a hint of cinnamon.",
+        "it": "Classico strudel fatto in casa con mele stiriane e cannella."
+      }
+    },
+    {
+      "id": "vanillesauce",
+      "category": "dessert",
+      "price": 3.6,
+      "portion": null,
+      "allergens": "A, G",
+      "tags": [
+        "veg"
+      ],
+      "star": false,
+      "photo": null,
+      "google_review": null,
+      "name": {
+        "de": "Vanillesauce",
+        "en": "Vanilla Sauce",
+        "it": "Crema alla vaniglia"
+      },
+      "description": {
+        "de": "Feine, warme Vanillesauce — die perfekte Begleitung zu unseren Strudeln.",
+        "en": "Delicate warm vanilla sauce — the ideal pairing with our strudels.",
+        "it": "Delicata crema calda alla vaniglia — l’abbinamento ideale con i nostri strudel."
+      }
+    },
+    {
+      "id": "marienbraeu-zwickl-naturtrueb",
+      "category": "brew",
+      "price": 4.9,
+      "portion": "0,5 l",
+      "allergens": null,
+      "tags": [
+        "beer",
+        "house"
+      ],
+      "star": true,
+      "photo": null,
+      "google_review": {
+        "author": "Sabine K.",
+        "rating": 5,
+        "de": "Urgemütliche Gaststube mit den Kupferkesseln — so stellt man sich ein echtes steirisches Wirtshaus vor. Das Zwickl ist hervorragend!",
+        "en": "A wonderfully cosy Stube with the copper kettles — exactly what you picture a real Styrian inn to be. The Zwickl is outstanding!"
+      },
+      "name": {
+        "de": "Marienbräu Zwickl (naturtrüb)",
+        "en": "Marienbräu Zwickl (Unfiltered)",
+        "it": "Marienbräu Zwickl (non filtrata)"
+      },
+      "description": {
+        "de": "Unfiltriert und naturtrüb direkt vom Fass gebraut mit unserem 20m Tiefquellwasser. Hefig, mild und herrlich süffig. (0,3 l € 3,90)",
+        "en": "Naturally cloudy and unfiltered on tap, brewed with our 20m deep subterranean well water. Mild, yeasty and refreshing. (0.3 l € 3.90)",
+        "it": "Torbida naturale alla spina, prodotta con l’acqua della sorgente sotterranea di 20m. Fresca, lievitosa e dissetante. (0,3 l € 3,90)"
+      }
+    },
+    {
+      "id": "marienbraeu-maerzen",
+      "category": "brew",
+      "price": 4.7,
+      "portion": "0,5 l",
+      "allergens": null,
+      "tags": [
+        "beer",
+        "house"
+      ],
+      "star": false,
+      "photo": null,
+      "google_review": null,
+      "name": {
+        "de": "Marienbräu Märzen",
+        "en": "Marienbräu Märzen",
+        "it": "Marienbräu Märzen"
+      },
+      "description": {
+        "de": "Klassisches bernsteinfarbenes Brauhausbier mit feiner Malznote und ausgewogener Bittere. (0,3 l € 3,70)",
+        "en": "Classic amber tavern beer with subtle malt sweetness and a clean, balanced hop finish. (0.3 l € 3.70)",
+        "it": "Classica birra ambrata da birreria con note di malto e un finale pulito ed equilibrato. (0,3 l € 3,70)"
+      }
+    },
+    {
+      "id": "saisonales-bockbier",
+      "category": "brew",
+      "price": 5.4,
+      "portion": "0,5 l",
+      "allergens": null,
+      "tags": [
+        "beer",
+        "season"
+      ],
+      "star": false,
+      "photo": null,
+      "google_review": null,
+      "name": {
+        "de": "Saisonales Bockbier",
+        "en": "Seasonal Bock Beer",
+        "it": "Birra Bock stagionale"
+      },
+      "description": {
+        "de": "Dunkel, vollmundig und kräftig eingebraut — ein saisonaler Hochgenuss aus unserem Kupferkessel.",
+        "en": "Rich, dark and full-bodied — our seasonal brew special from the copper brew kettles.",
+        "it": "Scura, corposa e robusta — la speciale cotta stagionale dai nostri tini di rame."
+      }
+    }
+  ]
+}

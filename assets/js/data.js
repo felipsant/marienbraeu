@@ -48,6 +48,7 @@ window.MB_MENU = [
   {
     cat: 'classics', price: 13.5, tags: ['regional', 'house'], star: true,
     allergens: 'A, C, G',
+    google_review: {"author":"Christina M.","rating":5,"de":"Das beste Backhendl weit und breit! Außen richtig knusprig, innen saftig — und der Erdäpfelsalat mit Kernöl ist ein Traum.","en":"The best Backhendl far and wide! Properly crispy outside, juicy inside — and the potato salad with pumpkin seed oil is a dream."},
     de: { name: 'Halbes Backhendl', desc: 'Knusprig herausgebackenes halbes Backhendl nach traditioneller Art.' },
     en: { name: 'Half Backhendl', desc: 'Crispy golden fried half chicken made according to traditional Styrian tavern custom.' },
     it: { name: 'Mezzo Backhendl', desc: 'Mezzo pollo fritto croccante e dorato secondo l’autentica usanza stiriana.' }
@@ -55,6 +56,7 @@ window.MB_MENU = [
   {
     cat: 'classics', price: 24.9, tags: ['regional', 'house'], star: true,
     allergens: 'A, C, G',
+    google_review: {"author":"Christina M.","rating":5,"de":"Perfekt herausgebackenes Backhendl — wunderbar zum Teilen mit der ganzen Familie.","en":"Perfect crispy fried chicken — wonderful for sharing with the whole family."},
     de: { name: 'Ganzes Backhendl', desc: 'Frisch herausgebackenes ganzes Backhendl — ideal zum Teilen.' },
     en: { name: 'Whole Backhendl', desc: 'Crispy golden fried whole chicken — ideal for sharing at the table.' },
     it: { name: 'Backhendl intero', desc: 'Pollo intero fritto croccante e dorato — ideale da condividere al tavolo.' }
@@ -228,6 +230,7 @@ window.MB_MENU = [
      ========================================================================= */
   {
     cat: 'brew', price: 4.9, tags: ['beer', 'house'], star: true, size: '0,5 l',
+    google_review: {"author":"Sabine K.","rating":5,"de":"Urgemütliche Gaststube mit den Kupferkesseln — so stellt man sich ein echtes steirisches Wirtshaus vor. Das Zwickl ist hervorragend!","en":"A wonderfully cosy Stube with the copper kettles — exactly what you picture a real Styrian inn to be. The Zwickl is outstanding!"},
     de: { name: 'Marienbräu Zwickl (naturtrüb)', desc: 'Unfiltriert und naturtrüb direkt vom Fass gebraut mit unserem 20m Tiefquellwasser. Hefig, mild und herrlich süffig. (0,3 l € 3,90)' },
     en: { name: 'Marienbräu Zwickl (Unfiltered)', desc: 'Naturally cloudy and unfiltered on tap, brewed with our 20m deep subterranean well water. Mild, yeasty and refreshing. (0.3 l € 3.90)' },
     it: { name: 'Marienbräu Zwickl (non filtrata)', desc: 'Torbida naturale alla spina, prodotta con l’acqua della sorgente sotterranea di 20m. Fresca, lievitosa e dissetante. (0,3 l € 3,90)' }
