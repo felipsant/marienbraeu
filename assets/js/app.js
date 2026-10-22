@@ -8,7 +8,7 @@
   var $ = function (sel, root) { return (root || document).querySelector(sel); };
   var $$ = function (sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); };
 
-  var I18N = window.MB_I18N || { de: {}, en: {}, it: {} };
+  var I18N = window.MB_I18N || { de: {} };
   var HOURS = window.MB_HOURS || {};
   var MENU = window.MB_MENU || [];
   var REVIEWS = window.MB_REVIEWS || [];
@@ -25,7 +25,15 @@
      i18n — snapshot the German copy from the DOM, overlay English on demand
      ------------------------------------------------------------------------ */
   var lang = 'de';
-  var LOCALES = { de: 'de-AT', en: 'en-GB', it: 'it-IT' };
+  var LOCALES = { de: 'de-AT', en: 'en-GB', it: 'it-IT', hu: 'hu-HU', pl: 'pl-PL', ro: 'ro-RO' };
+  var LANG_KEY = 'mb_lang';
+  // Primary language subtags we serve (gsw = Swiss German)
+  var LANG_ALIASES = { de: 'de', gsw: 'de', en: 'en', it: 'it', hu: 'hu', pl: 'pl', ro: 'ro', mo: 'ro' };
+  var TZ_LANGS = {
+    'Europe/Vienna': 'de', 'Europe/Berlin': 'de', 'Europe/Zurich': 'de', 'Europe/Busingen': 'de', 'Europe/Vaduz': 'de',
+    'Europe/Rome': 'it', 'Europe/San_Marino': 'it', 'Europe/Vatican': 'it',
+    'Europe/Budapest': 'hu', 'Europe/Warsaw': 'pl', 'Europe/Bucharest': 'ro', 'Europe/Chisinau': 'ro'
+  };
   var onLangChange = [];
 
   $$('[data-i18n]').forEach(function (el) { I18N.de[el.dataset.i18n] = I18N.de[el.dataset.i18n] || el.textContent.trim(); });
@@ -44,8 +52,25 @@
     return str;
   }
 
+  /* A language the visitor clicked always wins; otherwise the first supported
+     browser language, then the time zone, then English. */
+  function detectUserLanguage() {
+    var saved = store.get(LANG_KEY) || store.get('mb-lang');
+    if (saved && LOCALES[saved]) return saved;
+    var prefs = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || ''];
+    for (var i = 0; i < prefs.length; i++) {
+      var match = LANG_ALIASES[String(prefs[i] || '').toLowerCase().split(/[-_]/)[0]];
+      if (match) return match;
+    }
+    try {
+      var zone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      if (TZ_LANGS[zone]) return TZ_LANGS[zone];
+    } catch (e) { /* no Intl time zone support */ }
+    return 'en';
+  }
+
   function setLang(next) {
-    lang = LOCALES[next] ? next : 'de';
+    lang = LOCALES[next] ? next : 'en';
     document.documentElement.lang = lang;
     $$('[data-i18n]').forEach(function (el) { el.textContent = t(el.dataset.i18n); });
     $$('[data-i18n-html]').forEach(function (el) { el.innerHTML = t(el.dataset.i18nHtml); });
@@ -56,12 +81,11 @@
       });
     });
     $$('[data-lang]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.lang === lang)); });
-    store.set('mb-lang', lang);
     onLangChange.forEach(function (fn) { fn(); });
   }
 
   $$('[data-lang]').forEach(function (btn) {
-    btn.addEventListener('click', function () { setLang(btn.dataset.lang); });
+    btn.addEventListener('click', function () { setLang(btn.dataset.lang); store.set(LANG_KEY, lang); });
   });
 
   /* ------------------------------------------------------------------------
@@ -258,7 +282,7 @@
         '<span class="dish-price">' + price(d.price) + '</span></div>' +
         (size ? '<p class="dish-meta">' + escapeHtml(size) + '</p>' : '') +
         '<p class="dish-desc">' + escapeHtml(copy.desc) + '</p>' +
-        (d.allergens ? '<p class="text-[11px] mt-1 tracking-wide" style="color:var(--muted);opacity:0.85">Allergene: ' + escapeHtml(d.allergens) + '</p>' : '') +
+        (d.allergens ? '<p class="text-[11px] mt-1 tracking-wide" style="color:var(--muted);opacity:0.85">' + escapeHtml(t('menu.allergens')) + ': ' + escapeHtml(d.allergens) + '</p>' : '') +
         '<div class="flex flex-wrap gap-1.5 mt-auto pt-1">' + tags + '</div>' +
         '</article>';
     }).join('');
@@ -671,5 +695,5 @@
      ------------------------------------------------------------------------ */
   $$('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
 
-  setLang(store.get('mb-lang') || 'de');
+  setLang(detectUserLanguage());
 })();

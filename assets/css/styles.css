@@ -167,6 +167,7 @@ img, svg { display: block; max-width: 100%; }
 .btn-ghost-dark:hover { border-color: var(--copper); color: var(--copper-dark); }
 
 .btn-sm { min-height: 40px; padding: .55rem 1rem; font-size: .9rem; }
+.btn-xs { min-height: 34px; padding: .4rem .85rem; font-size: .8rem; gap: .4rem; }
 
 /* --------------------------------------------------------------------------
    Header
@@ -231,6 +232,11 @@ img, svg { display: block; max-width: 100%; }
   transition: background .2s, color .2s;
 }
 .lang-switch button[aria-pressed="true"] { background: var(--cream); color: var(--walnut); }
+/* Six languages: keep the header switch compact, let the drawer one wrap */
+@media (min-width: 640px) {
+  .lang-switch button { min-width: 30px; padding: 0 .4rem; font-size: .72rem; letter-spacing: .05em; }
+}
+.lang-switch--wrap { flex-wrap: wrap; border-radius: 22px; }
 
 .menu-toggle {
   display: inline-flex; align-items: center; justify-content: center;
@@ -362,6 +368,23 @@ img, svg { display: block; max-width: 100%; }
     linear-gradient(180deg, var(--forest) 0%, #142a1b 100%);
 }
 .section--linen { background: var(--cream); }
+/* Regional supplier guarantee — Austrian quality-seal banner under the menu */
+.menu-seal {
+  position: relative; display: flex; align-items: center; gap: 1rem;
+  padding: 1.1rem 1.35rem; border-radius: 16px; font-size: .9rem; color: var(--walnut);
+  background: linear-gradient(135deg, rgba(250,246,240,.95), rgba(243,230,205,.92));
+  border: 1px solid rgba(200,109,59,.35);
+  box-shadow: inset 0 0 0 4px rgba(250,246,240,.9), inset 0 0 0 5px rgba(200,109,59,.22), 0 6px 20px rgba(44,24,16,.06);
+}
+.menu-seal__badge {
+  flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center;
+  width: 46px; height: 46px; border-radius: 50%; color: #fff;
+  background: radial-gradient(circle at 35% 30%, var(--amber), var(--copper));
+  box-shadow: 0 0 0 3px rgba(250,246,240,.9), 0 0 0 4px rgba(200,109,59,.45);
+}
+.menu-seal__badge svg { width: 22px; height: 22px; }
+@media (max-width: 479px) { .menu-seal { flex-direction: column; text-align: center; } }
+
 .section--paper {
   background:
     radial-gradient(1000px 500px at 0% 0%, rgba(200,109,59,.07), transparent 60%),

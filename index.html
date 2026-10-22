@@ -97,6 +97,7 @@
       <symbol id="i-nav" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 22 2l-9 19-2-8-8-2z"/></symbol>
       <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
       <symbol id="i-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol>
       <symbol id="i-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"/></symbol>
       <symbol id="i-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></symbol>
       <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
@@ -143,10 +144,13 @@
       </nav>
 
       <div class="flex items-center gap-2 sm:gap-3">
-        <div class="lang-switch hidden sm:inline-flex" role="group" aria-label="Sprache / Language / Lingua">
-          <button type="button" data-lang="de" aria-pressed="true">DE</button>
-          <button type="button" data-lang="en" aria-pressed="false">EN</button>
-          <button type="button" data-lang="it" aria-pressed="false">IT</button>
+        <div class="lang-switch hidden sm:inline-flex" role="group" aria-label="Sprache / Language / Lingua / Nyelv / Język / Limbă">
+          <button type="button" data-lang="de" aria-pressed="true" lang="de" title="Deutsch">DE</button>
+          <button type="button" data-lang="en" aria-pressed="false" lang="en" title="English">EN</button>
+          <button type="button" data-lang="it" aria-pressed="false" lang="it" title="Italiano">IT</button>
+          <button type="button" data-lang="hu" aria-pressed="false" lang="hu" title="Magyar">HU</button>
+          <button type="button" data-lang="pl" aria-pressed="false" lang="pl" title="Polski">PL</button>
+          <button type="button" data-lang="ro" aria-pressed="false" lang="ro" title="Română">RO</button>
         </div>
         <a href="tel:+436642031953" class="btn btn-ghost-light btn-sm hidden lg:inline-flex xl:hidden min-[1500px]:inline-flex" aria-label="Anrufen: +43 664 2031953">
           <svg><use href="#i-phone"/></svg><span>+43 664 2031953</span>
@@ -177,10 +181,13 @@
         </button>
         <a href="tel:+436642031953" class="btn btn-ghost-light w-full"><svg><use href="#i-phone"/></svg>+43 664 2031953</a>
       </div>
-      <div class="lang-switch mt-6 sm:hidden" role="group" aria-label="Sprache / Language / Lingua">
-        <button type="button" data-lang="de" aria-pressed="true">DE</button>
-        <button type="button" data-lang="en" aria-pressed="false">EN</button>
-        <button type="button" data-lang="it" aria-pressed="false">IT</button>
+      <div class="lang-switch lang-switch--wrap mt-6 sm:hidden" role="group" aria-label="Sprache / Language / Lingua / Nyelv / Język / Limbă">
+        <button type="button" data-lang="de" aria-pressed="true" lang="de" title="Deutsch">DE</button>
+        <button type="button" data-lang="en" aria-pressed="false" lang="en" title="English">EN</button>
+        <button type="button" data-lang="it" aria-pressed="false" lang="it" title="Italiano">IT</button>
+        <button type="button" data-lang="hu" aria-pressed="false" lang="hu" title="Magyar">HU</button>
+        <button type="button" data-lang="pl" aria-pressed="false" lang="pl" title="Polski">PL</button>
+        <button type="button" data-lang="ro" aria-pressed="false" lang="ro" title="Română">RO</button>
       </div>
       <div class="live-pill mt-6 text-linen" style="display:flex;width:max-content;max-width:100%" data-live-status><span class="live-dot"></span><span data-live-text>—</span></div>
     </div>
@@ -442,13 +449,9 @@
           <h2 id="menu-title" class="section-title mt-3" style="color:var(--walnut)" data-i18n="menu.title">Unsere Speisekarte</h2>
           <p class="mt-4" style="color:var(--muted)" data-i18n="menu.intro">Ehrliche steirische Wirtshausküche mit Zutaten von Bauern aus der Region — dazu unser Bier, frisch aus dem Kupferkessel.</p>
 
-          <div class="mt-6 inline-flex flex-wrap items-center justify-center gap-3 p-2 px-5 rounded-full bg-white/85 border border-amber-800/15 shadow-sm text-xs">
-            <span class="inline-flex items-center gap-1.5 font-semibold" style="color:var(--walnut)">
-              <svg style="width:14px;height:14px;color:var(--copper)"><use href="#i-camera"/></svg>
-              <span data-i18n="menu.cardHint">Originale Speisekarte aus dem Gasthaus:</span>
-            </span>
-            <button type="button" class="inline-flex items-center gap-1 font-bold underline cursor-pointer hover:opacity-80" style="color:var(--copper)" data-open-modal="menu-photo">
-              <span data-i18n="menu.openPhotoModal">Foto in Großansicht öffnen</span> →
+          <div class="mt-5 flex justify-center">
+            <button type="button" class="btn btn-ghost-dark btn-xs" data-open-modal="menu-photo">
+              <svg style="width:13px;height:13px" aria-hidden="true"><use href="#i-search"/></svg><span data-i18n="menu.openPhotoModal">Originalkarte ansehen (Foto)</span>
             </button>
           </div>
         </div>
@@ -470,35 +473,18 @@
           <noscript><p>Bitte JavaScript aktivieren, um die Speisekarte zu sehen — oder rufen Sie uns an: +43 664 2031953.</p></noscript>
         </div>
 
-        <!-- Regional supplier transparency note from physical menu with thumbnail -->
-        <div class="mt-10 p-5 sm:p-6 rounded-2xl text-sm max-w-2xl mx-auto reveal relative overflow-hidden" style="background:rgba(255,255,255,0.92);border:1px solid rgba(200,109,59,0.25);box-shadow:0 6px 20px rgba(44,24,16,0.05);color:var(--walnut)">
-          <div class="flex flex-col sm:flex-row items-center gap-4 text-left">
-            <div class="flex-shrink-0 cursor-pointer group relative" data-open-modal="menu-photo" title="Klicken für Großansicht">
-              <div class="w-20 sm:w-24 rounded-xl overflow-hidden shadow-md border border-amber-900/15 transform transition-transform group-hover:scale-105">
-                <img src="assets/img/speisekarte-thumb.jpg" alt="Speisekarte Foto Vorschau" class="w-full h-auto object-cover" loading="lazy">
-              </div>
-              <span class="badge absolute -bottom-1.5 -right-1.5 text-[9px] shadow px-1.5 py-0.5" style="background:var(--copper);color:#fff"><svg style="width:10px;height:10px"><use href="#i-camera"/></svg><span>Zoom</span></span>
-            </div>
-            <div class="flex-1">
-              <p class="font-medium leading-relaxed" data-i18n="menu.suppliers">🌱 <strong>Regionalität &amp; Frische:</strong> Uns sind frische Produkte sehr wichtig, weshalb wir unser Fleisch sowie unser Gemüse täglich frisch von der <strong>Fleischhauerei Schönberger, Raaba</strong> und <strong>Johannes Kapper Steirergemüse, Hart bei Graz</strong> beziehen.</p>
-              <div class="mt-2.5 flex flex-wrap items-center gap-3">
-                <button type="button" class="btn btn-copper btn-xs inline-flex items-center gap-1.5" data-open-modal="menu-photo">
-                  <svg style="width:13px;height:13px"><use href="#i-camera"/></svg><span data-i18n="menu.openPhotoModal">Foto in Großansicht öffnen</span>
-                </button>
-                <a href="assets/img/1000052599.jpg" target="_blank" rel="noopener" class="text-xs font-semibold underline" style="color:var(--muted)" data-i18n="menu.fullRes">
-                  (12MP Original)
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <!-- Allergeninformation gemäß Codex-Empfehlung verbatim from physical menu -->
         <div class="mt-6 p-4 rounded-xl text-xs max-w-2xl mx-auto reveal" style="background:rgba(44,24,16,0.04);border:1px solid rgba(44,24,16,0.1);color:var(--muted)">
           <p class="font-semibold text-center mb-1.5" style="color:var(--walnut)" data-i18n="menu.codexTitle">Allergeninformation gemäß Codex-Empfehlung</p>
           <p class="text-center leading-relaxed" data-i18n="menu.codexList">
             <strong>A</strong> Glutenhaltiges Getreide · <strong>B</strong> Krebstiere · <strong>C</strong> Eier · <strong>D</strong> Fisch · <strong>E</strong> Erdnuss · <strong>F</strong> Soja · <strong>G</strong> Milch oder Laktose · <strong>H</strong> Schalenfrüchte · <strong>L</strong> Sellerie · <strong>M</strong> Senf · <strong>N</strong> Sesam · <strong>O</strong> Sulfite · <strong>P</strong> Lupinen · <strong>R</strong> Weichtiere
           </p>
+        </div>
+
+        <!-- Regional supplier guarantee, verbatim from the physical menu -->
+        <div class="menu-seal mt-6 max-w-2xl mx-auto reveal">
+          <span class="menu-seal__badge" aria-hidden="true"><svg><use href="#i-award"/></svg></span>
+          <p class="leading-relaxed" data-i18n-html="menu.suppliers">🌱 <strong>Regionalität &amp; Frische:</strong> Uns sind frische Produkte sehr wichtig, weshalb wir unser Fleisch sowie unser Gemüse täglich frisch von der <strong>Fleischhauerei Schönberger, Raaba</strong> und <strong>Johannes Kapper Steirergemüse, Hart bei Graz</strong> beziehen.</p>
         </div>
 
         <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-x-8 gap-y-3 text-sm reveal" style="color:var(--muted)">
