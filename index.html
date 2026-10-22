@@ -110,7 +110,7 @@
        Header & navigation
        =================================================================== -->
   <header class="site-header" id="top" data-header>
-    <div class="container-x h-full flex items-center justify-between gap-4">
+    <div class="header-container">
       <a href="#top" class="brand" aria-label="Marienbräu — zur Startseite">
         <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
           <defs>
@@ -120,7 +120,6 @@
           </defs>
           <circle cx="32" cy="32" r="30" fill="#1e130c" stroke="url(#bm-copper)" stroke-width="2.5"/>
           <circle cx="32" cy="32" r="25" fill="none" stroke="#c86d3b" stroke-opacity=".35" stroke-dasharray="1.5 3"/>
-          <!-- copper kettle emblem -->
           <path d="M19 38c0-9 5.8-15 13-15s13 6 13 15v4H19z" fill="url(#bm-copper)"/>
           <rect x="17" y="41" width="30" height="4.5" rx="1.5" fill="#e5a93b"/>
           <path d="M32 23v-6h8" fill="none" stroke="url(#bm-copper)" stroke-width="2.6" stroke-linecap="round"/>
@@ -133,7 +132,8 @@
         </span>
       </a>
 
-      <nav class="hidden xl:flex items-center gap-6" aria-label="Hauptnavigation" data-i18n-attr="aria-label:nav.label">
+      <!-- Desktop navigation: visible on screens >= 1200px where it comfortably fits without crowding -->
+      <nav class="hidden min-[1220px]:flex items-center gap-4 xl:gap-5 flex-shrink-0" aria-label="Hauptnavigation" data-i18n-attr="aria-label:nav.label">
         <a class="nav-link" href="#speisekarte" data-i18n="nav.menu">Speisekarte</a>
         <a class="nav-link" href="#ueber-uns" data-i18n="nav.about">Über Uns</a>
         <a class="nav-link" href="#brauhaus" data-i18n="nav.brewery">Brauhaus</a>
@@ -143,7 +143,9 @@
         <a class="nav-link" href="#kontakt" data-i18n="nav.contact">Kontakt</a>
       </nav>
 
-      <div class="flex items-center gap-2 sm:gap-3">
+      <!-- Right-side actions: language switcher, quick phone icon, compact reservation button, and mobile drawer toggle -->
+      <div class="flex items-center gap-1.5 sm:gap-2.5 flex-shrink-0">
+        <!-- Compact language pills -->
         <div class="lang-switch hidden sm:inline-flex" role="group" aria-label="Sprache / Language / Lingua / Nyelv / Język / Limbă">
           <button type="button" data-lang="de" aria-pressed="true" lang="de" title="Deutsch">DE</button>
           <button type="button" data-lang="en" aria-pressed="false" lang="en" title="English">EN</button>
@@ -152,20 +154,27 @@
           <button type="button" data-lang="pl" aria-pressed="false" lang="pl" title="Polski">PL</button>
           <button type="button" data-lang="ro" aria-pressed="false" lang="ro" title="Română">RO</button>
         </div>
-        <a href="tel:+436642031953" class="btn btn-ghost-light btn-sm hidden lg:inline-flex xl:hidden min-[1500px]:inline-flex" aria-label="Anrufen: +43 664 2031953">
-          <svg><use href="#i-phone"/></svg><span>+43 664 2031953</span>
+
+        <!-- Sleek telephone icon button: never wraps, never crowds -->
+        <a href="tel:+436642031953" class="header-icon-btn" aria-label="Anrufen: +43 664 2031953" title="+43 664 2031953">
+          <svg style="width:14px;height:14px"><use href="#i-phone"/></svg>
         </a>
-        <button type="button" class="btn btn-copper btn-sm hidden md:inline-flex" data-open-reservation>
-          <svg><use href="#i-calendar"/></svg><span data-i18n="cta.reserve">Tisch reservieren</span>
+
+        <!-- Compact reservation CTA -->
+        <button type="button" class="btn btn-copper btn-xs sm:btn-sm flex-shrink-0" data-open-reservation>
+          <svg style="width:13px;height:13px"><use href="#i-calendar"/></svg><span class="hidden xs:inline" data-i18n="cta.reserve">Reservieren</span>
         </button>
-        <button type="button" class="menu-toggle xl:hidden" aria-expanded="false" aria-controls="mobile-nav" data-menu-toggle>
+
+        <!-- Mobile / tablet drawer hamburger toggle -->
+        <button type="button" class="menu-toggle min-[1220px]:hidden" aria-expanded="false" aria-controls="mobile-nav" data-menu-toggle>
           <span class="sr-only" data-i18n="nav.toggle">Menü öffnen</span>
           <span class="bars" aria-hidden="true"><span class="bar"></span><span class="bar"></span><span class="bar"></span></span>
         </button>
       </div>
     </div>
 
-    <div class="mobile-nav xl:hidden" id="mobile-nav" data-mobile-nav>
+    <!-- Mobile Drawer navigation -->
+    <div class="mobile-nav min-[1220px]:hidden" id="mobile-nav" data-mobile-nav>
       <nav aria-label="Mobile Navigation">
         <a class="m-link" href="#speisekarte"><b data-i18n="nav.menu">Speisekarte</b><span>01</span></a>
         <a class="m-link" href="#ueber-uns"><b data-i18n="nav.about">Über Uns</b><span>02</span></a>
