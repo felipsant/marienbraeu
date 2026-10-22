@@ -8,7 +8,7 @@
   var $ = function (sel, root) { return (root || document).querySelector(sel); };
   var $$ = function (sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); };
 
-  var I18N = window.MB_I18N || { de: {}, en: {} };
+  var I18N = window.MB_I18N || { de: {}, en: {}, it: {} };
   var HOURS = window.MB_HOURS || {};
   var MENU = window.MB_MENU || [];
   var REVIEWS = window.MB_REVIEWS || [];
@@ -25,6 +25,7 @@
      i18n — snapshot the German copy from the DOM, overlay English on demand
      ------------------------------------------------------------------------ */
   var lang = 'de';
+  var LOCALES = { de: 'de-AT', en: 'en-GB', it: 'it-IT' };
   var onLangChange = [];
 
   $$('[data-i18n]').forEach(function (el) { I18N.de[el.dataset.i18n] = I18N.de[el.dataset.i18n] || el.textContent.trim(); });
@@ -44,7 +45,7 @@
   }
 
   function setLang(next) {
-    lang = next === 'en' ? 'en' : 'de';
+    lang = LOCALES[next] ? next : 'de';
     document.documentElement.lang = lang;
     $$('[data-i18n]').forEach(function (el) { el.textContent = t(el.dataset.i18n); });
     $$('[data-i18n-html]').forEach(function (el) { el.innerHTML = t(el.dataset.i18nHtml); });
@@ -229,7 +230,7 @@
   var activeFilter = 'all';
 
   function price(n) {
-    return '€ ' + n.toLocaleString(lang === 'en' ? 'en-GB' : 'de-AT', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    return '€ ' + n.toLocaleString(LOCALES[lang], { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   }
 
   function escapeHtml(s) {
@@ -560,7 +561,7 @@
          e.g. fetch('/api/reservation', { method: 'POST', body: new FormData(form) }). */
       var data = new FormData(form);
       var guests = Number(data.get('guests'));
-      var dateLabel = parseIsoDate(data.get('date')).toLocaleDateString(lang === 'en' ? 'en-GB' : 'de-AT', {
+      var dateLabel = parseIsoDate(data.get('date')).toLocaleDateString(LOCALES[lang], {
         weekday: 'long', day: 'numeric', month: 'long'
       });
       showToast(t('toast.title'), t('toast.text') + ' ' + t('toast.detail', {

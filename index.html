@@ -142,9 +142,10 @@
       </nav>
 
       <div class="flex items-center gap-2 sm:gap-3">
-        <div class="lang-switch hidden sm:inline-flex" role="group" aria-label="Sprache / Language">
+        <div class="lang-switch hidden sm:inline-flex" role="group" aria-label="Sprache / Language / Lingua">
           <button type="button" data-lang="de" aria-pressed="true">DE</button>
           <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          <button type="button" data-lang="it" aria-pressed="false">IT</button>
         </div>
         <a href="tel:+436642031953" class="btn btn-ghost-light btn-sm hidden lg:inline-flex xl:hidden min-[1500px]:inline-flex" aria-label="Anrufen: +43 664 2031953">
           <svg><use href="#i-phone"/></svg><span>+43 664 2031953</span>
@@ -174,9 +175,10 @@
         </button>
         <a href="tel:+436642031953" class="btn btn-ghost-light w-full"><svg><use href="#i-phone"/></svg>+43 664 2031953</a>
       </div>
-      <div class="lang-switch mt-6 sm:hidden" role="group" aria-label="Sprache / Language">
+      <div class="lang-switch mt-6 sm:hidden" role="group" aria-label="Sprache / Language / Lingua">
         <button type="button" data-lang="de" aria-pressed="true">DE</button>
         <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" data-lang="it" aria-pressed="false">IT</button>
       </div>
       <div class="live-pill mt-6 text-linen" style="display:flex;width:max-content;max-width:100%" data-live-status><span class="live-dot"></span><span data-live-text>—</span></div>
     </div>
@@ -405,15 +407,17 @@
           </blockquote>
 
           <div class="mt-8 space-y-4 text-[1.02rem]" style="color:#4a3a2e">
-            <p data-i18n-html="about.p1">Direkt vor unserer Eingangstür steht seit rund 350 Jahren die barocke <strong>Mariensäule</strong> — errichtet um 1670–1680 als Zeichen des Dankes und der Hoffnung. Sie hat unserem Haus seinen Namen gegeben und begrüßt bis heute jeden Gast, der über die Rupertistraße zu uns findet.</p>
-            <p data-i18n-html="about.p2">Drinnen erwartet Sie unsere urige Gaststube aus warmem Holz, in der die glänzenden <strong>Kupfer-Sudkessel</strong> das Herz des Hauses bilden. Hier wird unser Bier gebraut — naturbelassen, mit Geduld und ganz ohne Eile. Und wenn die Sonne scheint, lädt der schattige Gastgarten unter alten Bäumen zum Verweilen ein.</p>
+            <p data-i18n-html="about.p1">Seit rund <strong>1850</strong> steht unser Haus an der Rupertistraße — einst ein stattliches Anwesen und ein <strong>Zufluchtsort für Frauen</strong>, deren Männer als Reisende und Entdecker in die weite Welt hinauszogen. Hier fanden sie Schutz, Gemeinschaft und ein offenes Herdfeuer, bis die Männer heimkehrten. Diese Gastfreundschaft lebt in jedem Winkel des Hauses weiter.</p>
+            <p data-i18n-html="about.p2">Tief unter der Gaststube verbirgt sich unser Schatz: ein <strong>über 20 Meter tiefer, gemauerter Brunnen</strong> (Tiefbrunnen), der reines, kühles Quellwasser aus dem Untergrund fördert. Wir haben ihn wiederbelebt — sein Wasser ist die Seele unseres Hausbiers und unserer Küche.</p>
+            <p data-i18n-html="about.p3">Vor dem Eingang wacht seit den <strong>1670er-Jahren</strong> die barocke <strong>Mariensäule</strong>, errichtet als Zeichen des Dankes und der Hoffnung — sie hat dem Haus seinen Namen gegeben. Drinnen glänzen in der urigen, holzgetäfelten Gaststube die traditionellen <strong>Kupfer-Sudkessel</strong>, in denen unser Bier naturbelassen und ohne Eile entsteht. Und wenn die Sonne scheint, lädt der schattige Gastgarten unter alten Bäumen zum Verweilen ein.</p>
           </div>
 
-          <div class="mt-10 grid grid-cols-3 gap-4 sm:gap-6">
-            <div class="stat"><strong>~1675</strong><span data-i18n="about.stat1">Mariensäule</span></div>
-            <div class="stat"><strong>3</strong><span data-i18n="about.stat2">Hausbiere vom Fass</span></div>
-            <div class="stat"><strong>450+</strong><span data-i18n="about.stat3">begeisterte Bewertungen</span></div>
-          </div>
+          <ul class="heritage-badges mt-10" role="list">
+            <li class="stat"><strong>1670</strong><span data-i18n="about.stat1">Mariensäule</span></li>
+            <li class="stat"><strong>1850</strong><span data-i18n="about.stat2">Historisches Anwesen &amp; Zuflucht</span></li>
+            <li class="stat"><strong>20 m</strong><span data-i18n="about.stat3">Subterrane Tiefquelle / Brunnen</span></li>
+            <li class="stat"><strong>4.8★</strong><span data-i18n="about.stat4">Google-Bewertungen</span></li>
+          </ul>
         </div>
       </div>
     </section>
@@ -462,7 +466,7 @@
             <p class="eyebrow eyebrow--light" data-i18n="brew.eyebrow">Das Brauhaus</p>
             <h2 id="brew-title" class="section-title mt-4" data-i18n-html="brew.title">Gebraut im <em class="text-copper-gradient" style="font-style:italic">Kupferkessel</em>, gezapft im Wirtshaus</h2>
           </div>
-          <p class="text-lg" style="color:rgba(250,246,240,.78)" data-i18n="brew.intro">Unsere Hausbiere werden direkt in der Gaststube gebraut: mit steirischem Wasser, ausgesuchtem Malz und Aromahopfen. Unfiltriert, naturbelassen und vom Sudkessel bis zum Zapfhahn nur wenige Meter unterwegs.</p>
+          <p class="text-lg" style="color:rgba(250,246,240,.78)" data-i18n="brew.intro">Unsere Hausbiere werden direkt in der Gaststube gebraut: mit reinem Quellwasser aus unserem 20 Meter tiefen Brunnen, ausgesuchtem Malz und Aromahopfen. Unfiltriert, naturbelassen und vom Sudkessel bis zum Zapfhahn nur wenige Meter unterwegs.</p>
         </div>
 
         <div class="mt-12 grid md:grid-cols-3 gap-5 md:gap-6">

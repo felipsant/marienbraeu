@@ -427,6 +427,13 @@ img, svg { display: block; max-width: 100%; }
 .stat strong { display: block; font-family: "Playfair Display", serif; font-size: 2rem; line-height: 1; color: var(--walnut); }
 .stat span { font-size: .85rem; color: var(--muted); }
 
+.heritage-badges {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem 1rem;
+  list-style: none; margin-left: 0; margin-right: 0; padding: 0;
+}
+@media (min-width: 640px) { .heritage-badges { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; } }
+.heritage-badges .stat span { display: block; margin-top: .35rem; line-height: 1.3; }
+
 /* --------------------------------------------------------------------------
    Menu
    -------------------------------------------------------------------------- */

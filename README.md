@@ -16,7 +16,7 @@ Open `index.html` in a browser. There is no build step. The page needs an intern
 index.html            page markup; the German copy lives here, so it reads without JS
 assets/css/styles.css brand styling (palette, components); Tailwind CDN handles layout
 assets/js/data.js     menu items and prices, opening hours, review texts
-assets/js/i18n.js     English translations plus runtime-generated German strings
+assets/js/i18n.js     English & Italian translations plus runtime-generated German strings
 assets/js/app.js      language switch, menu filter, reviews carousel, live open/closed
                       status (Europe/Vienna), reservation modal + validation, map consent
 assets/img/           drop-in photos (see assets/img/README.md)
@@ -24,8 +24,8 @@ assets/img/           drop-in photos (see assets/img/README.md)
 
 ## Features
 
-- Sticky header with DE / EN language switch, a click-to-call link and a "Tisch reservieren" button. On phones there is also a bottom action bar (Anrufen · Reservieren · Route).
-- Hero, story with the Mariensäule (Marian column) and the owner photo slot (`assets/img/1000052599.jpg`, with an illustrated fallback), and a brewhouse section.
+- Sticky header with DE / EN / IT language switch (German is the default), a click-to-call link and a "Tisch reservieren" button. On phones there is also a bottom action bar (Anrufen · Reservieren · Route).
+- Hero, the house history (c. 1850 homestead and women's retreat, the 20 m brick-built Tiefbrunnen, the 1670s Mariensäule, the copper kettles) with heritage badges, the owner photo slot (`assets/img/1000052599.jpg`, with an illustrated fallback), and a brewhouse section.
 - Speisekarte (menu) with category filter pills, dietary/regional tags and prices in €.
 - Gallery tiles that use real photos when they are present and fall back to illustrations.
 - Reviews carousel with swipe, arrow buttons, dots and keyboard support. Autoplay is off when the visitor has asked for reduced motion.
