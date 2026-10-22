@@ -422,6 +422,15 @@
   }
 
   document.addEventListener('click', function (e) {
+    var groupBtn = e.target.closest('[data-open-reservation-group]');
+    if (groupBtn) {
+      e.preventDefault();
+      prepareReservation();
+      var gVal = groupBtn.getAttribute('data-open-reservation-group') || '80';
+      if (guestSelect) guestSelect.value = gVal;
+      openModal('reservation');
+      return;
+    }
     if (e.target.closest('[data-open-reservation]')) { e.preventDefault(); prepareReservation(); openModal('reservation'); }
     var openM = e.target.closest('[data-open-modal]');
     if (openM) { e.preventDefault(); openModal(openM.dataset.openModal); }
@@ -465,7 +474,10 @@
     for (var n = 1; n <= 12; n++) {
       html += '<option value="' + n + '">' + escapeHtml(n === 1 ? t('res.guest1') : t('res.guestN', { n: n })) + '</option>';
     }
-    html += '<option value="13">' + escapeHtml(t('res.guestMore')) + '</option>';
+    html += '<option value="20">' + escapeHtml(t('res.group15') || '13 – 25 Personen (Gruppe)') + '</option>';
+    html += '<option value="40">' + escapeHtml(t('res.group35') || '25 – 50 Personen (Gruppe)') + '</option>';
+    html += '<option value="80">' + escapeHtml(t('res.group80') || 'Bis zu 80 Personen (Großgruppe / Bus)') + '</option>';
+    html += '<option value="more">' + escapeHtml(t('res.guestMore') || 'Mehr als 80 Personen') + '</option>';
     guestSelect.innerHTML = html;
     guestSelect.value = selected;
   }
@@ -519,8 +531,7 @@
     date: dateProblem,
     time: function (v) { return v ? null : 'err.time'; },
     guests: function (v) {
-      if (!v) return 'err.guests';
-      return Number(v) > 12 ? 'err.groupCall' : null;
+      return v ? null : 'err.guests';
     }
   };
 
@@ -563,10 +574,17 @@
       /* Client-side static reservation mailer: 0 API, 0 server.
          Fills a complete structured email over the user's computer and opens it to marienbraeu@gmx.at */
       var data = new FormData(form);
-      var guests = Number(data.get('guests'));
+      var rawGuests = data.get('guests');
       var dateLabel = parseIsoDate(data.get('date')).toLocaleDateString(LOCALES[lang], {
         weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'
       });
+      var guestLabel = '';
+      if (rawGuests === '1') guestLabel = t('res.guest1');
+      else if (!isNaN(Number(rawGuests)) && Number(rawGuests) <= 12) guestLabel = t('res.guestN', { n: Number(rawGuests) });
+      else if (rawGuests === '20') guestLabel = t('res.group15') || '13 – 25 Personen (Gruppe)';
+      else if (rawGuests === '40') guestLabel = t('res.group35') || '25 – 50 Personen (Gruppe)';
+      else if (rawGuests === '80') guestLabel = t('res.group80') || 'Bis zu 80 Personen (Großgruppe / Bus)';
+      else guestLabel = t('res.guestMore') || 'Gruppe über 80 Personen';
       var name = (data.get('name') || '').trim();
       var email = (data.get('email') || '').trim();
       var phone = (data.get('phone') || '').trim();
@@ -579,7 +597,7 @@
       };
       var seatLabel = (seatNames[seatVal] && seatNames[seatVal][lang]) || seatNames[seatVal].de;
       var notes = (data.get('notes') || '').trim() || (lang === 'de' ? 'Keine' : (lang === 'it' ? 'Nessuna' : 'None'));
-      var guestLabel = guests === 1 ? t('res.guest1') : t('res.guestN', { n: guests });
+      // guestLabel already computed above
 
       var subject = 'Tischreservierung Marienbräu: ' + name + ' – ' + dateLabel + ' um ' + time + ' Uhr (' + guestLabel + ')';
       var body = 'Hallo Marienbräu-Team,\n\n' +
