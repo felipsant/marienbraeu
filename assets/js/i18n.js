@@ -78,6 +78,7 @@ window.MB_I18N = {
     'badge.rating': '4.8 ★ Google Reviews',
     'badge.brewery': 'House brewery',
     'badge.regional': 'Regional & Seasonal',
+    'badge.holidays': 'Open on public holidays',
 
     'about.eyebrow': 'About us & the Marian column',
     'about.title': 'An inn in the shadow <em class="text-copper-gradient" style="font-style:italic">of the Marian column</em>',
@@ -292,6 +293,7 @@ window.MB_I18N = {
     'badge.rating': '4.8 ★ recensioni Google',
     'badge.brewery': 'Birrificio artigianale',
     'badge.regional': 'Regionale & stagionale',
+    'badge.holidays': 'Aperto nei giorni festivi',
 
     'about.eyebrow': 'Chi siamo & la colonna mariana',
     'about.title': 'Una locanda all’ombra <em class="text-copper-gradient" style="font-style:italic">della colonna mariana</em>',
