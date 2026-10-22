@@ -397,14 +397,17 @@ img, svg { display: block; max-width: 100%; }
   outline: 1px solid rgba(200,109,59,.35);
 }
 .owner-frame img {
-  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center;
+  transition: transform .3s ease;
+}
+.owner-frame:hover img {
+  transform: scale(1.02);
 }
 .owner-placeholder {
   position: absolute; inset: 0; display: flex; flex-direction: column;
   justify-content: flex-end; color: var(--cream);
 }
 .owner-frame.has-photo .owner-placeholder { display: none; }
-.owner-caption { padding-bottom: 4rem !important; }
 .owner-frame:not(.has-photo) img { display: none; }
 .owner-file-tag {
   position: absolute; top: 14px; left: 14px; z-index: 2;

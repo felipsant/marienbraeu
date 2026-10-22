@@ -258,6 +258,7 @@
         '<span class="dish-price">' + price(d.price) + '</span></div>' +
         (size ? '<p class="dish-meta">' + escapeHtml(size) + '</p>' : '') +
         '<p class="dish-desc">' + escapeHtml(copy.desc) + '</p>' +
+        (d.allergens ? '<p class="text-[11px] mt-1 tracking-wide" style="color:var(--muted);opacity:0.85">Allergene: ' + escapeHtml(d.allergens) + '</p>' : '') +
         '<div class="flex flex-wrap gap-1.5 mt-auto pt-1">' + tags + '</div>' +
         '</article>';
     }).join('');
