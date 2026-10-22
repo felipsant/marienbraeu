@@ -221,13 +221,14 @@
      Optional photos: use real images when present, keep illustrations otherwise
      ------------------------------------------------------------------------ */
   function probe(src, ok) {
+    if (!src || src === "undefined") return;
     var img = new Image();
     img.onload = function () { if (img.naturalWidth > 0) ok(src); };
     img.src = src;
   }
 
   var heroPhoto = $('[data-hero-photo]');
-  if (heroPhoto) probe(heroPhoto.dataset.src, function (src) {
+  if (heroPhoto && heroPhoto.dataset.src) probe(heroPhoto.dataset.src, function (src) {
     heroPhoto.style.backgroundImage = 'url("' + src + '")';
     heroPhoto.classList.add('is-loaded');
   });

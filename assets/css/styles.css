@@ -41,12 +41,21 @@ html {
 
 body {
   margin: 0;
+  width: 100%;
+  max-width: 100vw;
   background: var(--cream);
   color: var(--ink);
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: clip;
 }
 
 body.is-locked { overflow: hidden; }
@@ -281,10 +290,10 @@ img, svg { display: block; max-width: 100%; }
   position: fixed; left: 0; right: 0; top: var(--header-h); bottom: 0;
   background: linear-gradient(180deg, rgba(30,19,12,.98), rgba(27,51,34,.98));
   padding: 1.5rem 16px 7rem; overflow-y: auto;
-  transform: translateY(-8px); opacity: 0; visibility: hidden;
+  transform: translateY(-4px); opacity: 0; visibility: hidden; pointer-events: none;
   transition: opacity .25s ease, transform .25s ease, visibility .25s;
 }
-.site-header.is-open .mobile-nav { opacity: 1; transform: none; visibility: visible; }
+.site-header.is-open .mobile-nav { opacity: 1; transform: none; visibility: visible; pointer-events: auto; }
 .mobile-nav a.m-link {
   display: flex; justify-content: space-between; align-items: center;
   padding: 1rem .25rem; color: var(--cream); text-decoration: none;
@@ -521,7 +530,7 @@ img, svg { display: block; max-width: 100%; }
   scrollbar-width: none; -webkit-overflow-scrolling: touch;
 }
 .pill-row::-webkit-scrollbar { display: none; }
-@media (min-width: 768px) { .pill-row { flex-wrap: wrap; justify-content: center; overflow: visible; } }
+@media (min-width: 640px) { .pill-row { flex-wrap: wrap; justify-content: center; overflow: visible; } }
 
 .pill {
   flex: none; min-height: 44px; padding: .55rem 1.15rem; border-radius: 999px;
@@ -622,10 +631,19 @@ img, svg { display: block; max-width: 100%; }
 /* --------------------------------------------------------------------------
    Reviews carousel
    -------------------------------------------------------------------------- */
+[data-carousel] {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
 .reviews-track {
   display: flex; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory;
   scroll-behavior: smooth; padding: 8px 2px 24px; scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
 }
 .reviews-track::-webkit-scrollbar { display: none; }
 .review {
