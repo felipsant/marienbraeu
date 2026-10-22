@@ -37,10 +37,10 @@ window.MB_MENU = [
     it: { name: 'Arrosto di maiale croccante', desc: 'Maiale stiriano con cotenna croccante, canederlo al tovagliolo, insalata tiepida di cavolo e speck e sugo d’arrosto.' }
   },
   {
-    cat: 'classics', price: 19.9, tags: ['regional'],
-    de: { name: 'Wiener Schnitzel vom Kalb', desc: 'In Butterschmalz goldgelb gebacken, mit Petersilerdäpfeln und Preiselbeeren.' },
-    en: { name: 'Veal Wiener Schnitzel', desc: 'Fried golden in clarified butter, with parsley potatoes and lingonberries.' },
-    it: { name: 'Wiener Schnitzel di vitello', desc: 'Fritta dorata nel burro chiarificato, con patate al prezzemolo e mirtilli rossi.' }
+    cat: 'classics', price: 14.5, tags: ['regional', 'house'],
+    de: { name: 'Wiener Schnitzel vom Schwein', desc: 'Traditionell in der Pfanne goldgelb herausgebacken, mit Petersilerdäpfeln und Preiselbeeren.' },
+    en: { name: 'Pork Wiener Schnitzel', desc: 'Traditionally pan-fried golden brown, served with parsley potatoes and lingonberries.' },
+    it: { name: 'Wiener Schnitzel di maiale', desc: 'Tradizionalmente dorata in padella, servita con patate al prezzemolo e mirtilli rossi.' }
   },
   {
     cat: 'classics', price: 13.9, tags: ['veg', 'house'],
