@@ -9,7 +9,7 @@
 
 set -euo pipefail
 
-REPO="santicartoons/marienbraeu" # OWNER/NAME on github.com
+REPO="felipsant/marienbraeu" # OWNER/NAME on github.com
 URL=""                          # alternative: an existing repo URL (https or ssh)
 INVITE=""                       # GitHub username of the owner to invite
 PERMISSION="admin"              # collaborator permission: pull|triage|push|maintain|admin
