@@ -186,8 +186,10 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
+  var mobileNav = $('#mobile-nav');
   function setMenu(open) {
     header.classList.toggle('is-open', open);
+    if (mobileNav) mobileNav.classList.toggle('is-open', open);
     toggle.setAttribute('aria-expanded', String(open));
     document.body.classList.toggle('is-locked', open);
   }

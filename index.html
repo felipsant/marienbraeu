@@ -172,35 +172,35 @@
         </button>
       </div>
     </div>
-
-    <!-- Mobile Drawer navigation -->
-    <div class="mobile-nav min-[1220px]:hidden" id="mobile-nav" data-mobile-nav>
-      <nav aria-label="Mobile Navigation">
-        <a class="m-link" href="#speisekarte"><b data-i18n="nav.menu">Speisekarte</b><span>01</span></a>
-        <a class="m-link" href="#ueber-uns"><b data-i18n="nav.about">Über Uns</b><span>02</span></a>
-        <a class="m-link" href="#brauhaus"><b data-i18n="nav.brewery">Brauhaus</b><span>03</span></a>
-        <a class="m-link" href="#bewertungen"><b data-i18n="nav.reviews">Bewertungen</b><span>04</span></a>
-        <a class="m-link" href="#gruppen"><b data-i18n="nav.groups">Gruppen &amp; Feiern</b><span>05</span></a>
-        <a class="m-link" href="#oeffnungszeiten"><b data-i18n="nav.hours">Öffnungszeiten</b><span>06</span></a>
-        <a class="m-link" href="#kontakt"><b data-i18n="nav.contact">Kontakt</b><span>07</span></a>
-      </nav>
-      <div class="grid gap-3 mt-8">
-        <button type="button" class="btn btn-copper w-full" data-open-reservation>
-          <svg><use href="#i-calendar"/></svg><span data-i18n="cta.reserve">Tisch reservieren</span>
-        </button>
-        <a href="tel:+436642031953" class="btn btn-ghost-light w-full"><svg><use href="#i-phone"/></svg>+43 664 2031953</a>
-      </div>
-      <div class="lang-switch lang-switch--wrap mt-6 sm:hidden" role="group" aria-label="Sprache / Language / Lingua / Nyelv / Język / Limbă">
-        <button type="button" data-lang="de" aria-pressed="true" lang="de" title="Deutsch">DE</button>
-        <button type="button" data-lang="en" aria-pressed="false" lang="en" title="English">EN</button>
-        <button type="button" data-lang="it" aria-pressed="false" lang="it" title="Italiano">IT</button>
-        <button type="button" data-lang="hu" aria-pressed="false" lang="hu" title="Magyar">HU</button>
-        <button type="button" data-lang="pl" aria-pressed="false" lang="pl" title="Polski">PL</button>
-        <button type="button" data-lang="ro" aria-pressed="false" lang="ro" title="Română">RO</button>
-      </div>
-      <div class="live-pill mt-6 text-linen" style="display:flex;width:max-content;max-width:100%" data-live-status><span class="live-dot"></span><span data-live-text>—</span></div>
-    </div>
   </header>
+
+  <!-- Mobile Drawer navigation: placed outside <header> to avoid backdrop-filter containing block trap on mobile browsers -->
+  <div class="mobile-nav min-[1220px]:hidden" id="mobile-nav" data-mobile-nav>
+    <nav aria-label="Mobile Navigation">
+      <a class="m-link" href="#speisekarte"><b data-i18n="nav.menu">Speisekarte</b><span>01</span></a>
+      <a class="m-link" href="#ueber-uns"><b data-i18n="nav.about">Über Uns</b><span>02</span></a>
+      <a class="m-link" href="#brauhaus"><b data-i18n="nav.brewery">Brauhaus</b><span>03</span></a>
+      <a class="m-link" href="#bewertungen"><b data-i18n="nav.reviews">Bewertungen</b><span>04</span></a>
+      <a class="m-link" href="#gruppen"><b data-i18n="nav.groups">Gruppen &amp; Feiern</b><span>05</span></a>
+      <a class="m-link" href="#oeffnungszeiten"><b data-i18n="nav.hours">Öffnungszeiten</b><span>06</span></a>
+      <a class="m-link" href="#kontakt"><b data-i18n="nav.contact">Kontakt</b><span>07</span></a>
+    </nav>
+    <div class="grid gap-2.5 mt-6">
+      <button type="button" class="btn btn-copper w-full" data-open-reservation>
+        <svg><use href="#i-calendar"/></svg><span data-i18n="cta.reserve">Tisch reservieren</span>
+      </button>
+      <a href="tel:+436642031953" class="btn btn-ghost-light w-full"><svg><use href="#i-phone"/></svg>+43 664 2031953</a>
+    </div>
+    <div class="lang-switch lang-switch--wrap mt-5 sm:hidden" role="group" aria-label="Sprache / Language / Lingua / Nyelv / Język / Limbă">
+      <button type="button" data-lang="de" aria-pressed="true" lang="de" title="Deutsch">DE</button>
+      <button type="button" data-lang="en" aria-pressed="false" lang="en" title="English">EN</button>
+      <button type="button" data-lang="it" aria-pressed="false" lang="it" title="Italiano">IT</button>
+      <button type="button" data-lang="hu" aria-pressed="false" lang="hu" title="Magyar">HU</button>
+      <button type="button" data-lang="pl" aria-pressed="false" lang="pl" title="Polski">PL</button>
+      <button type="button" data-lang="ro" aria-pressed="false" lang="ro" title="Română">RO</button>
+    </div>
+    <div class="live-pill mt-5 text-linen" style="display:flex;width:max-content;max-width:100%" data-live-status><span class="live-dot"></span><span data-live-text>—</span></div>
+  </div>
 
   <main id="main">
     <!-- =================================================================

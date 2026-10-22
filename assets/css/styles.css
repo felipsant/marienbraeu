@@ -288,19 +288,39 @@ img, svg { display: block; max-width: 100%; }
 
 .mobile-nav {
   position: fixed; left: 0; right: 0; top: var(--header-h); bottom: 0;
-  background: linear-gradient(180deg, rgba(30,19,12,.98), rgba(27,51,34,.98));
-  padding: 1.5rem 16px 7rem; overflow-y: auto;
-  transform: translateY(-4px); opacity: 0; visibility: hidden; pointer-events: none;
-  transition: opacity .25s ease, transform .25s ease, visibility .25s;
+  height: calc(100vh - var(--header-h));
+  height: calc(100dvh - var(--header-h));
+  z-index: 45;
+  background: linear-gradient(180deg, rgba(28, 17, 10, .98) 0%, rgba(20, 36, 24, .98) 100%);
+  padding: 1.25rem 20px 4rem; overflow-y: auto; -webkit-overflow-scrolling: touch;
+  transform: translateY(-8px); opacity: 0; visibility: hidden; pointer-events: none;
+  transition: opacity .22s cubic-bezier(0.16, 1, 0.3, 1), transform .22s cubic-bezier(0.16, 1, 0.3, 1), visibility .22s;
 }
-.site-header.is-open .mobile-nav { opacity: 1; transform: none; visibility: visible; pointer-events: auto; }
+.mobile-nav.is-open,
+.site-header.is-open ~ .mobile-nav {
+  opacity: 1; transform: none; visibility: visible; pointer-events: auto;
+}
 .mobile-nav a.m-link {
   display: flex; justify-content: space-between; align-items: center;
-  padding: 1rem .25rem; color: var(--cream); text-decoration: none;
-  font-family: "Playfair Display", Georgia, serif; font-size: 1.5rem;
-  border-bottom: 1px solid rgba(250, 246, 240, .1);
+  padding: .7rem .25rem; color: var(--cream); text-decoration: none;
+  font-family: "Playfair Display", Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  border-bottom: 1px solid rgba(250, 246, 240, .09);
+  transition: color .15s ease, padding-left .15s ease;
 }
-.mobile-nav a.m-link span { color: var(--copper); font-family: "Inter", sans-serif; font-size: .8rem; letter-spacing: .2em; }
+.mobile-nav a.m-link:hover,
+.mobile-nav a.m-link:active {
+  color: var(--amber);
+  padding-left: .35rem;
+}
+.mobile-nav a.m-link span {
+  color: var(--copper); font-family: "Inter", sans-serif; font-size: .75rem; letter-spacing: .2em; font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+}
 
 /* --------------------------------------------------------------------------
    Hero
