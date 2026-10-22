@@ -214,6 +214,11 @@ window.MB_I18N = {
     'nearby.c3.title': 'Close to Graz & Family-Friendly',
     'nearby.c3.dist': '10–12 minutes from Graz city centre',
     'nearby.c3.desc': 'Escape into the green: Fast access via St. Peter, leafy chestnut beer garden, safe open space for kids, on-site parking, and hearty Styrian cuisine for the whole family.',
+    'nearby.mapsBtn': 'Open on Google Maps',
+    'nearby.marienbraeuMaps': 'Get directions to Marienbräu',
+    'nearby.c1.tag': 'Church & Art',
+    'nearby.c2.tag': 'Castle & Animals',
+    'nearby.c3.tag': 'Family & Dining',
 
     'contact.address': 'Address',
     'contact.phone': 'Phone',
@@ -445,6 +450,11 @@ window.MB_I18N = {
     'nearby.c3.title': 'Vicino a Graz & Ideale per Famiglie',
     'nearby.c3.dist': '10–12 minuti dal centro di Graz',
     'nearby.c3.desc': 'Una gita nel verde: Collegamento rapido via St. Peter, giardino ombreggiato da castagni, spazio sicuro per i bambini, parcheggio e cucina stiriana per tutta la famiglia.',
+    'nearby.mapsBtn': 'Apri su Google Maps',
+    'nearby.marienbraeuMaps': 'Indicazioni per Marienbräu',
+    'nearby.c1.tag': 'Chiesa & Arte',
+    'nearby.c2.tag': 'Castello & Animali',
+    'nearby.c3.tag': 'Famiglia & Tavola',
 
     'contact.address': 'Indirizzo',
     'contact.phone': 'Telefono',
