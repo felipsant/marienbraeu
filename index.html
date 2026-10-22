@@ -442,8 +442,9 @@
             <button type="button" class="pill" data-filter="all" aria-pressed="true"><span data-i18n="menu.cat.all">Alle</span></button>
             <button type="button" class="pill" data-filter="classics" aria-pressed="false"><span data-i18n="menu.cat.classics">Warme Speisen</span></button>
             <button type="button" class="pill" data-filter="jause" aria-pressed="false"><span data-i18n="menu.cat.jause">Für den kleinen Hunger</span></button>
-            <button type="button" class="pill" data-filter="salads" aria-pressed="false"><span data-i18n="menu.cat.salads">Salate &amp; Suppen</span></button>
-            <button type="button" class="pill" data-filter="dessert" aria-pressed="false"><span data-i18n="menu.cat.dessert">Mehlspeisen</span></button>
+            <button type="button" class="pill" data-filter="soups" aria-pressed="false"><span data-i18n="menu.cat.soups">Suppen</span></button>
+            <button type="button" class="pill" data-filter="salads" aria-pressed="false"><span data-i18n="menu.cat.salads">Marienbräu Salate</span></button>
+            <button type="button" class="pill" data-filter="dessert" aria-pressed="false"><span data-i18n="menu.cat.dessert">Hausgemachte Mehlspeisen</span></button>
             <button type="button" class="pill" data-filter="brew" aria-pressed="false"><span data-i18n="menu.cat.brew">Aus dem Braukessel</span></button>
           </div>
         </div>
@@ -461,6 +462,14 @@
               <svg style="width:14px;height:14px"><use href="#i-camera"/></svg><span>Originale Speisekarte als Foto ansehen</span>
             </a>
           </div>
+        </div>
+
+        <!-- Allergeninformation gemäß Codex-Empfehlung verbatim from physical menu -->
+        <div class="mt-6 p-4 rounded-xl text-xs max-w-2xl mx-auto reveal" style="background:rgba(44,24,16,0.04);border:1px solid rgba(44,24,16,0.1);color:var(--muted)">
+          <p class="font-semibold text-center mb-1.5" style="color:var(--walnut)" data-i18n="menu.codexTitle">Allergeninformation gemäß Codex-Empfehlung</p>
+          <p class="text-center leading-relaxed" data-i18n="menu.codexList">
+            <strong>A</strong> Glutenhaltiges Getreide · <strong>B</strong> Krebstiere · <strong>C</strong> Eier · <strong>D</strong> Fisch · <strong>E</strong> Erdnuss · <strong>F</strong> Soja · <strong>G</strong> Milch oder Laktose · <strong>H</strong> Schalenfrüchte · <strong>L</strong> Sellerie · <strong>M</strong> Senf · <strong>N</strong> Sesam · <strong>O</strong> Sulfite · <strong>P</strong> Lupinen · <strong>R</strong> Weichtiere
+          </p>
         </div>
 
         <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-x-8 gap-y-3 text-sm reveal" style="color:var(--muted)">
