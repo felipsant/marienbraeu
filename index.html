@@ -868,48 +868,67 @@
             <p class="text-sm mt-2" style="color:var(--muted)" data-i18n="nearby.intro">Verbinden Sie Ihren Besuch im Marienbräu mit den schönsten Sehenswürdigkeiten der Region.</p>
           </div>
 
-          <div class="grid md:grid-cols-3 gap-6">
-            <article class="flex flex-col p-4 sm:p-5 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-lg" style="background:#fff;border:1px solid rgba(44,24,16,0.08);box-shadow:0 4px 16px rgba(44,24,16,0.04)">
-              <div class="relative h-48 -mx-4 -mt-4 sm:-mx-5 sm:-mt-5 mb-4 overflow-hidden rounded-t-2xl" style="background:#f3ece2">
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <!-- 1. Basilika Mariatrost (Most important pilgrimage church) -->
+            <article class="flex flex-col p-4 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-lg" style="background:#fff;border:1px solid rgba(44,24,16,0.08);box-shadow:0 4px 16px rgba(44,24,16,0.04)">
+              <div class="relative h-44 -mx-4 -mt-4 mb-3.5 overflow-hidden rounded-t-2xl" style="background:#f3ece2">
+                <img src="assets/img/basilika-mariatrost.jpg" alt="Basilika Mariatrost Graz" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy">
+                <span class="badge absolute top-2.5 right-2.5 text-[11px] shadow-md" style="background:rgba(18,11,6,0.88);color:#fff"><svg style="width:12px;height:12px"><use href="#i-star"/></svg><span data-i18n="nearby.c0.tag">Wallfahrtsort &amp; Barock</span></span>
+              </div>
+              <h4 class="font-display text-lg font-bold" style="color:var(--walnut)" data-i18n="nearby.c0.title">Basilika Mariatrost</h4>
+              <p class="text-xs font-semibold mt-0.5" style="color:var(--copper)" data-i18n="nearby.c0.dist">ca. 15 Autominuten</p>
+              <p class="text-xs mt-2 leading-relaxed" style="color:var(--muted)" data-i18n="nearby.c0.desc">Die bedeutendste Wallfahrtsbasilika der Steiermark: Erhaben auf dem Purberg thronend, berühmt für die markante Angelus-Stiege mit 216 Stufen und den Blick über Graz.</p>
+              <div class="mt-auto pt-3.5">
+                <a href="https://maps.google.com/?q=Basilika+Mariatrost,+Kirchplatz+8,+8044+Graz" target="_blank" rel="noopener" class="btn btn-ghost-dark btn-xs w-full justify-center">
+                  <svg style="width:13px;height:13px"><use href="#i-nav"/></svg><span data-i18n="nearby.mapsBtn">Auf Google Maps öffnen</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- 2. Rupertikirche Hohenrain (Famous local church on Rupertistraße) -->
+            <article class="flex flex-col p-4 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-lg" style="background:#fff;border:1px solid rgba(44,24,16,0.08);box-shadow:0 4px 16px rgba(44,24,16,0.04)">
+              <div class="relative h-44 -mx-4 -mt-4 mb-3.5 overflow-hidden rounded-t-2xl" style="background:#f3ece2">
                 <img src="assets/img/rupertikirche.jpg" alt="Rupertikirche Hohenrain" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy">
-                <span class="badge absolute top-3 right-3 text-xs shadow-md" style="background:rgba(18,11,6,0.85);color:#fff"><svg style="width:13px;height:13px"><use href="#i-mountain"/></svg><span data-i18n="nearby.c1.tag">Kirche &amp; Kunst</span></span>
+                <span class="badge absolute top-2.5 right-2.5 text-[11px] shadow-md" style="background:rgba(18,11,6,0.88);color:#fff"><svg style="width:12px;height:12px"><use href="#i-mountain"/></svg><span data-i18n="nearby.c1.tag">Kirche &amp; Kunst</span></span>
               </div>
               <h4 class="font-display text-lg font-bold" style="color:var(--walnut)" data-i18n="nearby.c1.title">Rupertikirche Hohenrain</h4>
-              <p class="text-xs font-semibold mt-1" style="color:var(--copper)" data-i18n="nearby.c1.dist">Nur 400 m (3 Gehminuten) entfernt</p>
-              <p class="text-sm mt-2.5 leading-relaxed" style="color:var(--muted)" data-i18n="nearby.c1.desc">Direkt an der Rupertistraße 121: Die berühmte Kirche beeindruckt Architektur- und Kunstfreunde mit den farbenprächtigen Glasfenstern des steirischen Meisters Rudolf Szyszkowitz.</p>
-              <div class="mt-auto pt-4">
-                <a href="https://maps.google.com/?q=Rupertikirche+Hohenrain,+Rupertistra%C3%9Fe+121,+8075+Hart+bei+Graz" target="_blank" rel="noopener" class="btn btn-ghost-dark btn-sm w-full justify-center">
-                  <svg style="width:14px;height:14px"><use href="#i-nav"/></svg><span data-i18n="nearby.mapsBtn">Auf Google Maps öffnen</span>
+              <p class="text-xs font-semibold mt-0.5" style="color:var(--copper)" data-i18n="nearby.c1.dist">Nur 400 m (3 Gehminuten)</p>
+              <p class="text-xs mt-2 leading-relaxed" style="color:var(--muted)" data-i18n="nearby.c1.desc">Direkt an der Rupertistraße 121: Die berühmte Kirche begeistert Kunstfreunde mit den farbenprächtigen Glasfenstern des steirischen Meisters Rudolf Szyszkowitz.</p>
+              <div class="mt-auto pt-3.5">
+                <a href="https://maps.google.com/?q=Rupertikirche+Hohenrain,+Rupertistra%C3%9Fe+121,+8075+Hart+bei+Graz" target="_blank" rel="noopener" class="btn btn-ghost-dark btn-xs w-full justify-center">
+                  <svg style="width:13px;height:13px"><use href="#i-nav"/></svg><span data-i18n="nearby.mapsBtn">Auf Google Maps öffnen</span>
                 </a>
               </div>
             </article>
 
-            <article class="flex flex-col p-4 sm:p-5 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-lg" style="background:#fff;border:1px solid rgba(44,24,16,0.08);box-shadow:0 4px 16px rgba(44,24,16,0.04)">
-              <div class="relative h-48 -mx-4 -mt-4 sm:-mx-5 sm:-mt-5 mb-4 overflow-hidden rounded-t-2xl" style="background:#f3ece2">
+            <!-- 3. Schloss Lustbühel & Weinberge -->
+            <article class="flex flex-col p-4 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-lg" style="background:#fff;border:1px solid rgba(44,24,16,0.08);box-shadow:0 4px 16px rgba(44,24,16,0.04)">
+              <div class="relative h-44 -mx-4 -mt-4 mb-3.5 overflow-hidden rounded-t-2xl" style="background:#f3ece2">
                 <img src="assets/img/schloss-lustbuehel.jpg" alt="Schloss Lustbühel & Weinberge" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy">
-                <span class="badge absolute top-3 right-3 text-xs shadow-md" style="background:rgba(18,11,6,0.85);color:#fff"><svg style="width:13px;height:13px"><use href="#i-leaf"/></svg><span data-i18n="nearby.c2.tag">Schloss &amp; Tiere</span></span>
+                <span class="badge absolute top-2.5 right-2.5 text-[11px] shadow-md" style="background:rgba(18,11,6,0.88);color:#fff"><svg style="width:12px;height:12px"><use href="#i-leaf"/></svg><span data-i18n="nearby.c2.tag">Schloss &amp; Tiere</span></span>
               </div>
-              <h4 class="font-display text-lg font-bold" style="color:var(--walnut)" data-i18n="nearby.c2.title">Schloss Lustbühel &amp; Weinberge</h4>
-              <p class="text-xs font-semibold mt-1" style="color:var(--copper)" data-i18n="nearby.c2.dist">ca. 2,5 km (5 Autominuten)</p>
-              <p class="text-sm mt-2.5 leading-relaxed" style="color:var(--muted)" data-i18n="nearby.c2.desc">Beliebtes Ausflugsziel mit barockem Schloss, herrlicher Aussicht auf Graz, Streichelzoo mit Ziegen und Schafen für die Kinder sowie Spazierwegen durch Obstgärten und Weinberge.</p>
-              <div class="mt-auto pt-4">
-                <a href="https://maps.google.com/?q=Schloss+Lustb%C3%BChel,+Lustb%C3%BChelstra%C3%9Fe,+8042+Graz" target="_blank" rel="noopener" class="btn btn-ghost-dark btn-sm w-full justify-center">
-                  <svg style="width:14px;height:14px"><use href="#i-nav"/></svg><span data-i18n="nearby.mapsBtn">Auf Google Maps öffnen</span>
+              <h4 class="font-display text-lg font-bold" style="color:var(--walnut)" data-i18n="nearby.c2.title">Schloss Lustbühel</h4>
+              <p class="text-xs font-semibold mt-0.5" style="color:var(--copper)" data-i18n="nearby.c2.dist">ca. 2,5 km (5 Autominuten)</p>
+              <p class="text-xs mt-2 leading-relaxed" style="color:var(--muted)" data-i18n="nearby.c2.desc">Beliebtes Ausflugsziel mit Barockschloss, herrlicher Aussicht auf Graz, Streichelzoo mit Ziegen und Schafen für Kinder sowie Spazierwegen durch Obstgärten und Weinberge.</p>
+              <div class="mt-auto pt-3.5">
+                <a href="https://maps.google.com/?q=Schloss+Lustb%C3%BChel,+Lustb%C3%BChelstra%C3%9Fe,+8042+Graz" target="_blank" rel="noopener" class="btn btn-ghost-dark btn-xs w-full justify-center">
+                  <svg style="width:13px;height:13px"><use href="#i-nav"/></svg><span data-i18n="nearby.mapsBtn">Auf Google Maps öffnen</span>
                 </a>
               </div>
             </article>
 
-            <article class="flex flex-col p-4 sm:p-5 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-lg" style="background:#fff;border:1px solid rgba(44,24,16,0.08);box-shadow:0 4px 16px rgba(44,24,16,0.04)">
-              <div class="relative h-48 -mx-4 -mt-4 sm:-mx-5 sm:-mt-5 mb-4 overflow-hidden rounded-t-2xl" style="background:#f3ece2">
-                <img src="assets/img/graz-huegelland.jpg" alt="Nahe Graz & ideal für Familien" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy">
-                <span class="badge absolute top-3 right-3 text-xs shadow-md" style="background:rgba(18,11,6,0.85);color:#fff"><svg style="width:13px;height:13px"><use href="#i-heart"/></svg><span data-i18n="nearby.c3.tag">Familie &amp; Einkehr</span></span>
+            <!-- 4. Grazer Schlossberg & Einkehr im Marienbräu -->
+            <article class="flex flex-col p-4 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-lg" style="background:#fff;border:1px solid rgba(44,24,16,0.08);box-shadow:0 4px 16px rgba(44,24,16,0.04)">
+              <div class="relative h-44 -mx-4 -mt-4 mb-3.5 overflow-hidden rounded-t-2xl" style="background:#f3ece2">
+                <img src="assets/img/grazer-schlossberg.jpg" alt="Grazer Schlossberg Uhrturm" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy">
+                <span class="badge absolute top-2.5 right-2.5 text-[11px] shadow-md" style="background:rgba(18,11,6,0.88);color:#fff"><svg style="width:12px;height:12px"><use href="#i-heart"/></svg><span data-i18n="nearby.c4.tag">Welterbe &amp; Gastgarten</span></span>
               </div>
-              <h4 class="font-display text-lg font-bold" style="color:var(--walnut)" data-i18n="nearby.c3.title">Nahe Graz &amp; ideal für Familien</h4>
-              <p class="text-xs font-semibold mt-1" style="color:var(--copper)" data-i18n="nearby.c3.dist">10–12 Minuten von Graz-Zentrum</p>
-              <p class="text-sm mt-2.5 leading-relaxed" style="color:var(--muted)" data-i18n="nearby.c3.desc">Raus ins Grüne: Schnelle Anbindung über St. Peter, schattiger Gastgarten unter Kastanienbäumen, viel Freiraum für Kinder, Parkplätze vor Ort und steirische Küche für die ganze Familie.</p>
-              <div class="mt-auto pt-4">
-                <a href="https://maps.app.goo.gl/rvDNVtdcPYVDybdy7" target="_blank" rel="noopener" class="btn btn-copper btn-sm w-full justify-center">
-                  <svg style="width:14px;height:14px"><use href="#i-pin"/></svg><span data-i18n="nearby.marienbraeuMaps">Marienbräu Route starten</span>
+              <h4 class="font-display text-lg font-bold" style="color:var(--walnut)" data-i18n="nearby.c4.title">Grazer Schlossberg &amp; Einkehr</h4>
+              <p class="text-xs font-semibold mt-0.5" style="color:var(--copper)" data-i18n="nearby.c4.dist">12–15 Min. von Graz-Zentrum</p>
+              <p class="text-xs mt-2 leading-relaxed" style="color:var(--muted)" data-i18n="nearby.c4.desc">Vom Grazer Uhrturm direkt ins Grüne: Schnelle Anbindung über St. Peter, schattiger Gastgarten unter Kastanienbäumen, Parkplätze vor Ort und steirische Küche für die Familie.</p>
+              <div class="mt-auto pt-3.5">
+                <a href="https://maps.app.goo.gl/rvDNVtdcPYVDybdy7" target="_blank" rel="noopener" class="btn btn-copper btn-xs w-full justify-center">
+                  <svg style="width:13px;height:13px"><use href="#i-pin"/></svg><span data-i18n="nearby.marienbraeuMaps">Marienbräu Route starten</span>
                 </a>
               </div>
             </article>
