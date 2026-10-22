@@ -423,6 +423,8 @@
 
   document.addEventListener('click', function (e) {
     if (e.target.closest('[data-open-reservation]')) { e.preventDefault(); prepareReservation(); openModal('reservation'); }
+    var openM = e.target.closest('[data-open-modal]');
+    if (openM) { e.preventDefault(); openModal(openM.dataset.openModal); }
     if (e.target.closest('[data-close-modal]')) closeModal();
     var legal = e.target.closest('[data-open-legal]');
     if (legal) { e.preventDefault(); showLegal(legal.dataset.openLegal); }

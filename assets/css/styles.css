@@ -368,6 +368,31 @@ img, svg { display: block; max-width: 100%; }
     var(--cream-2);
 }
 
+/* Authentic parchment & watermark background derived from the physical menu card */
+#speisekarte {
+  position: relative;
+  background-color: #faf6f0;
+  background-image:
+    linear-gradient(180deg, rgba(250,246,240,0.92) 0%, rgba(246,239,228,0.95) 100%),
+    url('../img/menu-bg-parchment.jpg');
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#speisekarte .dish {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(200, 109, 59, 0.22);
+  box-shadow: 0 4px 12px rgba(44, 24, 16, 0.04), 0 16px 32px -16px rgba(44, 24, 16, 0.08);
+}
+
+#speisekarte .dish:hover {
+  transform: translateY(-4px);
+  border-color: rgba(200, 109, 59, 0.45);
+  box-shadow: 0 12px 30px -10px rgba(200, 109, 59, 0.22), 0 20px 40px -18px rgba(44, 24, 16, 0.12);
+}
+
 .wood-grain {
   background-color: var(--walnut);
   background-image:

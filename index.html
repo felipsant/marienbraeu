@@ -433,9 +433,22 @@
     <section class="section section--paper" id="speisekarte" aria-labelledby="menu-title">
       <div class="container-x">
         <div class="text-center max-w-2xl mx-auto reveal">
+          <div class="flex justify-center mb-3">
+            <img src="assets/img/crest-gold.jpg" alt="Marienbräu Wappen" class="h-20 w-auto object-contain rounded-2xl shadow-sm border border-amber-900/10 p-1 bg-amber-50/70 transition-transform duration-300 hover:scale-105">
+          </div>
           <p class="eyebrow justify-center" data-i18n="menu.eyebrow">Herzlich Willkommen im Marienbräu! Speis und Trank</p>
-          <h2 id="menu-title" class="section-title mt-4" style="color:var(--walnut)" data-i18n="menu.title">Unsere Speisekarte</h2>
+          <h2 id="menu-title" class="section-title mt-3" style="color:var(--walnut)" data-i18n="menu.title">Unsere Speisekarte</h2>
           <p class="mt-4" style="color:var(--muted)" data-i18n="menu.intro">Ehrliche steirische Wirtshausküche mit Zutaten von Bauern aus der Region — dazu unser Bier, frisch aus dem Kupferkessel.</p>
+
+          <div class="mt-6 inline-flex flex-wrap items-center justify-center gap-3 p-2 px-5 rounded-full bg-white/85 border border-amber-800/15 shadow-sm text-xs">
+            <span class="inline-flex items-center gap-1.5 font-semibold" style="color:var(--walnut)">
+              <svg style="width:14px;height:14px;color:var(--copper)"><use href="#i-camera"/></svg>
+              <span data-i18n="menu.cardHint">Originale Speisekarte aus dem Gasthaus:</span>
+            </span>
+            <button type="button" class="inline-flex items-center gap-1 font-bold underline cursor-pointer hover:opacity-80" style="color:var(--copper)" data-open-modal="menu-photo">
+              <span data-i18n="menu.openPhotoModal">Foto in Großansicht öffnen</span> →
+            </button>
+          </div>
         </div>
 
         <div class="mt-10 reveal">
@@ -455,13 +468,26 @@
           <noscript><p>Bitte JavaScript aktivieren, um die Speisekarte zu sehen — oder rufen Sie uns an: +43 664 2031953.</p></noscript>
         </div>
 
-        <!-- Regional supplier transparency note from physical menu -->
-        <div class="mt-10 p-5 rounded-2xl text-center text-sm max-w-2xl mx-auto reveal" style="background:rgba(200,109,59,0.07);border:1px solid rgba(200,109,59,0.22);color:var(--walnut)">
-          <p class="font-medium leading-relaxed" data-i18n="menu.suppliers">🌱 <strong>Regionalität &amp; Frische:</strong> Uns sind frische Produkte sehr wichtig, weshalb wir unser Fleisch sowie unser Gemüse täglich frisch von der <strong>Fleischhauerei Schönberger, Raaba</strong> und <strong>Johannes Kapper Steirergemüse, Hart bei Graz</strong> beziehen.</p>
-          <div class="mt-3">
-            <a href="assets/img/1000052599.jpg" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold underline" style="color:var(--copper)" data-i18n="menu.originalPhoto">
-              <svg style="width:14px;height:14px"><use href="#i-camera"/></svg><span>Originale Speisekarte als Foto ansehen</span>
-            </a>
+        <!-- Regional supplier transparency note from physical menu with thumbnail -->
+        <div class="mt-10 p-5 sm:p-6 rounded-2xl text-sm max-w-2xl mx-auto reveal relative overflow-hidden" style="background:rgba(255,255,255,0.92);border:1px solid rgba(200,109,59,0.25);box-shadow:0 6px 20px rgba(44,24,16,0.05);color:var(--walnut)">
+          <div class="flex flex-col sm:flex-row items-center gap-4 text-left">
+            <div class="flex-shrink-0 cursor-pointer group relative" data-open-modal="menu-photo" title="Klicken für Großansicht">
+              <div class="w-20 sm:w-24 rounded-xl overflow-hidden shadow-md border border-amber-900/15 transform transition-transform group-hover:scale-105">
+                <img src="assets/img/speisekarte-thumb.jpg" alt="Speisekarte Foto Vorschau" class="w-full h-auto object-cover" loading="lazy">
+              </div>
+              <span class="badge absolute -bottom-1.5 -right-1.5 text-[9px] shadow px-1.5 py-0.5" style="background:var(--copper);color:#fff"><svg style="width:10px;height:10px"><use href="#i-camera"/></svg><span>Zoom</span></span>
+            </div>
+            <div class="flex-1">
+              <p class="font-medium leading-relaxed" data-i18n="menu.suppliers">🌱 <strong>Regionalität &amp; Frische:</strong> Uns sind frische Produkte sehr wichtig, weshalb wir unser Fleisch sowie unser Gemüse täglich frisch von der <strong>Fleischhauerei Schönberger, Raaba</strong> und <strong>Johannes Kapper Steirergemüse, Hart bei Graz</strong> beziehen.</p>
+              <div class="mt-2.5 flex flex-wrap items-center gap-3">
+                <button type="button" class="btn btn-copper btn-xs inline-flex items-center gap-1.5" data-open-modal="menu-photo">
+                  <svg style="width:13px;height:13px"><use href="#i-camera"/></svg><span data-i18n="menu.openPhotoModal">Foto in Großansicht öffnen</span>
+                </button>
+                <a href="assets/img/1000052599.jpg" target="_blank" rel="noopener" class="text-xs font-semibold underline" style="color:var(--muted)" data-i18n="menu.fullRes">
+                  (12MP Original)
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -1029,6 +1055,34 @@
         <button type="button" class="modal-close" data-close-modal aria-label="Schließen" data-i18n-attr="aria-label:res.close"><svg><use href="#i-x"/></svg></button>
       </div>
       <div class="p-6 sm:p-8 legal-body" data-legal-body></div>
+    </div>
+  </div>
+
+  <!-- Modal: Original Physical Menu Card Lightbox -->
+  <div class="modal" id="modal-menu-photo" role="dialog" aria-modal="true" aria-labelledby="menu-photo-title" aria-hidden="true" data-modal="menu-photo">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel max-w-4xl max-h-[92vh] overflow-y-auto">
+      <div class="modal-head flex items-center justify-between">
+        <div>
+          <p class="eyebrow eyebrow--light" data-i18n="menuPhoto.eyebrow">Aus der Gaststube</p>
+          <h2 id="menu-photo-title" class="font-display text-2xl mt-1" data-i18n="menuPhoto.title">Originale Speisekarte (Speis und Trank)</h2>
+        </div>
+        <button type="button" class="modal-close" data-close-modal aria-label="Schließen"><svg><use href="#i-x"/></svg></button>
+      </div>
+      <div class="p-4 sm:p-6 text-center">
+        <p class="text-sm mb-4" style="color:var(--muted)" data-i18n="menuPhoto.desc">Foto der gedruckten Speisekarte aus dem Marienbräu — 100% originalgetreu.</p>
+        <div class="rounded-2xl overflow-hidden shadow-2xl border border-amber-900/15 bg-stone-900 inline-block max-w-full">
+          <img src="assets/img/speisekarte-foto-web.jpg" alt="Originale Speisekarte Marienbräu Foto" class="w-full max-h-[70vh] object-contain mx-auto" loading="lazy">
+        </div>
+        <div class="mt-5 flex flex-wrap gap-3 justify-center">
+          <a href="assets/img/1000052599.jpg" target="_blank" rel="noopener" class="btn btn-copper btn-sm">
+            <svg style="width:14px;height:14px"><use href="#i-external"/></svg><span data-i18n="menuPhoto.viewOriginal">Foto in voller 12MP-Auflösung öffnen</span>
+          </a>
+          <button type="button" class="btn btn-ghost-dark btn-sm" data-close-modal>
+            <span data-i18n="menuPhoto.close">Schließen</span>
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 
