@@ -558,18 +558,52 @@
       inputs.forEach(function (input) { if (!validateField(input) && !firstBad) firstBad = input; });
       if (firstBad) { firstBad.focus(); return; }
 
-      /* Template: no backend is wired up. Hook a mail service / booking API in here,
-         e.g. fetch('/api/reservation', { method: 'POST', body: new FormData(form) }). */
+      /* Client-side static reservation mailer: 0 API, 0 server.
+         Fills a complete structured email over the user's computer and opens it to marienbraeu@gmx.at */
       var data = new FormData(form);
       var guests = Number(data.get('guests'));
       var dateLabel = parseIsoDate(data.get('date')).toLocaleDateString(LOCALES[lang], {
-        weekday: 'long', day: 'numeric', month: 'long'
+        weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'
       });
-      showToast(t('toast.title'), t('toast.text') + ' ' + t('toast.detail', {
-        date: dateLabel,
-        time: data.get('time'),
-        guests: guests === 1 ? t('res.guest1') : t('res.guestN', { n: guests })
-      }));
+      var name = (data.get('name') || '').trim();
+      var email = (data.get('email') || '').trim();
+      var phone = (data.get('phone') || '').trim();
+      var time = (data.get('time') || '').trim();
+      var seatVal = data.get('seat') || 'egal';
+      var seatNames = {
+        stube: { de: 'Gaststube (drinnen)', en: 'Inside dining room (Gaststube)', it: 'Sala interna (Gaststube)' },
+        garten: { de: 'Gastgarten (draußen)', en: 'Beer garden (Gastgarten)', it: 'Giardino all’aperto (Gastgarten)' },
+        egal: { de: 'Keine Präferenz / egal', en: 'No preference', it: 'Nessuna preferenza' }
+      };
+      var seatLabel = (seatNames[seatVal] && seatNames[seatVal][lang]) || seatNames[seatVal].de;
+      var notes = (data.get('notes') || '').trim() || (lang === 'de' ? 'Keine' : (lang === 'it' ? 'Nessuna' : 'None'));
+      var guestLabel = guests === 1 ? t('res.guest1') : t('res.guestN', { n: guests });
+
+      var subject = 'Tischreservierung Marienbräu: ' + name + ' – ' + dateLabel + ' um ' + time + ' Uhr (' + guestLabel + ')';
+      var body = 'Hallo Marienbräu-Team,\n\n' +
+        'ich möchte gerne einen Tisch bei Ihnen reservieren:\n\n' +
+        '• Name: ' + name + '\n' +
+        '• Telefon: ' + phone + '\n' +
+        '• E-Mail: ' + email + '\n' +
+        '• Datum: ' + dateLabel + '\n' +
+        '• Uhrzeit: ' + time + ' Uhr\n' +
+        '• Personenanzahl: ' + guestLabel + '\n' +
+        '• Sitzplatzwunsch: ' + seatLabel + '\n' +
+        '• Besondere Wünsche / Anmerkungen: ' + notes + '\n\n' +
+        'Bitte um kurze Bestätigung dieser Reservierungsanfrage.\n\n' +
+        'Mit freundlichen Grüßen,\n' + name;
+
+      var mailtoUrl = 'mailto:marienbraeu@gmx.at?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+
+      // Trigger user\'s local email client on their computer/phone
+      window.location.href = mailtoUrl;
+
+      showToast(
+        t('toast.title'),
+        t('toast.text') + '<br><span class="text-xs opacity-90">' + t('toast.detail', { date: dateLabel, time: time, guests: guestLabel }) + '</span>',
+        mailtoUrl
+      );
+
       form.reset();
       guestSelect.value = '2';
       renderTimes();
@@ -583,12 +617,16 @@
      ------------------------------------------------------------------------ */
   var toast = $('[data-toast]');
   var toastTimer = null;
-  function showToast(title, text) {
+  function showToast(title, text, mailtoUrl) {
     $('[data-toast-title]', toast).textContent = title;
-    $('[data-toast-text]', toast).textContent = text;
+    var bodyHtml = text;
+    if (mailtoUrl) {
+      bodyHtml += '<div class="mt-3 pt-2 border-t border-white/20"><a href="' + mailtoUrl + '" class="inline-flex items-center gap-1.5 underline font-bold text-xs" style="color:var(--amber)"><svg style="width:14px;height:14px"><use href="#i-mail"/></svg><span>' + escapeHtml(t('toast.reopen') || 'E-Mail nochmals öffnen') + '</span></a></div>';
+    }
+    $('[data-toast-text]', toast).innerHTML = bodyHtml;
     toast.classList.add('is-visible');
     clearTimeout(toastTimer);
-    toastTimer = setTimeout(function () { toast.classList.remove('is-visible'); }, 8000);
+    toastTimer = setTimeout(function () { toast.classList.remove('is-visible'); }, 14000);
   }
   $('[data-toast-close]').addEventListener('click', function () { toast.classList.remove('is-visible'); });
 
