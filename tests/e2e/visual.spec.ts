@@ -6,7 +6,9 @@ import { HIDE_FIXED_CHROME_CSS, LANGS, openSite, revealEverything } from '../sup
  * blur, whose edge pixels vary by a few hundred pixels between two captures of the
  * very same build. They get a 1% tolerance; section tiles and the DOM are exact.
  */
-const FIXED_CHROME = { maxDiffPixelRatio: 0.01 };
+// Playwright applies the smaller of maxDiffPixels and maxDiffPixelRatio, so the
+// config-wide `maxDiffPixels: 0` has to be lifted for the ratio to take effect.
+const FIXED_CHROME = { maxDiffPixels: Number.POSITIVE_INFINITY, maxDiffPixelRatio: 0.01 };
 
 /**
  * Visual and DOM baseline. Run once against the reference build with
@@ -48,7 +50,8 @@ for (const lang of LANGS) {
             viewport.height - y,
             Math.round(box.height - k * viewport.height),
           );
-          await expect(page).toHaveScreenshot(`${lang}/section-${id}-${k}.png`, {
+          // soft: keep comparing the remaining tiles after a mismatch
+          await expect.soft(page).toHaveScreenshot(`${lang}/section-${id}-${k}.png`, {
             clip: { x: 0, y, width: viewport.width, height },
           });
         }
