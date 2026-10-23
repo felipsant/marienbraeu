@@ -1,0 +1,55 @@
+/* --------------------------------------------------------------------------
+   Opening hours
+   -------------------------------------------------------------------------- */
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.hours-table th,
+.hours-table td {
+  padding: 0.95rem 0.25rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(30, 19, 12, 0.08);
+}
+.hours-table th {
+  font-weight: 600;
+}
+.hours-table td {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: var(--walnut);
+}
+.hours-table tr.is-today th,
+.hours-table tr.is-today td {
+  color: var(--copper-dark);
+}
+.hours-table tr.is-today th::after {
+  content: attr(data-today);
+  margin-left: 0.6rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--copper);
+  color: var(--white);
+  vertical-align: middle;
+}
+.hours-table tr.is-rest td {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.status-card {
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  color: var(--cream);
+  background:
+    radial-gradient(400px 200px at 100% 0%, rgba(229, 169, 59, 0.25), transparent 70%),
+    linear-gradient(150deg, var(--forest-2), var(--forest));
+  box-shadow: var(--shadow-deep);
+}
+.status-card .live-pill {
+  background: rgba(0, 0, 0, 0.25);
+}

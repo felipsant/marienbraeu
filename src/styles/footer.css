@@ -1,0 +1,20 @@
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background: #140c07;
+  color: rgba(250, 246, 240, 0.78);
+}
+.site-footer a {
+  color: rgba(250, 246, 240, 0.85);
+  text-decoration: none;
+}
+.site-footer a:hover {
+  color: var(--amber);
+}
+.site-footer h3 {
+  color: var(--cream);
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  margin-bottom: 0.9rem;
+}

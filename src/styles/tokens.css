@@ -1,0 +1,28 @@
+:root {
+  --walnut: #1e130c;
+  --walnut-2: #2a1b11;
+  --walnut-3: #3a2617;
+  --copper: #c86d3b;
+  --copper-light: #e08a55;
+  --copper-dark: #9c4f26;
+  --forest: #1b3322;
+  --forest-2: #24432d;
+  --cream: #faf6f0;
+  --cream-2: #f1e8da;
+  --amber: #e5a93b;
+  --amber-light: #f4c463;
+  --amber-dark: #d97706;
+  --white: #fff;
+  --ink: #2b1d14;
+  --muted: #7a6656;
+
+  --radius: 1.25rem;
+  --shadow-soft: 0 10px 30px -12px rgba(30, 19, 12, 0.35);
+  --shadow-deep: 0 30px 60px -20px rgba(30, 19, 12, 0.55);
+  --header-h: 58px;
+}
+@media (max-width: 639px) {
+  :root {
+    --header-h: 52px;
+  }
+}
