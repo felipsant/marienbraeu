@@ -126,6 +126,8 @@ export const hu: Messages = {
   'gallery.c5d': 'Burgonya- és galambbegysalátával, tökmagolajjal',
   'gallery.c6': 'A Mária-oszlop',
   'gallery.c6d': 'Barokk emlékmű az ajtónk előtt, kb. 1670–1680',
+  'gallery.c7': 'Érkezés Hart bei Grazba',
+  'gallery.c7d': 'Az utolsó kanyar a sörkert előtt',
 
   'reviews.eyebrow': 'Vélemények',
   'reviews.title': 'Amit vendégeink mondanak',
@@ -217,6 +219,7 @@ export const hu: Messages = {
   'footer.h4': 'H',
   'footer.links': 'Navigáció',
   'footer.rights': 'Minden jog fenntartva.',
+  'footer.credit': 'A weboldalt készítette:',
   'footer.imprint': 'Impresszum',
   'footer.privacy': 'Adatvédelem',
 
@@ -291,6 +294,7 @@ export const hu: Messages = {
   'legal.impressum.body':
     '<h3>Tulajdonos &amp; üzemeltető</h3><p>Marienbräu<br>Rupertistraße 80<br>8075 Hart bei Graz, Ausztria</p>' +
     '<p>Telefon: <a href="tel:+436642031953">+43 664 2031953</a><br>E-mail: <a href="mailto:marienbraeu@gmx.at">marienbraeu@gmx.at</a></p>' +
+    '<p>Weboldal-tervezés és fejlesztés: <a href="https://blog.santicartoons.ai" target="_blank" rel="noopener">santicartoons</a></p>' +
     '<h3>Cégadatok</h3><p>A jogi formát, cégjegyzékszámot, adószámot, iparhatóságot és a stájer kereskedelmi kamarai tagságot az üzemeltető egészíti ki (§ 5 ECG, § 25 MedienG).</p>' +
     '<p><em>Megjegyzés: ez az oldal sablon. Közzététel előtt kérjük, adja meg a teljes adatokat.</em></p>',
   'legal.privacy.title': 'Adatvédelem',

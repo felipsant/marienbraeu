@@ -127,6 +127,8 @@ export const pl: Messages = {
   'gallery.c5d': 'Z sałatką ziemniaczaną i roszponką z olejem z pestek dyni',
   'gallery.c6': 'Kolumna maryjna',
   'gallery.c6d': 'Barokowy zabytek przed naszymi drzwiami, ok. 1670–1680',
+  'gallery.c7': 'Przyjazd do Hart bei Graz',
+  'gallery.c7d': 'Ostatni zakręt przed ogródkiem piwnym',
 
   'reviews.eyebrow': 'Opinie',
   'reviews.title': 'Co mówią nasi goście',
@@ -219,6 +221,7 @@ export const pl: Messages = {
   'footer.h4': 'pon',
   'footer.links': 'Nawigacja',
   'footer.rights': 'Wszelkie prawa zastrzeżone.',
+  'footer.credit': 'Strona wykonana przez',
   'footer.imprint': 'Nota prawna',
   'footer.privacy': 'Prywatność',
 
@@ -293,6 +296,7 @@ export const pl: Messages = {
   'legal.impressum.body':
     '<h3>Właściciel &amp; operator</h3><p>Marienbräu<br>Rupertistraße 80<br>8075 Hart bei Graz, Austria</p>' +
     '<p>Telefon: <a href="tel:+436642031953">+43 664 2031953</a><br>E-mail: <a href="mailto:marienbraeu@gmx.at">marienbraeu@gmx.at</a></p>' +
+    '<p>Projekt i wykonanie strony internetowej: <a href="https://blog.santicartoons.ai" target="_blank" rel="noopener">santicartoons</a></p>' +
     '<h3>Dane firmy</h3><p>Forma prawna, numer w rejestrze handlowym, NIP UE, organ nadzoru handlowego i członkostwo w Izbie Gospodarczej Styrii zostaną uzupełnione przez operatora (§ 5 ECG, § 25 MedienG).</p>' +
     '<p><em>Uwaga: ta strona jest szablonem. Przed publikacją należy uzupełnić pełne dane.</em></p>',
   'legal.privacy.title': 'Prywatność',

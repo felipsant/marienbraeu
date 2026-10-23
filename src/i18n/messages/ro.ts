@@ -128,6 +128,8 @@ export const ro: Messages = {
   'gallery.c5d': 'Cu salată de cartofi și fetică, cu ulei de semințe de dovleac',
   'gallery.c6': 'Coloana Mariei',
   'gallery.c6d': 'Monument baroc în fața ușii noastre, cca. 1670–1680',
+  'gallery.c7': 'Sosirea în Hart bei Graz',
+  'gallery.c7d': 'Ultima curbă înainte de grădina de bere',
 
   'reviews.eyebrow': 'Recenzii',
   'reviews.title': 'Ce spun oaspeții noștri',
@@ -220,6 +222,7 @@ export const ro: Messages = {
   'footer.h4': 'Lu',
   'footer.links': 'Navigare',
   'footer.rights': 'Toate drepturile rezervate.',
+  'footer.credit': 'Site realizat de',
   'footer.imprint': 'Informații legale',
   'footer.privacy': 'Confidențialitate',
 
@@ -294,6 +297,7 @@ export const ro: Messages = {
   'legal.impressum.body':
     '<h3>Proprietar &amp; operator</h3><p>Marienbräu<br>Rupertistraße 80<br>8075 Hart bei Graz, Austria</p>' +
     '<p>Telefon: <a href="tel:+436642031953">+43 664 2031953</a><br>E-mail: <a href="mailto:marienbraeu@gmx.at">marienbraeu@gmx.at</a></p>' +
+    '<p>Design și dezvoltare site web: <a href="https://blog.santicartoons.ai" target="_blank" rel="noopener">santicartoons</a></p>' +
     '<h3>Date despre firmă</h3><p>Forma juridică, numărul de înregistrare, codul de TVA, autoritatea comercială și apartenența la Camera de Comerț a Stiriei vor fi completate de operator (§ 5 ECG, § 25 MedienG).</p>' +
     '<p><em>Notă: această pagină este un șablon. Vă rugăm să completați datele integrale înainte de publicare.</em></p>',
   'legal.privacy.title': 'Confidențialitate',

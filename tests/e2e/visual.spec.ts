@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test } from '../support/fixtures';
 import { HIDE_FIXED_CHROME_CSS, LANGS, openSite, revealEverything } from '../support/page';
 
 /**

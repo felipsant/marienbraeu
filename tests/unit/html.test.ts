@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { readdirSync } from 'node:fs';
+import { existsSync, readdirSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { read, ROOT } from '../support/files';
 
@@ -25,6 +25,29 @@ describe('index.html', () => {
     for (const u of local) expect(u, u).not.toMatch(/^\//);
     expect(local).toContain('src/styles/index.css');
     expect(local).toContain('src/main.ts');
+  });
+
+  it('loads the cookie-free GoatCounter script, async', () => {
+    expect(html).toContain(
+      '<script data-goatcounter="https://akatsuky.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>',
+    );
+  });
+
+  it('points every photo tile at an optimised photo that exists in public/assets/img', () => {
+    const photos = [...html.matchAll(/data-(?:photo|src)="(assets\/img\/[^"]+\.jpg)"/g)].map(
+      (m) => m[1] ?? '',
+    );
+    expect(photos.sort()).toEqual([
+      'assets/img/gallery-arrival.jpg',
+      'assets/img/gallery-garden.jpg',
+      'assets/img/gallery-prost.jpg',
+      'assets/img/hero.jpg',
+    ]);
+    for (const photo of photos) {
+      const stem = photo.replace(/\.jpg$/, '');
+      for (const file of [photo, `${stem}.webp`, `${stem}-640.jpg`, `${stem}-640.webp`])
+        expect(existsSync(resolve(ROOT, 'public', file)), file).toBe(true);
+    }
   });
 
   it('is built with a relative base so any sub-path works', () => {
