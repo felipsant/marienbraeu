@@ -222,6 +222,7 @@ export const it: Messages = {
   'footer.h4': 'lun',
   'footer.links': 'Navigazione',
   'footer.rights': 'Tutti i diritti riservati.',
+  'footer.credit': 'Sito web di',
   'footer.imprint': 'Note legali',
   'footer.privacy': 'Privacy',
 
@@ -296,6 +297,7 @@ export const it: Messages = {
   'legal.impressum.body':
     '<h3>Proprietario &amp; gestore</h3><p>Marienbräu<br>Rupertistraße 80<br>8075 Hart bei Graz, Austria</p>' +
     '<p>Telefono: <a href="tel:+436642031953">+43 664 2031953</a><br>E-mail: <a href="mailto:marienbraeu@gmx.at">marienbraeu@gmx.at</a></p>' +
+    '<p>Progettazione e sviluppo del sito web: <a href="https://blog.santicartoons.ai" target="_blank" rel="noopener">santicartoons</a></p>' +
     '<h3>Dati aziendali</h3><p>Forma giuridica, numero di registro delle imprese, partita IVA, autorità commerciale e iscrizione alla Camera di commercio saranno completati dal gestore (§ 5 ECG, § 25 MedienG).</p>' +
     '<p><em>Nota: questa pagina è un modello. Inserire i dati completi prima della pubblicazione.</em></p>',
   'legal.privacy.title': 'Privacy',
