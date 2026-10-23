@@ -120,9 +120,9 @@ export function t(key: MessageKey, vars?: Readonly<Record<string, string | numbe
  *  browser language, then the time zone, then English. */
 export function detectUserLanguage(): Lang {
   const saved = [store.get(LANG_KEY), store.get(LEGACY_LANG_KEY)].find(
-    (v) => v !== null && v !== '',
+    (value): value is string => value !== null && value !== '',
   );
-  if (saved !== undefined && saved !== null && isLang(saved)) return saved;
+  if (saved !== undefined && isLang(saved)) return saved;
   const preferred = navigator.languages.length > 0 ? navigator.languages : [navigator.language];
   for (const tag of preferred) {
     const primary = tag.toLowerCase().split(/[-_]/)[0] ?? '';

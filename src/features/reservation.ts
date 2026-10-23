@@ -22,7 +22,11 @@ function dateProblem(iso: string): Problem {
   return null;
 }
 
-const validators: Readonly<Record<string, (value: string) => Problem>> = {
+/** Validated in this order; the first invalid field gets focus. */
+const VALIDATED_FIELDS = ['name', 'email', 'phone', 'date', 'time', 'guests'] as const;
+type ValidatedField = (typeof VALIDATED_FIELDS)[number];
+
+const validators: Readonly<Record<ValidatedField, (value: string) => Problem>> = {
   name: (v) => (v.trim().length >= 2 ? null : 'err.name'),
   email: (v) => (/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()) ? null : 'err.email'),
   phone: (v) =>
@@ -47,10 +51,13 @@ function setError(input: Field, key: Problem): void {
   }
 }
 
+function isValidatedField(name: string): name is ValidatedField {
+  return (VALIDATED_FIELDS as readonly string[]).includes(name);
+}
+
 function validateField(input: Field): boolean {
-  const validate = validators[input.name];
-  if (!validate) return true;
-  const problem = validate(input.value);
+  if (!isValidatedField(input.name)) return true;
+  const problem = validators[input.name](input.value);
   setError(input, problem);
   return !problem;
 }
@@ -152,7 +159,7 @@ export function initReservation(): void {
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();
-    const fields = Object.keys(validators).map((name) => form.elements.namedItem(name) as Field);
+    const fields = VALIDATED_FIELDS.map((name) => form.elements.namedItem(name) as Field);
     const invalid = fields.filter((field) => !validateField(field));
     if (invalid[0]) {
       invalid[0].focus();
