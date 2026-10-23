@@ -8,7 +8,7 @@ import { HIDE_FIXED_CHROME_CSS, LANGS, openSite, revealEverything } from '../sup
  */
 // Playwright applies the smaller of maxDiffPixels and maxDiffPixelRatio, so the
 // config-wide `maxDiffPixels: 0` has to be lifted for the ratio to take effect.
-const FIXED_CHROME = { maxDiffPixels: Number.POSITIVE_INFINITY, maxDiffPixelRatio: 0.01 };
+const FIXED_CHROME = { maxDiffPixels: Number.MAX_SAFE_INTEGER, maxDiffPixelRatio: 0.01 };
 
 /**
  * Visual and DOM baseline. Run once against the reference build with
