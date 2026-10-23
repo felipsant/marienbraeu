@@ -61,7 +61,7 @@ export const de: Partial<Messages> = {
     '<h3>Medieninhaber &amp; Betreiber</h3><p>Marienbräu<br>Rupertistraße 80<br>8075 Hart bei Graz, Österreich</p>' +
     '<p>Telefon: <a href="tel:+436642031953">+43 664 2031953</a><br>E-Mail: <a href="mailto:marienbraeu@gmx.at">marienbraeu@gmx.at</a></p>' +
     '<p>Quellcode &amp; Repository: <a href="https://github.com/felipsant/marienbraeu" target="_blank" rel="noopener">github.com/felipsant/marienbraeu</a></p>' +
-    '<p>Webdesign &amp; Entwicklung: <a href="https://blog.santicartoons.ai" target="_blank" rel="noopener">santicartoons</a></p>' +
+    '<p>Webdesign &amp; Entwicklung: <a href="https://blog.santicartoons.ai/whoami/" target="_blank" rel="noopener">santicartoons</a></p>' +
     '<h3>Unternehmensangaben</h3><p>Rechtsform, Firmenbuchnummer, UID-Nummer, Gewerbebehörde und Mitgliedschaft bei der WKO Steiermark werden vom Betreiber ergänzt (§ 5 ECG, § 25 MedienG).</p>' +
     '<p><em>Hinweis: Diese Seite ist eine Vorlage. Bitte vor Veröffentlichung vollständige Angaben einsetzen.</em></p>',
   'legal.privacy.title': 'Datenschutz',

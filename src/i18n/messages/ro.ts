@@ -297,7 +297,7 @@ export const ro: Messages = {
   'legal.impressum.body':
     '<h3>Proprietar &amp; operator</h3><p>Marienbräu<br>Rupertistraße 80<br>8075 Hart bei Graz, Austria</p>' +
     '<p>Telefon: <a href="tel:+436642031953">+43 664 2031953</a><br>E-mail: <a href="mailto:marienbraeu@gmx.at">marienbraeu@gmx.at</a></p>' +
-    '<p>Design și dezvoltare site web: <a href="https://blog.santicartoons.ai" target="_blank" rel="noopener">santicartoons</a></p>' +
+    '<p>Design și dezvoltare site web: <a href="https://blog.santicartoons.ai/whoami/" target="_blank" rel="noopener">santicartoons</a></p>' +
     '<h3>Date despre firmă</h3><p>Forma juridică, numărul de înregistrare, codul de TVA, autoritatea comercială și apartenența la Camera de Comerț a Stiriei vor fi completate de operator (§ 5 ECG, § 25 MedienG).</p>' +
     '<p><em>Notă: această pagină este un șablon. Vă rugăm să completați datele integrale înainte de publicare.</em></p>',
   'legal.privacy.title': 'Confidențialitate',
