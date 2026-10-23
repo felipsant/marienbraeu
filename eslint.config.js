@@ -53,5 +53,10 @@ export default tseslint.config(
       '@typescript-eslint/restrict-template-expressions': ['error', { allowNumber: true }],
     },
   },
+  {
+    // Mirrors querySelector<T>: the type parameter only ever appears in the return type.
+    files: ['src/lib/dom.ts'],
+    rules: { '@typescript-eslint/no-unnecessary-type-parameters': 'off' },
+  },
   prettier,
 );

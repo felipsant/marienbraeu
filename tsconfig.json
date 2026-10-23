@@ -15,8 +15,7 @@
     "verbatimModuleSyntax": true,
     "isolatedModules": true,
     "skipLibCheck": true,
-    "noEmit": true,
-    "allowJs": true
+    "noEmit": true
   },
-  "include": ["src", "tests/e2e", "tests/support/page.ts", "*.config.ts"]
+  "include": ["src", "tests", "*.config.ts"]
 }

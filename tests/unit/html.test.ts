@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { read } from '../support/legacy-env';
+import { read } from '../support/files';
 
 const html = read('index.html');
 const css = read('assets/css/styles.css');
@@ -14,16 +14,16 @@ describe('index.html', () => {
   });
 
   it('references local assets with relative URLs only (subpath-safe)', () => {
-    const refs = [...html.matchAll(/\b(?:src|href)="([^"]+)"/g)].map((m) => m[1]);
+    const refs = [...html.matchAll(/\b(?:src|href)="([^"]+)"/g)].map((m) => m[1] ?? '');
     const local = refs.filter((u) => !/^(https?:|mailto:|tel:|data:|#)/.test(u));
     expect(local.length).toBeGreaterThan(5);
     for (const u of local) expect(u, u).not.toMatch(/^\//);
     expect(local).toContain('assets/css/styles.css');
-    expect(local).toContain('src/main.js');
+    expect(local).toContain('src/main.ts');
   });
 
-  it('loads menu.json relatively', () => {
-    expect(read('assets/js/app.js')).toContain("fetch('assets/data/menu.json')");
+  it('is built with a relative base so any sub-path works', () => {
+    expect(read('vite.config.ts')).toContain("base: './'");
   });
 
   it('uses https for every external resource', () => {
@@ -32,7 +32,7 @@ describe('index.html', () => {
   });
 
   it('exposes valid tel:, mailto: and Google Maps links', () => {
-    const hrefs = [...html.matchAll(/href="([^"]+)"/g)].map((m) => m[1]);
+    const hrefs = [...html.matchAll(/href="([^"]+)"/g)].map((m) => m[1] ?? '');
     expect(hrefs).toContain('tel:+436642031953');
     expect(hrefs.some((h) => h.startsWith('mailto:marienbraeu@gmx.at'))).toBe(true);
     expect(hrefs).toContain('https://maps.app.goo.gl/rvDNVtdcPYVDybdy7');

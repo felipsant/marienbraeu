@@ -2,7 +2,6 @@ dist
 node_modules
 package-lock.json
 public
-assets/js
 index.html
 tests/e2e/.snapshots
 assets/css
