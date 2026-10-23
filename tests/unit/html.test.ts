@@ -39,6 +39,7 @@ describe('index.html', () => {
     );
     expect(photos.sort()).toEqual([
       'assets/img/gallery-arrival.jpg',
+      'assets/img/gallery-beer.jpg',
       'assets/img/gallery-garden.jpg',
       'assets/img/gallery-kettle.jpg',
       'assets/img/gallery-prost.jpg',

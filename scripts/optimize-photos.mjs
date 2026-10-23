@@ -61,6 +61,13 @@ const PHOTOS = [
     widths: [640, 1280],
     crop: { ratio: 1.0, left: 0.1 },
   },
+  // the Marienbräu crest glass with fresh beer on the tavern table: "Frisch gezapft"
+  {
+    source: 'gallery-beer-original.jpg',
+    name: 'gallery-beer',
+    widths: [640, 1280],
+    crop: { ratio: 1.0 },
+  },
 ];
 
 /** Gentle white-balance shift: a touch more red, a touch less blue, a little more colour. */
