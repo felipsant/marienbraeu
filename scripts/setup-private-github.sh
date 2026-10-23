@@ -5,7 +5,7 @@
 # re-checks visibility before every push, refuses to run if GitHub Pages is
 # enabled, and never adds a Pages workflow, CNAME file or public deploy.
 #
-# It is a dry run unless --yes is given. See docs/OWNER_HANDOFF.md, part C.
+# It is a dry run unless --yes is given.
 
 set -euo pipefail
 
