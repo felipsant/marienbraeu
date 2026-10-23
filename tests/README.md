@@ -9,7 +9,7 @@ migration can be proven not to change anything.
 | e2e + visual (Playwright, Chromium) | `tests/e2e`  | the **e2e-runner** VM only | `npm run test:e2e:remote` |
 
 Browsers are not installed on the development box. `scripts/e2e-remote.sh` rsyncs the
-working tree to `claude@192.168.0.109`, runs `npm ci` and Playwright there, and keeps
+working tree to the runner specified in `$E2E_HOST`, runs `npm ci` and Playwright there, and keeps
 the snapshot sets in `~/mb-e2e/snapshots/<name>` on the runner. The runner has under
 1 GB of RAM, so the suite uses a single worker and no full-page screenshots.
 
