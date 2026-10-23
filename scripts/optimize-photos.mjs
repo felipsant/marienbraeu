@@ -21,9 +21,9 @@ const OUT_DIR = path.join(path.dirname(fileURLToPath(import.meta.url)), '../publ
 
 /**
  * `crop` is the part of the upright original to keep: `top` and `left` are fractions
- * of the height and width, `ratio` is width / height. Every source is wider than
- * `ratio` allows at full width, so the crop spans the full width unless `left` and
- * `width` say otherwise.
+ * of the height and width, `ratio` is width / height. The crop spans the full width
+ * when the source is too tall for `ratio`, and the full height when it is too wide, in
+ * which case `left` picks the horizontal slice.
  */
 const PHOTOS = [
   // tavern facade with the garden umbrellas: hero background (full 4:3 frame)
@@ -54,6 +54,13 @@ const PHOTOS = [
     widths: [640, 1280],
     crop: { ratio: 1.05, top: 0.14 },
   },
+  // the copper brew kettle on its tiled hearth: "Die Kupfer-Sudkessel"
+  {
+    source: 'PXL_20261023_145131052.jpg',
+    name: 'gallery-kettle',
+    widths: [640, 1280],
+    crop: { ratio: 1.0, left: 0.1 },
+  },
 ];
 
 /** Gentle white-balance shift: a touch more red, a touch less blue, a little more colour. */
@@ -73,11 +80,13 @@ async function renderPhoto(dir, photo) {
     .clone()
     .toBuffer({ resolveWithObject: true })
     .then((r) => r.info);
-  const { ratio, top = 0 } = photo.crop;
-  const cropHeight = Math.min(sourceHeight, Math.round(sourceWidth / ratio));
+  const { ratio, top = 0, left = 0 } = photo.crop;
+  const cropWidth = Math.min(sourceWidth, Math.round(sourceHeight * ratio));
+  const cropHeight = Math.min(sourceHeight, Math.round(cropWidth / ratio));
   const cropTop = Math.min(sourceHeight - cropHeight, Math.round(top * sourceHeight));
+  const cropLeft = Math.min(sourceWidth - cropWidth, Math.round(left * sourceWidth));
   const cropped = await upright
-    .extract({ left: 0, top: cropTop, width: sourceWidth, height: cropHeight })
+    .extract({ left: cropLeft, top: cropTop, width: cropWidth, height: cropHeight })
     .linear(WARM_GAIN, [0, 0, 0])
     .modulate({ saturation: SATURATION })
     .toBuffer();

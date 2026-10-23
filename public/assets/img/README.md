@@ -7,7 +7,7 @@ Until a file exists, the matching hand-drawn illustration is shown instead.
 |---|---|
 | `1000052599.jpg` | Owner / host portrait in "Über uns" (portrait, 4:5, ≥ 800×1000) |
 | `hero.jpg`, `hero-{640,1280}.jpg`, `hero{,-640,-1280}.webp` | Hero background, fades in over the illustration |
-| `gallery-kettle.jpg` | Gallery: copper brew kettles (large tile, square) |
+| `gallery-kettle*` | Gallery: copper brew kettles (large tile, square) |
 | `gallery-garden*` | Gallery: beer garden (wide, about 2.2:1) |
 | `gallery-beer.jpg` | Gallery: freshly tapped beer (square) |
 | `gallery-prost*` | Gallery: Prost & Gemütlichkeit (about 1.15:1) |
@@ -17,7 +17,7 @@ Until a file exists, the matching hand-drawn illustration is shown instead.
 
 ## Photos made by `scripts/optimize-photos.mjs`
 
-`hero`, `gallery-garden`, `gallery-prost` and `gallery-arrival` are generated from the phone
+`hero`, `gallery-garden`, `gallery-prost`, `gallery-arrival` and `gallery-kettle` are generated from the phone
 originals (never committed) with `node scripts/optimize-photos.mjs <folder with the originals>`:
 EXIF rotation, a gentle warm white balance, no metadata, WebP and JPEG at 640/1280 px
 (hero also 1920). The widest size has no width suffix (`hero.jpg`, `hero.webp`); the markup
