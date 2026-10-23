@@ -1,0 +1,23 @@
+/* Marienbräu — brand styles. Order matters: later files win at equal specificity. */
+@import './tokens.css';
+@import './base.css';
+@import './typography.css';
+@import './buttons.css';
+@import './header.css';
+@import './hero.css';
+@import './sections.css';
+@import './story.css';
+@import './menu.css';
+@import './brewhouse.css';
+@import './gallery.css';
+@import './reviews.css';
+@import './hours.css';
+@import './contact.css';
+@import './footer.css';
+@import './action-bar.css';
+@import './modal.css';
+@import './motion.css';
+
+/* Layout utilities, compiled at build time from the markup (see tailwind.config.ts). */
+@tailwind base;
+@tailwind utilities;

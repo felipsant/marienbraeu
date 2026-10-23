@@ -1,0 +1,83 @@
+/* --------------------------------------------------------------------------
+   Story / owner slot
+   -------------------------------------------------------------------------- */
+.owner-frame {
+  position: relative;
+  border-radius: 1.6rem;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  background: var(--walnut);
+  box-shadow: var(--shadow-deep);
+  border: 6px solid var(--white);
+  outline: 1px solid rgba(200, 109, 59, 0.35);
+}
+.owner-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.3s ease;
+}
+.owner-frame:hover img {
+  transform: scale(1.02);
+}
+.owner-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: var(--cream);
+}
+.owner-frame.has-photo .owner-placeholder {
+  display: none;
+}
+.owner-frame:not(.has-photo) img {
+  display: none;
+}
+
+.signature {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 1.6rem;
+  color: var(--copper-dark);
+}
+
+.stat {
+  border-left: 2px solid var(--copper);
+  padding-left: 1rem;
+}
+.stat strong {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--walnut);
+}
+.stat span {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.heritage-badges {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem 1rem;
+  list-style: none;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+}
+@media (min-width: 640px) {
+  .heritage-badges {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+}
+.heritage-badges .stat span {
+  display: block;
+  margin-top: 0.35rem;
+  line-height: 1.3;
+}

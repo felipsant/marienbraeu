@@ -1,0 +1,141 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 12px);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  max-width: 100vw;
+  background: var(--cream);
+  color: var(--ink);
+  font-family:
+    'Inter',
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: clip;
+  padding-block: clamp(4.5rem, 10vw, 8rem);
+}
+
+body.is-locked {
+  overflow: hidden;
+}
+
+/* Minimal reset (Tailwind preflight is disabled so it can't override button gradients) */
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ol,
+ul {
+  margin: 0;
+}
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+a {
+  color: inherit;
+}
+table {
+  border-collapse: collapse;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+.font-display {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+}
+
+.container-x {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+@media (min-width: 640px) {
+  .container-x {
+    padding-inline: 24px;
+  }
+}
+@media (min-width: 1024px) {
+  .container-x {
+    padding-inline: 32px;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -60px;
+  z-index: 100;
+  background: var(--amber);
+  color: var(--walnut);
+  padding: 0.6rem 1rem;
+  border-radius: 0.6rem;
+  font-weight: 600;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 12px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--amber);
+  outline-offset: 3px;
+  border-radius: 6px;
+}

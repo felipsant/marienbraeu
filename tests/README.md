@@ -15,11 +15,12 @@ the snapshot sets in `~/mb-e2e/snapshots/<name>` on the runner. The runner has u
 
 ## Visual before/after proof
 
-1. Check out the reference commit and record the baseline:
-   `SNAPSHOT_NAME=baseline scripts/e2e-remote.sh --update-snapshots`
-2. Check out the build under test and compare against it with zero tolerance
-   (`maxDiffPixels: 0`): `SNAPSHOT_NAME=baseline scripts/e2e-remote.sh`
-   (after the Vite migration also pass `SITE_DIR=dist` with a built `dist/`).
+1. Check out the reference commit (the test-harness commit `e90ae0b`, the last one before the migration, where
+   `index.html` is served from the repository root: run with `SITE_DIR=.`) and record the
+   baseline: `SNAPSHOT_NAME=baseline SITE_DIR=. scripts/e2e-remote.sh --update-snapshots`
+2. Check out the build under test and compare against it with zero tolerance for sections
+   and DOM: `SNAPSHOT_NAME=baseline scripts/e2e-remote.sh`. The script builds `dist/` on the
+   runner and serves it.
 
 Captured for each of the six languages at 375 px (phone) and 1440 px (desktop): the
 first and a scrolled viewport, every `section[id]`, the footer, and the normalised
@@ -37,4 +38,3 @@ here; these are listed in the PR description:
 - `menu.json` has no `title_de`; the German title is `name.de`
 - viewport meta is `width=device-width, initial-scale=1, viewport-fit=cover` (no `maximum-scale=5.0`)
 - the Monday restriction shows an inline field error, not a warning toast
-- the same-origin "original menu card" link has `target="_blank"` without `rel="noopener"`

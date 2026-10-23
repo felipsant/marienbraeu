@@ -67,11 +67,11 @@ test('tel:, mailto: and Google Maps links are well formed', async ({ page }) => 
   const maps = hrefs.filter((h) => /maps\.(app\.goo\.gl|google\.com)/.test(h));
   expect(maps.length).toBeGreaterThan(0);
   for (const h of maps) expect(() => new URL(h)).not.toThrow();
-  // KNOWN DEVIATION: the same-origin "original menu card" link opens in a new tab without rel="noopener".
+  // The same-origin "original menu card" link used to open in a new tab without rel="noopener".
   const withoutRel = await page.$$eval('a[target="_blank"]:not([rel~="noopener"])', (as) =>
     as.map((a) => a.getAttribute('href')),
   );
-  expect(withoutRel).toEqual(['assets/img/1000052599.jpg']);
+  expect(withoutRel).toEqual([]);
 });
 
 // KNOWN DEVIATION from the captain's call notes (they want initial-scale=1.0, maximum-scale=5.0).

@@ -19,25 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CSS (Play CDN) — layout utilities; brand styling lives in assets/css/styles.css -->
-  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-  <script>
-    tailwind.config = {
-      corePlugins: { preflight: false }, // our own reset lives in styles.css
-      theme: {
-        extend: {
-          colors: {
-            walnut: '#1e130c', copper: '#c86d3b', forest: '#1b3322', linen: '#faf6f0', amber: '#e5a93b'
-          },
-          fontFamily: {
-            display: ['"Playfair Display"', 'Georgia', 'serif'],
-            sans: ['Inter', 'system-ui', 'sans-serif']
-          }
-        }
-      }
-    };
-  </script>
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="src/styles/index.css">
 
   <!-- Structured data for search engines -->
   <script type="application/ld+json">
@@ -361,7 +343,7 @@
         <div class="lg:col-span-5 reveal">
           <div class="relative max-w-md mx-auto lg:mx-0">
             <figure class="owner-frame" data-owner-frame>
-              <a href="assets/img/1000052599.jpg" target="_blank" title="Originale Speisekarte in voller Auflösung ansehen">
+              <a href="assets/img/1000052599.jpg" target="_blank" rel="noopener" title="Originale Speisekarte in voller Auflösung ansehen">
                 <img src="assets/img/1000052599.jpg" alt="Originale Speisekarte Marienbräu" data-owner-photo width="800" height="1000" decoding="async">
               </a>
               <div class="owner-caption" style="position:absolute;bottom:0;inset-x:0;padding:1rem;background:linear-gradient(to top, rgba(30,19,12,0.92) 20%, transparent);color:var(--cream);font-size:0.85rem;text-align:center;z-index:2;">

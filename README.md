@@ -6,26 +6,54 @@ A single-page showcase website for **Marienbräu**, a traditional Austrian Gasth
 - Phone: +43 664 2031953 · Email: marienbraeu@gmx.at
 - Rating: 4.8 / 5.0 Google Reviews
 
-## View it
+## Develop, build, test
 
-Open `index.html` in a browser. There is no build step. The page needs an internet connection for the Tailwind CSS Play CDN and Google Fonts.
+Requires Node 22+.
+
+```sh
+npm ci            # install
+npm run dev       # dev server with hot reload
+npm run build     # type-check, then bundle to dist/
+npm run preview   # serve dist/ locally
+```
+
+| Command                           | What it does                                                                                                                |
+| --------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `npm run typecheck`               | `tsc --noEmit` in strict mode                                                                                               |
+| `npm run lint`                    | ESLint (typescript-eslint, strict type-checked rules)                                                                       |
+| `npm run format` / `format:check` | Prettier                                                                                                                    |
+| `npm run test:unit`               | Vitest: data shape, i18n parity, language detection, opening hours, reservation mail builder, the DOM behaviour of the page |
+| `npm run test:e2e:remote`         | Playwright (screenshots, DOM, smoke) on the e2e-runner VM; see `tests/README.md`                                            |
+
+`dist/` is a plain static bundle with relative URLs: it works at a domain root and under a
+sub-path such as `https://<user>.github.io/marienbraeu/`. Pushing to `main` deploys it via
+`.github/workflows/pages.yml` (Settings → Pages → Source must be "GitHub Actions").
+
+The page still needs an internet connection for Google Fonts.
 
 ## Structure
 
 ```
-index.html            page markup; the German copy lives here, so it reads without JS
-assets/css/styles.css brand styling (palette, components); Tailwind CDN handles layout
-assets/js/data.js     menu items and prices, opening hours, review texts
-assets/js/i18n.js     English & Italian translations plus runtime-generated German strings
-assets/js/app.js      language switch, menu filter, reviews carousel, live open/closed
-                      status (Europe/Vienna), reservation modal + validation, map consent
-assets/img/           drop-in photos (see assets/img/README.md)
+index.html                 page markup; the German copy lives here, so it reads without JS
+src/main.ts                entry point: wires the features together
+src/types.ts               shared types (languages, dishes, opening hours)
+src/data/                  built-in menu, opening hours, reviews, and the menu.json schema
+src/i18n/messages/         one typed message table per language; English defines the keys,
+                           the compiler rejects a language that misses or adds one
+src/i18n/index.ts          language detection, switching and lookups
+src/features/              status, header, photos, menu, carousel, modal, reservation, toast, map
+src/lib/                   DOM, storage and Vienna-time helpers
+src/styles/                brand CSS by concern (tokens, base, buttons, header, hero, ...);
+                           layout utilities come from Tailwind, compiled at build time
+public/assets/data/        menu.json: the file the owner edits (docs/MENU_UPDATE_GUIDE.md)
+public/assets/img/         photos (see public/assets/img/README.md)
+tests/                     unit (Vitest) and e2e (Playwright) tests
 ```
 
 ## Features
 
 - Sticky header with DE / EN / IT language switch (German is the default), a click-to-call link and a "Tisch reservieren" button. On phones there is also a bottom action bar (Anrufen · Reservieren · Route).
-- Hero, the house history (c. 1850 homestead and women's retreat, the 20 m brick-built Tiefbrunnen, the 1670s Mariensäule, the copper kettles) with heritage badges, the owner photo slot (`assets/img/1000052599.jpg`, with an illustrated fallback), and a brewhouse section.
+- Hero, the house history (c. 1850 homestead and women's retreat, the 20 m brick-built Tiefbrunnen, the 1670s Mariensäule, the copper kettles) with heritage badges, the owner photo slot (`public/assets/img/1000052599.jpg`, with an illustrated fallback), and a brewhouse section.
 - Speisekarte (menu) with category filter pills, dietary/regional tags and prices in €.
 - Gallery tiles that use real photos when they are present and fall back to illustrations.
 - Reviews carousel with swipe, arrow buttons, dots and keyboard support. Autoplay is off when the visitor has asked for reduced motion.
@@ -39,8 +67,8 @@ The site is private and unpublished. `docs/OWNER_HANDOFF.md` holds the outreach 
 
 ## Before going live
 
-- **Reservations:** the form does not send anything yet. Wire it to a mail service or booking API in the `submit` handler in `assets/js/app.js`.
-- **Reviews:** the texts in `assets/js/data.js` are illustrative samples written for this template. Replace them with verbatim Google reviews.
+- **Reservations:** the form does not send anything yet. Wire it to a mail service or booking API in the `submit` handler in `src/features/reservation.ts`.
+- **Reviews:** the texts in `src/data/reviews.ts` are illustrative samples written for this template. Replace them with verbatim Google reviews.
 - **Menu & prices:** the dishes beyond the core list, and all prices, are realistic placeholders. Confirm them with the owner.
-- **Impressum / Datenschutz:** placeholder texts are in `assets/js/i18n.js`. Fill in the legally required details.
-- **Fonts / CDN:** for production, consider self-hosting the fonts and compiling Tailwind instead of using the Play CDN.
+- **Impressum / Datenschutz:** placeholder texts are in `src/i18n/messages/`. Fill in the legally required details.
+- **Fonts:** for production, consider self-hosting the fonts instead of loading them from Google Fonts.

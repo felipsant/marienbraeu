@@ -4,10 +4,10 @@ Dieses Dokument erklärt, wie die Speisekarte, Preise, Fotos und Google-Bewertun
 
 ---
 
-## 1. Zentrale Speisekarten-Datei: `assets/data/menu.json`
+## 1. Zentrale Speisekarten-Datei: `public/assets/data/menu.json`
 
 Alle Gerichte, Preise, Beschreibungen, Allergen-Codes und Bewertungen liegen übersichtlich und strukturiert in der Datei:
-📁 **[`assets/data/menu.json`](file:///home/akatsuky/firstmate/projects/marienbraeu/assets/data/menu.json)**
+📁 **[`public/assets/data/menu.json`](../public/assets/data/menu.json)**
 
 ### Aufbau eines Eintrags:
 ```json
@@ -43,7 +43,7 @@ Alle Gerichte, Preise, Beschreibungen, Allergen-Codes und Bewertungen liegen üb
 
 ## 2. Preise anpassen (Dauert 10 Sekunden)
 
-Um einen Preis zu ändern, einfach in `assets/data/menu.json` beim entsprechenden Gericht die Zahl anpassen:
+Um einen Preis zu ändern, einfach in `public/assets/data/menu.json` beim entsprechenden Gericht die Zahl anpassen:
 
 ```json
 "price": 14.50
@@ -59,9 +59,9 @@ Wirtsleute oder Gäste können mit dem Smartphone selbst Fotos von den Speisen m
 
 1. **Foto abspeichern:**
    Bild als JPG oder WebP im Ordner speichern:
-   📁 `assets/img/dishes/` (z.B. `assets/img/dishes/schweinsbraten.jpg`)
+   📁 `public/assets/img/dishes/` (z.B. `public/assets/img/dishes/schweinsbraten.jpg`)
 2. **Im JSON eintragen:**
-   Beim jeweiligen Gericht im Feld `"photo"` den Pfad eintragen:
+   Beim jeweiligen Gericht im Feld `"photo"` den Pfad eintragen (ohne `public/`, so wie die Seite ihn später im Netz ausliefert):
    ```json
    "photo": "assets/img/dishes/schweinsbraten.jpg"
    ```
@@ -95,5 +95,11 @@ Gerichte können direkt mit echten Kundenstimmen aus Google Reviews versehen wer
 
 Wenn eine neue physische Speisekarte gedruckt wird:
 1. Ein Foto der Karte mit dem Smartphone aufnehmen.
-2. Die Datei als `assets/img/speisekarte-foto-web.jpg` abspeichern.
+2. Die Datei als `public/assets/img/speisekarte-foto-web.jpg` abspeichern.
 3. Der Button **„Originalkarte ansehen (Foto)“** öffnet sofort das neue Foto im Vollbild-Lightbox-Modal.
+
+---
+
+## 6. Änderungen veröffentlichen
+
+Die Website wird aus dem Quellcode gebaut (`npm run build`). Nach einer Änderung an `public/assets/data/menu.json` oder an den Fotos genügt es, die Änderung in das Repository zu laden (Branch `main`): die Seite wird dann automatisch neu gebaut und veröffentlicht (siehe `README.md`). Zum Ausprobieren auf dem eigenen Rechner: `npm ci` und `npm run dev`.

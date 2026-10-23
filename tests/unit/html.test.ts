@@ -1,8 +1,13 @@
 import { describe, expect, it } from 'vitest';
-import { read } from '../support/files';
+import { readdirSync } from 'node:fs';
+import { resolve } from 'node:path';
+import { read, ROOT } from '../support/files';
 
 const html = read('index.html');
-const css = read('assets/css/styles.css');
+const css = readdirSync(resolve(ROOT, 'src/styles'))
+  .filter((file) => file !== 'index.css' && file.endsWith('.css'))
+  .map((file) => read(`src/styles/${file}`))
+  .join('\n');
 
 describe('index.html', () => {
   // KNOWN DEVIATION from the call notes, which want
@@ -18,7 +23,7 @@ describe('index.html', () => {
     const local = refs.filter((u) => !/^(https?:|mailto:|tel:|data:|#)/.test(u));
     expect(local.length).toBeGreaterThan(5);
     for (const u of local) expect(u, u).not.toMatch(/^\//);
-    expect(local).toContain('assets/css/styles.css');
+    expect(local).toContain('src/styles/index.css');
     expect(local).toContain('src/main.ts');
   });
 

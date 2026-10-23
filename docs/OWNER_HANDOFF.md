@@ -258,6 +258,6 @@ reviews, Impressum and Datenschutz.
 
 - [ ] All `[placeholders]` in part A (and B, if sent) are filled in.
 - [ ] The owner's family name is spelled correctly, or the greeting is generic.
-- [ ] You can show the draft locally (open `index.html`), not via a public link.
+- [ ] You can show the draft locally (`npm run dev`), not via a public link.
 - [ ] Nothing about Marienbräu is online: no public repo, no Pages site, no domain.
 - [ ] Send from a personal address. Do not use a no-reply or marketing tool.
