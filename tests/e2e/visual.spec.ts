@@ -44,8 +44,13 @@ for (const lang of LANGS) {
           await page.waitForTimeout(60);
           // near the bottom of the page the browser clamps the scroll offset, so locate the tile by what actually scrolled
           const y = docY - (await page.evaluate(() => Math.round(window.scrollY)));
-          const height = Math.min(viewport.height - y, Math.round(box.height - k * viewport.height));
-          await expect(page).toHaveScreenshot(`${lang}/section-${id}-${k}.png`, { clip: { x: 0, y, width: viewport.width, height } });
+          const height = Math.min(
+            viewport.height - y,
+            Math.round(box.height - k * viewport.height),
+          );
+          await expect(page).toHaveScreenshot(`${lang}/section-${id}-${k}.png`, {
+            clip: { x: 0, y, width: viewport.width, height },
+          });
         }
       }
     });

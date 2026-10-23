@@ -29,13 +29,23 @@ export interface Page {
 export function boot(opts: BootOptions = {}): Page {
   const now = opts.now ?? '2026-10-21T08:00:00Z';
   const html = read('index.html');
-  const dom = new JSDOM(html, { url: 'http://localhost/', runScripts: 'outside-only', pretendToBeVisual: true });
+  const dom = new JSDOM(html, {
+    url: 'http://localhost/',
+    runScripts: 'outside-only',
+    pretendToBeVisual: true,
+  });
   const window = dom.window as unknown as Window & typeof globalThis;
   const w = dom.window;
 
   for (const [k, v] of Object.entries(opts.stored ?? {})) w.localStorage.setItem(k, v);
-  Object.defineProperty(w.navigator, 'languages', { value: opts.languages ?? ['de-AT'], configurable: true });
-  Object.defineProperty(w.navigator, 'language', { value: (opts.languages ?? ['de-AT'])[0], configurable: true });
+  Object.defineProperty(w.navigator, 'languages', {
+    value: opts.languages ?? ['de-AT'],
+    configurable: true,
+  });
+  Object.defineProperty(w.navigator, 'language', {
+    value: (opts.languages ?? ['de-AT'])[0],
+    configurable: true,
+  });
 
   w.eval(`(function(){
     var RealDate = Date, fixed = new RealDate(${JSON.stringify(now)}).getTime();
@@ -44,7 +54,8 @@ export function boot(opts: BootOptions = {}): Page {
       static now() { return fixed; }
     };
   })();`);
-  for (const file of ['assets/js/i18n.js', 'assets/js/data.js', 'assets/js/app.js']) w.eval(read(file));
+  for (const file of ['assets/js/i18n.js', 'assets/js/data.js', 'assets/js/app.js'])
+    w.eval(read(file));
 
   const $ = (sel: string): HTMLElement => {
     const el = w.document.querySelector<HTMLElement>(sel);
@@ -62,10 +73,24 @@ export function boot(opts: BootOptions = {}): Page {
 }
 
 /** Loads the data/i18n scripts only, returning the globals they define. */
-export function loadGlobals(): { I18N: Record<string, Record<string, string>>; MENU: any[]; HOURS: Record<string, { open: number; close: number } | null>; REVIEWS: any[]; ALLERGENS: any[]; SUPPLIERS: Record<string, string> } {
+export function loadGlobals(): {
+  I18N: Record<string, Record<string, string>>;
+  MENU: any[];
+  HOURS: Record<string, { open: number; close: number } | null>;
+  REVIEWS: any[];
+  ALLERGENS: any[];
+  SUPPLIERS: Record<string, string>;
+} {
   const dom = new JSDOM('<!doctype html><html></html>', { runScripts: 'outside-only' });
   dom.window.eval(read('assets/js/i18n.js'));
   dom.window.eval(read('assets/js/data.js'));
   const w = dom.window as any;
-  return { I18N: w.MB_I18N, MENU: w.MB_MENU, HOURS: w.MB_HOURS, REVIEWS: w.MB_REVIEWS, ALLERGENS: w.MB_ALLERGENS_CODEX, SUPPLIERS: w.MB_SUPPLIERS };
+  return {
+    I18N: w.MB_I18N,
+    MENU: w.MB_MENU,
+    HOURS: w.MB_HOURS,
+    REVIEWS: w.MB_REVIEWS,
+    ALLERGENS: w.MB_ALLERGENS_CODEX,
+    SUPPLIERS: w.MB_SUPPLIERS,
+  };
 }

@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { loadGlobals, read } from '../support/legacy-env';
 
 const { I18N, MENU, HOURS, REVIEWS, ALLERGENS, SUPPLIERS } = loadGlobals();
-const menuJson = JSON.parse(read('assets/data/menu.json')) as { dishes: any[] };
+const menuJson = JSON.parse(read('public/assets/data/menu.json')) as { dishes: any[] };
 const CATEGORIES = ['classics', 'jause', 'soups', 'salads', 'dessert', 'brew'];
 const TAGS = ['veg', 'regional', 'house', 'beer', 'season'];
 const VEAL = /(?<![a-z])(kalb|veal|calf|calves|vitello|borj[uú]|cielęc|vițel)/i;
@@ -28,7 +28,12 @@ describe('menu data (data.js)', () => {
   });
 
   it('is pork only: no veal / calf anywhere in the menu, translations or page', () => {
-    const haystacks = [JSON.stringify(MENU), JSON.stringify(I18N), JSON.stringify(menuJson), read('index.html')];
+    const haystacks = [
+      JSON.stringify(MENU),
+      JSON.stringify(I18N),
+      JSON.stringify(menuJson),
+      read('index.html'),
+    ];
     for (const h of haystacks) expect(h).not.toMatch(VEAL);
     const names = MENU.map((d) => d.de.name);
     expect(names).toContain('Wienerschnitzel vom Schwein');
@@ -44,7 +49,22 @@ describe('menu data (data.js)', () => {
       const codes = d.allergens ? d.allergens.split(',').map((c: string) => c.trim()) : [];
       for (const c of codes) expect(c).toMatch(/^[A-R]$/);
     }
-    expect(ALLERGENS.map((a) => a.code)).toEqual(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'L', 'M', 'N', 'O', 'P', 'R']);
+    expect(ALLERGENS.map((a) => a.code)).toEqual([
+      'A',
+      'B',
+      'C',
+      'D',
+      'E',
+      'F',
+      'G',
+      'H',
+      'L',
+      'M',
+      'N',
+      'O',
+      'P',
+      'R',
+    ]);
     for (const a of ALLERGENS) expect(Object.keys(a).sort()).toEqual(['code', 'de', 'en', 'it']);
   });
 
@@ -87,7 +107,9 @@ describe('owner-editable menu.json', () => {
   });
 
   it('mirrors the built-in data.js menu (same order, categories, prices, German names)', () => {
-    expect(menuJson.dishes.map((d) => [d.category, d.price, d.name.de])).toEqual(MENU.map((d) => [d.cat, d.price, d.de.name]));
+    expect(menuJson.dishes.map((d) => [d.category, d.price, d.name.de])).toEqual(
+      MENU.map((d) => [d.cat, d.price, d.de.name]),
+    );
   });
 
   it('references dish photos with relative paths only', () => {
@@ -96,6 +118,7 @@ describe('owner-editable menu.json', () => {
 
   it('has the review sample data shape', () => {
     expect(REVIEWS.length).toBeGreaterThan(0);
-    for (const r of REVIEWS) for (const k of ['name', 'color', 'de', 'en', 'it']) expect(r[k]).toBeTruthy();
+    for (const r of REVIEWS)
+      for (const k of ['name', 'color', 'de', 'en', 'it']) expect(r[k]).toBeTruthy();
   });
 });

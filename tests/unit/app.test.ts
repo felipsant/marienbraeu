@@ -34,7 +34,9 @@ describe('language detection', () => {
 
   it('still honours the legacy mb-lang key, but mb_lang beats it', () => {
     expect(htmlLang(boot({ languages: ['de-AT'], stored: { 'mb-lang': 'ro' } }))).toBe('ro');
-    expect(htmlLang(boot({ languages: ['de-AT'], stored: { 'mb-lang': 'ro', mb_lang: 'it' } }))).toBe('it');
+    expect(
+      htmlLang(boot({ languages: ['de-AT'], stored: { 'mb-lang': 'ro', mb_lang: 'it' } })),
+    ).toBe('it');
   });
 
   it('ignores an unsupported saved language', () => {
@@ -57,14 +59,20 @@ describe('language switching', () => {
     expect(htmlLang(p)).toBe('en');
     expect(p.$('[data-i18n="nav.menu"]').textContent).toBe('Menu');
     expect(p.window.localStorage.getItem('mb_lang')).toBe('en');
-    expect(p.$$('[data-lang="en"]').every((b) => b.getAttribute('aria-pressed') === 'true')).toBe(true);
-    expect(p.$$('[data-lang="de"]').every((b) => b.getAttribute('aria-pressed') === 'false')).toBe(true);
+    expect(p.$$('[data-lang="en"]').every((b) => b.getAttribute('aria-pressed') === 'true')).toBe(
+      true,
+    );
+    expect(p.$$('[data-lang="de"]').every((b) => b.getAttribute('aria-pressed') === 'false')).toBe(
+      true,
+    );
   });
 
   it('translates attributes (aria-label) too', () => {
     const p = boot();
     p.click(p.$$('[data-lang="it"]')[0]);
-    expect(p.$('[data-i18n-attr="aria-label:nav.label"]').getAttribute('aria-label')).not.toBe('Hauptnavigation');
+    expect(p.$('[data-i18n-attr="aria-label:nav.label"]').getAttribute('aria-label')).not.toBe(
+      'Hauptnavigation',
+    );
   });
 
   it('round-trips back to the original German markup', () => {
@@ -77,7 +85,10 @@ describe('language switching', () => {
 });
 
 describe('live opening status', () => {
-  const status = (p: Page) => ({ cls: [...p.$('[data-live-status]').classList].filter((c) => c.startsWith('is-')), text: p.$('[data-live-status] [data-live-text]').textContent });
+  const status = (p: Page) => ({
+    cls: [...p.$('[data-live-status]').classList].filter((c) => c.startsWith('is-')),
+    text: p.$('[data-live-status] [data-live-text]').textContent,
+  });
 
   it('open: shows closing time', () => {
     const s = status(boot({ now: TUE_EVENING }));
@@ -121,11 +132,23 @@ describe('menu', () => {
   it('adds a count badge to each filter pill and filters on click', () => {
     const p = boot();
     const pills = p.$$('[data-menu-filters] .pill');
-    const counts = Object.fromEntries(pills.map((b) => [b.dataset.filter, Number(b.querySelector('.count')!.textContent)]));
-    expect(counts).toEqual({ all: 26, classics: 7, jause: 6, soups: 2, salads: 4, dessert: 4, brew: 3 });
+    const counts = Object.fromEntries(
+      pills.map((b) => [b.dataset.filter, Number(b.querySelector('.count')!.textContent)]),
+    );
+    expect(counts).toEqual({
+      all: 26,
+      classics: 7,
+      jause: 6,
+      soups: 2,
+      salads: 4,
+      dessert: 4,
+      brew: 3,
+    });
     p.click(pills.find((b) => b.dataset.filter === 'soups')!);
     expect(cards(p)).toHaveLength(2);
-    expect(pills.filter((b) => b.getAttribute('aria-pressed') === 'true').map((b) => b.dataset.filter)).toEqual(['soups']);
+    expect(
+      pills.filter((b) => b.getAttribute('aria-pressed') === 'true').map((b) => b.dataset.filter),
+    ).toEqual(['soups']);
   });
 
   it('shows copy in the active language and English decimal sizes', () => {
@@ -165,7 +188,11 @@ describe('reservation form', () => {
     input.value = iso;
     input.dispatchEvent(new p.window.Event('change', { bubbles: true }));
   };
-  const timeOptions = (p: Page) => p.$$('#r-time option').map((o) => (o as HTMLOptionElement).value).filter(Boolean);
+  const timeOptions = (p: Page) =>
+    p
+      .$$('#r-time option')
+      .map((o) => (o as HTMLOptionElement).value)
+      .filter(Boolean);
 
   it('opens the modal and sets the earliest selectable date to today (Vienna)', () => {
     const p = open();
@@ -175,14 +202,33 @@ describe('reservation form', () => {
 
   it('offers 12 single-guest steps plus the four group options', () => {
     const p = open();
-    expect(p.$$('[data-guests] option').map((o) => (o as HTMLOptionElement).value)).toEqual(['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '20', '40', '80', 'more']);
+    expect(p.$$('[data-guests] option').map((o) => (o as HTMLOptionElement).value)).toEqual([
+      '1',
+      '2',
+      '3',
+      '4',
+      '5',
+      '6',
+      '7',
+      '8',
+      '9',
+      '10',
+      '11',
+      '12',
+      '20',
+      '40',
+      '80',
+      'more',
+    ]);
   });
 
   it('Monday: shows the rest-day error', () => {
     const p = open();
     setDate(p, '2026-10-26');
     expect(p.$('#r-date').closest('.field')!.classList.contains('has-error')).toBe(true);
-    expect(p.$('#r-date').closest('.field')!.querySelector('.error')!.textContent).toMatch(/Montag|Ruhetag/);
+    expect(p.$('#r-date').closest('.field')!.querySelector('.error')!.textContent).toMatch(
+      /Montag|Ruhetag/,
+    );
     expect(timeOptions(p)).toEqual([]);
   });
 
@@ -223,7 +269,9 @@ describe('reservation form', () => {
 
   it('blocks submission and focuses the first invalid field', () => {
     const p = open();
-    (p.$('[data-res-form]') as HTMLFormElement).dispatchEvent(new p.window.Event('submit', { bubbles: true, cancelable: true }));
+    (p.$('[data-res-form]') as HTMLFormElement).dispatchEvent(
+      new p.window.Event('submit', { bubbles: true, cancelable: true }),
+    );
     expect(p.$$('[data-res-form] .field.has-error').length).toBeGreaterThan(0);
     expect(p.document.activeElement?.id).toBe('r-name');
     expect(p.$('[data-toast]').classList.contains('is-visible')).toBe(false);
@@ -239,7 +287,9 @@ describe('reservation form', () => {
     (p.$('#r-time') as HTMLSelectElement).value = '19:00';
     (p.$('#r-guests') as HTMLSelectElement).value = '4';
     (p.$('#r-notes') as HTMLTextAreaElement).value = 'Kinderstuhl & Torte';
-    (p.$('[data-res-form]') as HTMLFormElement).dispatchEvent(new p.window.Event('submit', { bubbles: true, cancelable: true }));
+    (p.$('[data-res-form]') as HTMLFormElement).dispatchEvent(
+      new p.window.Event('submit', { bubbles: true, cancelable: true }),
+    );
 
     const link = p.$('[data-toast-text] a[href^="mailto:"]') as HTMLAnchorElement;
     const href = link.getAttribute('href')!;
@@ -248,7 +298,9 @@ describe('reservation form', () => {
     const url = new URL(href);
     expect(url.protocol).toBe('mailto:');
     expect(url.pathname).toBe('marienbraeu@gmx.at');
-    expect(url.searchParams.get('subject')).toBe('Tischreservierung Marienbräu: Anna Müller – Dienstag, 27. Oktober 2026 um 19:00 Uhr (4 Personen)');
+    expect(url.searchParams.get('subject')).toBe(
+      'Tischreservierung Marienbräu: Anna Müller – Dienstag, 27. Oktober 2026 um 19:00 Uhr (4 Personen)',
+    );
     const body = url.searchParams.get('body')!;
     expect(body).toContain('• Name: Anna Müller\n');
     expect(body).toContain('• Telefon: +43 660 1234567\n');

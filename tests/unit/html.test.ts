@@ -8,7 +8,9 @@ describe('index.html', () => {
   // KNOWN DEVIATION from the call notes, which want
   // "width=device-width, initial-scale=1.0, maximum-scale=5.0".
   it('[deviation] viewport meta is the current, different one', () => {
-    expect(html).toContain('<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">');
+    expect(html).toContain(
+      '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">',
+    );
   });
 
   it('references local assets with relative URLs only (subpath-safe)', () => {
@@ -17,7 +19,7 @@ describe('index.html', () => {
     expect(local.length).toBeGreaterThan(5);
     for (const u of local) expect(u, u).not.toMatch(/^\//);
     expect(local).toContain('assets/css/styles.css');
-    expect(local).toContain('assets/js/app.js');
+    expect(local).toContain('src/main.js');
   });
 
   it('loads menu.json relatively', () => {
@@ -25,7 +27,8 @@ describe('index.html', () => {
   });
 
   it('uses https for every external resource', () => {
-    for (const m of html.matchAll(/\b(?:src|href)="(http:[^"]+)"/g)) throw new Error(`insecure: ${m[1]}`);
+    for (const m of html.matchAll(/\b(?:src|href)="(http:[^"]+)"/g))
+      throw new Error(`insecure: ${m[1]}`);
   });
 
   it('exposes valid tel:, mailto: and Google Maps links', () => {
@@ -50,10 +53,11 @@ describe('styles.css', () => {
     expect(rule).not.toMatch(/backdrop-filter/);
   });
 
-  it('uses relative url() references for images', () => {
-    for (const m of css.matchAll(/url\((['"]?)([^)'"]+)\1\)/g)) {
-      if (m[2].startsWith('data:')) continue;
-      expect(m[2]).not.toMatch(/^(\/|https?:)/);
-    }
+  it('references images by their public path, which Vite rewrites relative to the base', () => {
+    const refs = [...css.matchAll(/url\(\s*(['"]?)([^)'"]+\.(?:jpe?g|png|webp|svg))\1\s*\)/g)].map(
+      (m) => m[2],
+    );
+    expect(refs.length).toBeGreaterThan(0);
+    for (const target of refs) expect(target).toMatch(/^\/assets\/img\//);
   });
 });

@@ -3,10 +3,10 @@
 Two layers, both pinning the **current** behaviour of the site so the TypeScript
 migration can be proven not to change anything.
 
-| layer | where | runs on | command |
-|---|---|---|---|
-| unit (vitest + jsdom) | `tests/unit` | anywhere | `npm run test:unit` |
-| e2e + visual (Playwright, Chromium) | `tests/e2e` | the **e2e-runner** VM only | `npm run test:e2e:remote` |
+| layer                               | where        | runs on                    | command                   |
+| ----------------------------------- | ------------ | -------------------------- | ------------------------- |
+| unit (vitest + jsdom)               | `tests/unit` | anywhere                   | `npm run test:unit`       |
+| e2e + visual (Playwright, Chromium) | `tests/e2e`  | the **e2e-runner** VM only | `npm run test:e2e:remote` |
 
 Browsers are not installed on the development box. `scripts/e2e-remote.sh` rsyncs the
 working tree to `claude@192.168.0.109`, runs `npm ci` and Playwright there, and keeps

@@ -23,12 +23,18 @@ export interface OpenOptions {
 }
 
 /** Opens the page in a given language with a frozen clock and waits until it has settled. */
-export async function openSite(page: Page, { lang = 'de', base = '/' }: OpenOptions = {}): Promise<void> {
+export async function openSite(
+  page: Page,
+  { lang = 'de', base = '/' }: OpenOptions = {},
+): Promise<void> {
   await page.clock.setFixedTime(FROZEN_NOW);
   await page.addInitScript((l) => window.localStorage.setItem('mb_lang', l), lang);
   await page.goto(base, { waitUntil: 'networkidle' });
   await page.addStyleTag({ content: STABILISE_CSS });
-  await page.waitForFunction(() => document.documentElement.lang !== '' && !document.documentElement.classList.contains('no-js'));
+  await page.waitForFunction(
+    () =>
+      document.documentElement.lang !== '' && !document.documentElement.classList.contains('no-js'),
+  );
   await settleFonts(page);
 }
 
@@ -39,11 +45,13 @@ export async function openSite(page: Page, { lang = 'de', base = '/' }: OpenOpti
  */
 export async function settleFonts(page: Page): Promise<void> {
   let previous = -1;
-  for (let stable = 0; stable < 3; ) {
+  for (let stable = 0; stable < 3;) {
     await page.evaluate(() => document.fonts.ready);
     const loaded = await page.evaluate(() => {
       const faces = [...document.fonts];
-      return faces.some((f) => f.status === 'loading') ? -2 : faces.filter((f) => f.status === 'loaded').length;
+      return faces.some((f) => f.status === 'loading')
+        ? -2
+        : faces.filter((f) => f.status === 'loaded').length;
     });
     stable = loaded === previous && loaded !== -2 ? stable + 1 : 0;
     previous = loaded;
@@ -62,7 +70,11 @@ export async function revealEverything(page: Page): Promise<void> {
   await page.evaluate(() => window.scrollTo(0, 0));
   await page.waitForTimeout(300);
   await page.evaluate(async () => {
-    await Promise.all(Array.from(document.images).map((img) => (img.complete ? null : img.decode().catch(() => undefined))));
+    await Promise.all(
+      Array.from(document.images).map((img) =>
+        img.complete ? Promise.resolve() : img.decode().catch(() => undefined),
+      ),
+    );
   });
   await settleFonts(page);
 }
