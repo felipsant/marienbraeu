@@ -128,6 +128,8 @@ export const ro: Messages = {
   'gallery.c5d': 'Cu salată de cartofi și fetică, cu ulei de semințe de dovleac',
   'gallery.c6': 'Coloana Mariei',
   'gallery.c6d': 'Monument baroc în fața ușii noastre, cca. 1670–1680',
+  'gallery.c7': 'Sosirea în Hart bei Graz',
+  'gallery.c7d': 'Ultima curbă înainte de grădina de bere',
 
   'reviews.eyebrow': 'Recenzii',
   'reviews.title': 'Ce spun oaspeții noștri',

@@ -128,6 +128,8 @@ export const it: Messages = {
   'gallery.c5d': 'Con insalata di patate e songino all’olio di semi di zucca',
   'gallery.c6': 'La colonna mariana',
   'gallery.c6d': 'Monumento barocco davanti alla nostra porta, anni 1670',
+  'gallery.c7': 'L’arrivo a Hart bei Graz',
+  'gallery.c7d': 'L’ultima curva prima del giardino della birra',
 
   'reviews.eyebrow': 'Recensioni',
   'reviews.title': 'Cosa dicono i nostri ospiti',

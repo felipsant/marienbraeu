@@ -190,8 +190,8 @@
          Hero
          ================================================================= -->
     <section class="hero" aria-labelledby="hero-title">
-      <!-- Optional real photo: drop assets/img/hero.jpg and it fades in over the illustration -->
-      <div class="hero-photo" data-hero-photo  aria-hidden="true"></div>
+      <!-- Real photo: assets/img/hero.jpg (widest) plus hero-640/-1280 as WebP and JPEG; fades in over the illustration -->
+      <div class="hero-photo" data-hero-photo data-src="assets/img/hero.jpg" data-photo-widths="640 1280 1920" data-photo-ratio="1.3333" aria-hidden="true"></div>
       <svg class="hero-art" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
         <defs>
           <radialGradient id="h-glow" cx="75%" cy="45%" r="55%">
@@ -587,7 +587,7 @@
           <p class="max-w-md" style="color:var(--muted)" data-i18n="gallery.intro">Glänzendes Kupfer, knisternde Gemütlichkeit und lange Sommerabende unter alten Bäumen.</p>
         </div>
 
-        <!-- Each tile looks for assets/img/gallery-*.jpg; the illustration stays as fallback. -->
+        <!-- Tiles with a data-photo swap their illustration for that photo (see src/features/photos.ts); the illustration stays as fallback. -->
         <div class="gallery-grid mt-10">
           <figure class="g-item g-big reveal" >
             <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -611,7 +611,7 @@
             <figcaption><strong data-i18n="gallery.c1">Die Kupfer-Sudkessel</strong><span data-i18n="gallery.c1d">Das glänzende Herz unserer Gaststube</span></figcaption>
           </figure>
 
-          <figure class="g-item g-wide reveal" >
+          <figure class="g-item g-wide reveal" data-photo="assets/img/gallery-garden.jpg" data-photo-widths="640 1280" data-photo-ratio="2.2">
             <svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
               <defs>
                 <linearGradient id="g2-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f2b866"/><stop offset=".55" stop-color="#d98a4a"/><stop offset="1" stop-color="#2c4a30"/></linearGradient>
@@ -650,7 +650,7 @@
             <figcaption><strong data-i18n="gallery.c3">Frisch gezapft</strong><span data-i18n="gallery.c3d">Zwickl direkt vom Fass</span></figcaption>
           </figure>
 
-          <figure class="g-item reveal" >
+          <figure class="g-item reveal" data-photo="assets/img/gallery-prost.jpg" data-photo-widths="640 1280" data-photo-ratio="1.15">
             <svg viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
               <defs><radialGradient id="g4-bg" cx="50%" cy="45%" r="70%"><stop offset="0" stop-color="#7a3d12"/><stop offset="1" stop-color="#1b3322"/></radialGradient></defs>
               <rect width="200" height="200" fill="url(#g4-bg)"/>
@@ -662,6 +662,23 @@
             </svg>
             <div class="g-photo"></div>
             <figcaption><strong data-i18n="gallery.c4">Prost &amp; Gemütlichkeit</strong><span data-i18n="gallery.c4d">Steirische Gastlichkeit</span></figcaption>
+          </figure>
+
+          <figure class="g-item g-big reveal" data-photo="assets/img/gallery-arrival.jpg" data-photo-widths="640 1280" data-photo-ratio="1.05">
+            <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs>
+                <linearGradient id="g7-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b3d5a"/><stop offset=".5" stop-color="#c97a4a"/><stop offset="1" stop-color="#f2b866"/></linearGradient>
+              </defs>
+              <rect width="400" height="400" fill="url(#g7-sky)"/>
+              <circle cx="270" cy="170" r="60" fill="#ffd27a" opacity=".4"/>
+              <path d="M0 230 Q120 210 210 230 T400 215 V400 H0Z" fill="#1b3322"/>
+              <path d="M150 400 Q190 300 230 240 Q250 215 290 205 L310 215 Q270 235 255 270 Q245 330 300 400Z" fill="#3a2a1d"/>
+              <path d="M214 400 Q215 330 244 270" stroke="#f4efe6" stroke-width="3" stroke-dasharray="14 12" fill="none" opacity=".7"/>
+              <g fill="#140c07"><rect x="70" y="150" width="90" height="85"/><path d="M60 152 L115 112 L170 152Z"/></g>
+              <g fill="#ffcf7a"><rect x="86" y="172" width="16" height="22"/><rect x="124" y="172" width="16" height="22"/></g>
+            </svg>
+            <div class="g-photo"></div>
+            <figcaption><strong data-i18n="gallery.c7">Ankommen in Hart bei Graz</strong><span data-i18n="gallery.c7d">Die letzte Kurve vor dem Gastgarten</span></figcaption>
           </figure>
 
           <figure class="g-item g-wide reveal" >
@@ -1189,5 +1206,7 @@
   </div>
 
   <script type="module" src="src/main.ts"></script>
+  <!-- GoatCounter: cookie-free, so no consent banner; it skips localhost by itself -->
+  <script data-goatcounter="https://akatsuky.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>

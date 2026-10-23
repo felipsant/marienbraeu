@@ -39,12 +39,13 @@ function localizedSize(size: string | null | undefined): string {
 }
 
 /**
- * The dish copy for a language, or the German copy when that language is absent.
- * An entry that exists but is empty is used as is, so a language missing from
- * menu.json renders as "undefined" — current behaviour, kept until decided otherwise.
+ * The dish copy for a language, or the German copy when that language has no name
+ * for the dish (menu.json carries no hu/pl/ro translations). Falls back to the same
+ * German text the built-in menu uses, so "undefined" is never rendered.
  */
 function copyFor(dish: Dish): DishCopy {
-  return dish.copy[getLang()] ?? dish.copy.de ?? {};
+  const own = dish.copy[getLang()];
+  return own?.name ? own : (dish.copy.de ?? { name: '', desc: '' });
 }
 
 function reviewHtml(dish: Dish): string {

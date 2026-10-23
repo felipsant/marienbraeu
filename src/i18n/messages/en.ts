@@ -125,6 +125,8 @@ export const en = {
   'gallery.c5d': 'With potato & lamb’s lettuce salad and pumpkin seed oil',
   'gallery.c6': 'The Marian column',
   'gallery.c6d': 'Baroque landmark outside our door, c. 1670–1680',
+  'gallery.c7': 'Arriving in Hart bei Graz',
+  'gallery.c7d': 'The last bend before the beer garden',
 
   'reviews.eyebrow': 'Reviews',
   'reviews.title': 'What our guests say',

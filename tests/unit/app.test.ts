@@ -201,16 +201,30 @@ describe('menu', () => {
     expect(cards(p)).toHaveLength(26);
   });
 
-  // KNOWN DEVIATION: menu.json has no hu/pl/ro translations, so once it has loaded those
-  // languages render the literal text "undefined" instead of falling back to German.
-  it('[deviation] shows "undefined" for dish names in languages missing from menu.json', async () => {
-    const p = await boot({ menuJson: read('public/assets/data/menu.json') });
-    await vi.waitFor(() => {
-      expect(p.$$('[data-menu-grid] .dish')).toHaveLength(26);
-    });
-    p.click(p.$$('[data-lang="hu"]')[0] as HTMLElement);
-    expect(p.$('.dish-name').textContent).toBe('undefined');
-  });
+  // menu.json has no hu/pl/ro translations: those languages fall back to the German copy.
+  it.each(['hu', 'pl', 'ro'])(
+    'falls back to German dish copy for %s once menu.json has loaded',
+    async (lang) => {
+      const p = await boot({ menuJson: read('public/assets/data/menu.json') });
+      await vi.waitFor(() => {
+        expect(p.$$('[data-menu-grid] .dish')).toHaveLength(26);
+      });
+      p.click(p.$$(`[data-lang="${lang}"]`)[0] as HTMLElement);
+      const dishes = p.$$('[data-menu-grid] .dish');
+      expect(dishes).toHaveLength(26);
+      const file = JSON.parse(read('public/assets/data/menu.json')) as {
+        dishes: { name: { de: string }; description: { de: string } }[];
+      };
+      expect(dishes[0]?.querySelector('.dish-name')?.textContent).toBe(file.dishes[0]?.name.de);
+      expect(dishes[0]?.querySelector('.dish-desc')?.textContent).toBe(
+        file.dishes[0]?.description.de,
+      );
+      for (const dish of dishes) {
+        expect(dish.textContent).not.toContain('undefined');
+        expect(dish.querySelector('.dish-name')?.textContent).not.toBe('');
+      }
+    },
+  );
 });
 
 describe('reviews carousel', () => {

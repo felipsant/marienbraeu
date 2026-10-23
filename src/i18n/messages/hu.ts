@@ -126,6 +126,8 @@ export const hu: Messages = {
   'gallery.c5d': 'Burgonya- és galambbegysalátával, tökmagolajjal',
   'gallery.c6': 'A Mária-oszlop',
   'gallery.c6d': 'Barokk emlékmű az ajtónk előtt, kb. 1670–1680',
+  'gallery.c7': 'Érkezés Hart bei Grazba',
+  'gallery.c7d': 'Az utolsó kanyar a sörkert előtt',
 
   'reviews.eyebrow': 'Vélemények',
   'reviews.title': 'Amit vendégeink mondanak',

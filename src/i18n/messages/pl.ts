@@ -127,6 +127,8 @@ export const pl: Messages = {
   'gallery.c5d': 'Z sałatką ziemniaczaną i roszponką z olejem z pestek dyni',
   'gallery.c6': 'Kolumna maryjna',
   'gallery.c6d': 'Barokowy zabytek przed naszymi drzwiami, ok. 1670–1680',
+  'gallery.c7': 'Przyjazd do Hart bei Graz',
+  'gallery.c7d': 'Ostatni zakręt przed ogródkiem piwnym',
 
   'reviews.eyebrow': 'Opinie',
   'reviews.title': 'Co mówią nasi goście',

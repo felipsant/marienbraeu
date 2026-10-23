@@ -1,4 +1,5 @@
-import { expect, test, type Page } from '@playwright/test';
+import { type Page } from '@playwright/test';
+import { expect, test } from '../support/fixtures';
 import { openSite } from '../support/page';
 
 // The page must work at the domain root and under the GitHub Pages sub-path.
