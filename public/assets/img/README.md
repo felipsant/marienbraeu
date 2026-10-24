@@ -13,11 +13,11 @@ Until a file exists, the matching hand-drawn illustration is shown instead.
 | `gallery-prost*` | Gallery: Prost & Gemütlichkeit (about 1.15:1) |
 | `gallery-arrival*` | Gallery: arriving in Hart bei Graz (large tile, about 1:1) |
 | `gallery-backhendl.jpg` | Gallery: Backhendl (wide, 2:1) |
-| `gallery-mariensaeule.jpg` | Gallery: the Marian column (wide, 2:1) |
+| `gallery-mariensaeule*` | Gallery: the Marian column (wide, 2:1) |
 
 ## Photos made by `scripts/optimize-photos.mjs`
 
-`hero`, `gallery-garden`, `gallery-prost`, `gallery-arrival` and `gallery-kettle` are generated from the phone
+`hero`, `gallery-garden`, `gallery-prost`, `gallery-arrival`, `gallery-kettle` and `gallery-mariensaeule` are generated from the phone
 originals (never committed) with `node scripts/optimize-photos.mjs <folder with the originals>`:
 EXIF rotation, a gentle warm white balance, no metadata, WebP and JPEG at 640/1280 px
 (hero also 1920). The widest size has no width suffix (`hero.jpg`, `hero.webp`); the markup

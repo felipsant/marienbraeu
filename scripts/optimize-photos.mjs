@@ -61,6 +61,13 @@ const PHOTOS = [
     widths: [640, 1280],
     crop: { ratio: 1.0, left: 0.1 },
   },
+  // the baroque Marian column in front of the tavern, statue tip to base: "Die Mariensäule"
+  {
+    source: 'PXL_20261023_105552522.jpg',
+    name: 'gallery-mariensaeule',
+    widths: [640, 1280],
+    crop: { ratio: 2.0, top: 0.03 },
+  },
 ];
 
 /** Gentle white-balance shift: a touch more red, a touch less blue, a little more colour. */
