@@ -52,6 +52,38 @@ describe('index.html', () => {
     }
   });
 
+  it('keeps the "Frisch gezapft" gallery tile on its illustration', () => {
+    const tile = html.slice(
+      html.lastIndexOf('<figure', html.indexOf('data-i18n="gallery.c3"')),
+      html.indexOf('data-i18n="gallery.c3"'),
+    );
+    expect(tile).not.toMatch(/data-photo/);
+    expect(tile).toContain('<svg');
+  });
+
+  it('shows the Zwickl and Märzen photos in the Brauhaus cards, every size present', () => {
+    const brew = html.slice(html.indexOf('id="brauhaus"'), html.indexOf('id="galerie"'));
+    const files = [...brew.matchAll(/(assets\/img\/beer-[\w-]+\.(?:jpg|webp))/g)].map(
+      (m) => m[1] ?? '',
+    );
+    expect(new Set(files)).toEqual(
+      new Set(
+        ['beer-zwickl', 'beer-marzen'].flatMap((stem) =>
+          ['.jpg', '.webp', '-320.jpg', '-320.webp'].map((suffix) => `assets/img/${stem}${suffix}`),
+        ),
+      ),
+    );
+    for (const file of files) expect(existsSync(resolve(ROOT, 'public', file)), file).toBe(true);
+  });
+
+  it('gives each beer card its colour swatch', () => {
+    const cards = [...html.matchAll(/<article class="beer-card beer-card--(\w+) reveal">/g)].map(
+      (m) => m[1],
+    );
+    expect(cards).toEqual(['zwickl', 'marzen', 'bock']);
+    expect(html.match(/class="beer-swatch"/g)).toHaveLength(3);
+  });
+
   it('is built with a relative base so any sub-path works', () => {
     expect(read('vite.config.ts')).toContain("base: './'");
   });
@@ -89,5 +121,16 @@ describe('styles.css', () => {
     );
     expect(refs.length).toBeGreaterThan(0);
     for (const target of refs) expect(target).toMatch(/^\/assets\/img\//);
+  });
+
+  it('colours each beer card with its own hex', () => {
+    for (const [beer, hex] of [
+      ['zwickl', '#f0c25a'],
+      ['marzen', '#c9771f'],
+      ['bock', '#6b2f12'],
+    ]) {
+      const rule = css.match(new RegExp(`\\.beer-card--${beer}\\s*\\{[^}]*\\}`))![0];
+      expect(rule).toContain(`--beer: ${hex};`);
+    }
   });
 });

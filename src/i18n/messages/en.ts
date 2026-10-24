@@ -91,10 +91,12 @@ export const en = {
   'brew.b1.style': 'naturally cloudy · unfiltered',
   'brew.b1.desc':
     'Yeasty, fresh and easy-drinking, with a delicate bready note and a soft hop aroma. Our beer-garden favourite.',
+  'brew.b1.photo': 'Marienbräu Zwickl, cloudy and golden, in a dimpled mug',
   'brew.b2.name': 'Marienbräu Märzen',
   'brew.b2.style': 'amber · full-bodied',
   'brew.b2.desc':
     'The classic Austrian tavern beer: round and malty with a hint of caramel and a pleasantly mild finish.',
+  'brew.b2.photo': 'Marienbräu Märzen, amber, in a glass with the Marienbräu crest',
   'brew.b3.name': 'Seasonal Bock',
   'brew.b3.style': 'strong · seasonal only',
   'brew.b3.desc':

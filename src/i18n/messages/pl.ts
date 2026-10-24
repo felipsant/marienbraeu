@@ -93,10 +93,12 @@ export const pl: Messages = {
   'brew.b1.style': 'naturalnie mętne · niefiltrowane',
   'brew.b1.desc':
     'Drożdżowe, świeże i lekkie w piciu, z delikatną chlebową nutą i łagodnym aromatem chmielu. Ulubieniec ogródka piwnego.',
+  'brew.b1.photo': 'Marienbräu Zwickl, mętne i złote, w kuflu z wgłębieniami',
   'brew.b2.name': 'Marienbräu Märzen',
   'brew.b2.style': 'bursztynowe · pełne',
   'brew.b2.desc':
     'Klasyczne austriackie piwo karczemne: okrągłe i słodowe, z nutą karmelu i przyjemnie łagodnym finiszem.',
+  'brew.b2.photo': 'Marienbräu Märzen, bursztynowe, w szklance z herbem Marienbräu',
   'brew.b3.name': 'Koźlak sezonowy',
   'brew.b3.style': 'mocne · tylko w sezonie',
   'brew.b3.desc':

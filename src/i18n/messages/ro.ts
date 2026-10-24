@@ -93,10 +93,12 @@ export const ro: Messages = {
   'brew.b1.style': 'tulbure natural · nefiltrată',
   'brew.b1.desc':
     'Cu note de drojdie, proaspătă și ușor de băut, cu o aromă delicată de pâine și un parfum fin de hamei. Preferata grădinii de bere.',
+  'brew.b1.photo': 'Marienbräu Zwickl, tulbure și aurie, în halbă cu adâncituri',
   'brew.b2.name': 'Marienbräu Märzen',
   'brew.b2.style': 'chihlimbarie · plină',
   'brew.b2.desc':
     'Berea clasică de han austriacă: rotundă și maltoasă, cu o notă de caramel și un final plăcut de blând.',
+  'brew.b2.photo': 'Marienbräu Märzen, chihlimbarie, în pahar cu blazonul Marienbräu',
   'brew.b3.name': 'Bock de sezon',
   'brew.b3.style': 'tare · doar în sezon',
   'brew.b3.desc':
