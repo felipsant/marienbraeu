@@ -125,7 +125,7 @@ export const pl: Messages = {
   'gallery.c3d': 'Zwickl prosto z beczki',
   'gallery.c4': 'Prost & Gemütlichkeit',
   'gallery.c4d': 'Styryjska gościnność',
-  'gallery.c5': 'Oryginalny styryjski Backhendl',
+  'gallery.c5': 'Tradycyjny chrupiący kurczak smażony po styryjsku (Backhendl)',
   'gallery.c5d': 'Z sałatką ziemniaczaną i roszponką z olejem z pestek dyni',
   'gallery.c6': 'Historyczna posiadłość',
   'gallery.c6d': 'Tradycyjna gospoda z kaplicznym szczytem, od ok. 1850 r.',
@@ -304,8 +304,10 @@ export const pl: Messages = {
     '<p><em>Uwaga: ta strona jest szablonem. Przed publikacją należy uzupełnić pełne dane.</em></p>',
   'legal.privacy.title': 'Prywatność',
   'legal.privacy.body':
-    '<h3>Twoje dane</h3><p>Dane osobowe przetwarzamy wyłącznie na podstawie RODO i austriackiej ustawy o ochronie danych. Dane z formularza rezerwacji (imię, e-mail, telefon, wybrany termin) wykorzystujemy wyłącznie do obsługi Twojej prośby.</p>' +
-    '<h3>Google Maps</h3><p>Mapa jest osadzana dopiero po kliknięciu „Załaduj mapę”. Wówczas dane (w tym Twój adres IP) są przesyłane do Google.</p>' +
-    '<h3>Czcionki</h3><p>Ten szablon ładuje czcionki z Google Fonts. W wersji produkcyjnej zalecamy hostowanie ich lokalnie.</p>' +
-    '<p><em>Uwaga: ta strona jest szablonem. Przed publikacją należy wstawić pełną politykę prywatności.</em></p>',
+    '<h3>Twoje dane</h3><p>Dane osobowe przetwarzamy wyłącznie na podstawie RODO i austriackiej ustawy o ochronie danych. Administratorem danych jest Marienbräu, Rupertistraße 80, 8075 Hart bei Graz (marienbraeu@gmx.at). Dane z formularza rezerwacji (imię, e-mail, telefon, wybrany termin) wykorzystujemy wyłącznie do obsługi Twojej prośby.</p>' +
+    '<h3>Hosting</h3><p>Ta strona jest udostępniana za pośrednictwem GitHub Pages, usługi firmy GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Podczas odwiedzin GitHub przetwarza technicznie niezbędne dane dostępowe (m.in. Twój adres IP, datę i godzinę, otwieraną stronę oraz typ przeglądarki), aby dostarczyć stronę i chronić ją przed nadużyciami. Podstawą prawną jest nasz prawnie uzasadniony interes w bezpiecznym i niezawodnym działaniu strony (art. 6 ust. 1 lit. f RODO). GitHub posiada certyfikację w ramach EU-U.S. Data Privacy Framework; przekazanie danych do USA opiera się na decyzji Komisji Europejskiej stwierdzającej odpowiedni stopień ochrony (art. 45 RODO).</p>' +
+    '<h3>Google Maps</h3><p>Mapa jest osadzana dopiero po kliknięciu „Załaduj mapę”. Wówczas dane (w tym Twój adres IP) są przesyłane do Google. Podstawą prawną jest zgoda wyrażona tym kliknięciem (art. 6 ust. 1 lit. a RODO).</p>' +
+    '<h3>Czcionki, pliki cookie i analityka</h3><p>Wszystkie czcionki są hostowane lokalnie i dostarczane razem z tą stroną; nie jest nawiązywane żadne połączenie z Google Fonts. Nie stosujemy śledzących plików cookie ani nie uruchamiamy zewnętrznych skryptów analitycznych czy statystycznych. Jedynie wybrany przez Ciebie język jest zapisywany lokalnie w Twojej przeglądarce i nigdy nie jest do nas przesyłany.</p>' +
+    '<h3>Twoje prawa</h3><p>Przysługuje Ci prawo dostępu do danych (art. 15 RODO), ich sprostowania (art. 16), usunięcia (art. 17), ograniczenia przetwarzania (art. 18), przenoszenia danych (art. 20) oraz prawo sprzeciwu (art. 21). Udzieloną zgodę możesz w każdej chwili wycofać ze skutkiem na przyszłość. Wystarczy napisać do nas na adres marienbraeu@gmx.at.</p>' +
+    '<h3>Prawo do wniesienia skargi</h3><p>Jeśli uważasz, że przetwarzanie Twoich danych narusza przepisy o ochronie danych, możesz wnieść skargę do organu nadzorczego: Österreichische Datenschutzbehörde (austriacki organ ochrony danych), Barichgasse 40-42, 1030 Wien, e-mail: dsb@dsb.gv.at.</p>',
 };

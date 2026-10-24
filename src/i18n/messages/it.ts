@@ -126,7 +126,7 @@ export const it: Messages = {
   'gallery.c3d': 'Zwickl direttamente dalla botte',
   'gallery.c4': 'Prost & Gemütlichkeit',
   'gallery.c4d': 'Ospitalità stiriana',
-  'gallery.c5': 'Backhendl stiriano originale',
+  'gallery.c5': 'Pollo fritto stiriano (Backhendl)',
   'gallery.c5d': 'Con insalata di patate e songino all’olio di semi di zucca',
   'gallery.c6': 'La storica tenuta',
   'gallery.c6d': 'Locanda tradizionale con frontone a cappella, dal 1850 circa',
@@ -305,8 +305,10 @@ export const it: Messages = {
     '<p><em>Nota: questa pagina è un modello. Inserire i dati completi prima della pubblicazione.</em></p>',
   'legal.privacy.title': 'Privacy',
   'legal.privacy.body':
-    '<h3>I vostri dati</h3><p>Trattiamo i dati personali esclusivamente ai sensi del GDPR e della legge austriaca sulla protezione dei dati. I dati del modulo di prenotazione (nome, e-mail, telefono, data desiderata) vengono usati solo per gestire la vostra richiesta.</p>' +
-    '<h3>Google Maps</h3><p>La mappa viene incorporata solo dopo il vostro clic su “Carica la mappa”. In tal caso alcuni dati (tra cui il vostro indirizzo IP) vengono trasmessi a Google.</p>' +
-    '<h3>Caratteri</h3><p>Questo modello carica i caratteri da Google Fonts. Per l’uso in produzione consigliamo di ospitarli localmente.</p>' +
-    '<p><em>Nota: questa pagina è un modello. Inserire un’informativa sulla privacy completa prima della pubblicazione.</em></p>',
+    '<h3>I vostri dati</h3><p>Trattiamo i dati personali esclusivamente ai sensi del GDPR e della legge austriaca sulla protezione dei dati. Titolare del trattamento è il Marienbräu, Rupertistraße 80, 8075 Hart bei Graz (marienbraeu@gmx.at). I dati del modulo di prenotazione (nome, e-mail, telefono, data desiderata) vengono usati solo per gestire la vostra richiesta.</p>' +
+    '<h3>Hosting</h3><p>Questo sito è fornito tramite GitHub Pages, un servizio di GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Quando visitate il sito, GitHub tratta i dati di accesso tecnicamente necessari (tra cui il vostro indirizzo IP, data e ora, la pagina richiesta e il tipo di browser) per distribuire il sito e proteggerlo da abusi. La base giuridica è il nostro legittimo interesse a un sito sicuro e affidabile (art. 6, par. 1, lett. f GDPR). GitHub è certificata nell’ambito dell’EU-U.S. Data Privacy Framework; il trasferimento negli USA si basa sulla decisione di adeguatezza della Commissione europea (art. 45 GDPR).</p>' +
+    '<h3>Google Maps</h3><p>La mappa viene incorporata solo dopo il vostro clic su “Carica la mappa”. In tal caso alcuni dati (tra cui il vostro indirizzo IP) vengono trasmessi a Google. La base giuridica è il consenso che prestate con quel clic (art. 6, par. 1, lett. a GDPR).</p>' +
+    '<h3>Caratteri, cookie e analisi</h3><p>Tutti i caratteri sono ospitati localmente e distribuiti insieme a questo sito; non viene stabilita alcuna connessione con Google Fonts. Non utilizziamo cookie di tracciamento né eseguiamo script esterni di analisi o statistica. Solo la lingua scelta viene salvata localmente nel vostro browser e non ci viene mai trasmessa.</p>' +
+    '<h3>I vostri diritti</h3><p>Avete il diritto di accesso (art. 15 GDPR), rettifica (art. 16), cancellazione (art. 17), limitazione del trattamento (art. 18), portabilità dei dati (art. 20) e opposizione (art. 21). Potete revocare in qualsiasi momento un consenso prestato, con effetto per il futuro. Basta scriverci a marienbraeu@gmx.at.</p>' +
+    '<h3>Diritto di reclamo</h3><p>Se ritenete che il trattamento dei vostri dati violi la normativa sulla protezione dei dati, potete presentare reclamo all’autorità di controllo: Österreichische Datenschutzbehörde (Autorità austriaca per la protezione dei dati), Barichgasse 40-42, 1030 Wien, e-mail: dsb@dsb.gv.at.</p>',
 };

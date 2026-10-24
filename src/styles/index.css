@@ -1,4 +1,5 @@
 /* Marienbräu — brand styles. Order matters: later files win at equal specificity. */
+@import './fonts.css';
 @import './tokens.css';
 @import './base.css';
 @import './typography.css';

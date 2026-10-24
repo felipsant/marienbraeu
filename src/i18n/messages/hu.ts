@@ -124,7 +124,7 @@ export const hu: Messages = {
   'gallery.c3d': 'Zwickl egyenesen a hordóból',
   'gallery.c4': 'Prost & Gemütlichkeit',
   'gallery.c4d': 'Stájer vendégszeretet',
-  'gallery.c5': 'Eredeti stájer Backhendl',
+  'gallery.c5': 'Eredeti stájer rántott csirke (Backhendl)',
   'gallery.c5d': 'Burgonya- és galambbegysalátával, tökmagolajjal',
   'gallery.c6': 'A történelmi birtok',
   'gallery.c6d': 'Hagyományos fogadó kápolnaoromzattal, kb. 1850 óta',
@@ -303,8 +303,10 @@ export const hu: Messages = {
     '<p><em>Megjegyzés: ez az oldal sablon. Közzététel előtt kérjük, adja meg a teljes adatokat.</em></p>',
   'legal.privacy.title': 'Adatvédelem',
   'legal.privacy.body':
-    '<h3>Az Ön adatai</h3><p>Személyes adatokat kizárólag a GDPR és az osztrák adatvédelmi törvény alapján kezelünk. A foglalási űrlap adatait (név, e-mail, telefon, kívánt időpont) csak kérése feldolgozására használjuk.</p>' +
-    '<h3>Google Maps</h3><p>A térkép csak a „Térkép betöltése” gombra kattintás után kerül beágyazásra. Ekkor adatok (többek között IP-címe) kerülnek a Google-hoz.</p>' +
-    '<h3>Betűtípusok</h3><p>Ez a sablon a Google Fonts szolgáltatásból tölti be a betűtípusokat. Éles üzemhez javasoljuk azok helyi tárolását.</p>' +
-    '<p><em>Megjegyzés: ez az oldal sablon. Közzététel előtt kérjük, illesszen be teljes adatvédelmi tájékoztatót.</em></p>',
+    '<h3>Az Ön adatai</h3><p>Személyes adatokat kizárólag a GDPR és az osztrák adatvédelmi törvény alapján kezelünk. Az adatkezelő: Marienbräu, Rupertistraße 80, 8075 Hart bei Graz (marienbraeu@gmx.at). A foglalási űrlap adatait (név, e-mail, telefon, kívánt időpont) csak kérése feldolgozására használjuk.</p>' +
+    '<h3>Tárhely</h3><p>Ezt a weboldalt a GitHub Pages szolgáltatja, amely a GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA szolgáltatása. Az oldal megnyitásakor a GitHub a technikailag szükséges hozzáférési adatokat (többek között az Ön IP-címét, a dátumot és az időpontot, a megnyitott oldalt és a böngésző típusát) kezeli, hogy az oldalt kiszolgálja és megvédje a visszaélésektől. A jogalap a biztonságos és megbízható weboldalhoz fűződő jogos érdekünk (GDPR 6. cikk (1) bekezdés f) pont). A GitHub rendelkezik az EU–USA adatvédelmi keretrendszer (EU-U.S. Data Privacy Framework) szerinti tanúsítással; az USA-ba történő továbbítás az Európai Bizottság megfelelőségi határozatán alapul (GDPR 45. cikk).</p>' +
+    '<h3>Google Maps</h3><p>A térkép csak a „Térkép betöltése” gombra kattintás után kerül beágyazásra. Ekkor adatok (többek között IP-címe) kerülnek a Google-hoz. A jogalap az Ön ezzel a kattintással adott hozzájárulása (GDPR 6. cikk (1) bekezdés a) pont).</p>' +
+    '<h3>Betűtípusok, sütik és elemzés</h3><p>Minden betűtípus helyben van tárolva, és ezzel a weboldallal együtt töltődik be; a Google Fonts szolgáltatással semmilyen kapcsolat nem jön létre. Nem használunk nyomkövető sütiket, és nem futtatunk külső elemző vagy statisztikai szkripteket. Csak a választott nyelvet tároljuk helyben az Ön böngészőjében, és az soha nem kerül hozzánk.</p>' +
+    '<h3>Az Ön jogai</h3><p>Önt megilleti a hozzáférés (GDPR 15. cikk), a helyesbítés (16. cikk), a törlés (17. cikk), az adatkezelés korlátozása (18. cikk), az adathordozhatóság (20. cikk) és a tiltakozás (21. cikk) joga. A megadott hozzájárulását bármikor visszavonhatja, a jövőre nézve. Ehhez elég e-mailt írnia a marienbraeu@gmx.at címre.</p>' +
+    '<h3>Panasztételi jog</h3><p>Ha úgy véli, hogy adatai kezelése sérti az adatvédelmi jogszabályokat, panaszt nyújthat be a felügyeleti hatósághoz: Österreichische Datenschutzbehörde (osztrák adatvédelmi hatóság), Barichgasse 40-42, 1030 Wien, e-mail: dsb@dsb.gv.at.</p>',
 };

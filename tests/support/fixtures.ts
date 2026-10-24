@@ -1,18 +1,17 @@
 import { test as base } from '@playwright/test';
 
 /**
- * GoatCounter's script is third-party and its beacon would hit the network from every
- * run, so the e2e suite serves an empty script instead. That keeps "no failed requests"
- * and "zero console errors" meaningful and the screenshots independent of the network.
- * (Even unstubbed, count.js does nothing on 127.0.0.1 and localhost.)
+ * The page is fully self-hosted (fonts included, no analytics), so the e2e suite aborts
+ * every request that leaves the local test server. A regression that adds a third-party
+ * resource then shows up as a failed request in the smoke test instead of passing
+ * silently, and the screenshots stay independent of the network.
+ * (The Google Maps iframe only loads after a click, which no spec makes.)
  */
 export const test = base.extend({
   context: async ({ context }, use) => {
-    await context.route('https://gc.zgo.at/**', (route) =>
-      route.fulfill({ status: 200, contentType: 'text/javascript', body: '' }),
-    );
-    await context.route('https://*.goatcounter.com/**', (route) =>
-      route.fulfill({ status: 204, body: '' }),
+    await context.route(
+      (url) => !['127.0.0.1', 'localhost'].includes(url.hostname),
+      (route) => route.abort('blockedbyclient'),
     );
     await use(context);
   },
