@@ -61,19 +61,11 @@ describe('index.html', () => {
     expect(tile).toContain('<svg');
   });
 
-  it('shows the Zwickl and Märzen photos in the Brauhaus cards, every size present', () => {
+  it('keeps each beer card on its SVG illustration', () => {
     const brew = html.slice(html.indexOf('id="brauhaus"'), html.indexOf('id="galerie"'));
-    const files = [...brew.matchAll(/(assets\/img\/beer-[\w-]+\.(?:jpg|webp))/g)].map(
-      (m) => m[1] ?? '',
-    );
-    expect(new Set(files)).toEqual(
-      new Set(
-        ['beer-zwickl', 'beer-marzen'].flatMap((stem) =>
-          ['.jpg', '.webp', '-320.jpg', '-320.webp'].map((suffix) => `assets/img/${stem}${suffix}`),
-        ),
-      ),
-    );
-    for (const file of files) expect(existsSync(resolve(ROOT, 'public', file)), file).toBe(true);
+    const glasses = brew.match(/<svg class="beer-glass"/g);
+    expect(glasses).toHaveLength(3);
+    expect(brew).not.toMatch(/assets\/img\/beer-/);
   });
 
   it('gives each beer card its colour swatch', () => {
