@@ -88,6 +88,14 @@ const PHOTOS = [
     widths: [640, 1280],
     crop: { ratio: 2.0, top: 0.03 },
   },
+  // freshly tapped Zwickl beer in dimpled mug on wooden table: "Frisch gezapft"
+  {
+    source: 'gallery-zwickl-new.jpg',
+    name: 'gallery-beer',
+    widths: [640, 1280],
+    crop: { ratio: 1.0, top: 0.04 },
+    warm: false,
+  },
 ];
 
 /** Gentle white-balance shift: a touch more red, a touch less blue, a little more colour. */

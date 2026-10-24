@@ -40,6 +40,7 @@ describe('index.html', () => {
     expect(photos.sort()).toEqual([
       'assets/img/gallery-arrival.jpg',
       'assets/img/gallery-backhendl.jpg',
+      'assets/img/gallery-beer.jpg',
       'assets/img/gallery-garden.jpg',
       'assets/img/gallery-kettle.jpg',
       'assets/img/gallery-mariensaeule.jpg',
@@ -53,12 +54,12 @@ describe('index.html', () => {
     }
   });
 
-  it('keeps the "Frisch gezapft" gallery tile on its illustration', () => {
+  it('points the "Frisch gezapft" gallery tile at gallery-beer.jpg', () => {
     const tile = html.slice(
       html.lastIndexOf('<figure', html.indexOf('data-i18n="gallery.c3"')),
       html.indexOf('data-i18n="gallery.c3"'),
     );
-    expect(tile).not.toMatch(/data-photo/);
+    expect(tile).toContain('data-photo="assets/img/gallery-beer.jpg"');
     expect(tile).toContain('<svg');
   });
 

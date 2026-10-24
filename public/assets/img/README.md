@@ -9,6 +9,7 @@ Until a file exists, the matching hand-drawn illustration is shown instead.
 | `hero.jpg`, `hero-{640,1280}.jpg`, `hero{,-640,-1280}.webp` | Hero background, fades in over the illustration |
 | `gallery-kettle*` | Gallery: copper brew kettles (large tile, square) |
 | `gallery-garden*` | Gallery: beer garden (wide, about 2.2:1) |
+| `gallery-beer*` | Gallery: freshly tapped beer (square) |
 | `gallery-prost*` | Gallery: Prost & Gemütlichkeit (about 1.15:1) |
 | `gallery-arrival*` | Gallery: arriving in Hart bei Graz (large tile, about 1:1) |
 | `gallery-backhendl*` | Gallery: Backhendl (wide, 2:1) |
@@ -17,7 +18,7 @@ Until a file exists, the matching hand-drawn illustration is shown instead.
 
 ## Photos made by `scripts/optimize-photos.mjs`
 
-`hero`, `gallery-garden`, `gallery-prost`, `gallery-arrival`, `gallery-kettle`, `gallery-backhendl`,
+`hero`, `gallery-garden`, `gallery-beer`, `gallery-prost`, `gallery-arrival`, `gallery-kettle`, `gallery-backhendl`,
 `food-schweinsbraten` and `gallery-mariensaeule` are generated from the originals (never committed) with
 `node scripts/optimize-photos.mjs <folder with the originals>`: EXIF rotation, a gentle warm white
 balance (skipped for indoor food shots, `warm: false`), no metadata, WebP and JPEG at 640/1280 px
