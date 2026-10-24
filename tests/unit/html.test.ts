@@ -42,6 +42,7 @@ describe('index.html', () => {
       'assets/img/gallery-backhendl.jpg',
       'assets/img/gallery-garden.jpg',
       'assets/img/gallery-kettle.jpg',
+      'assets/img/gallery-mariensaeule.jpg',
       'assets/img/gallery-prost.jpg',
       'assets/img/hero.jpg',
     ]);

@@ -13,16 +13,15 @@ Until a file exists, the matching hand-drawn illustration is shown instead.
 | `gallery-arrival*` | Gallery: arriving in Hart bei Graz (large tile, about 1:1) |
 | `gallery-backhendl*` | Gallery: Backhendl (wide, 2:1) |
 | `food-schweinsbraten*` | Groups banner: Schweinsbraten with beer (square, 480/960 px, plain `<picture>`) |
-| `gallery-mariensaeule.jpg` | Gallery: the Marian column (wide, 2:1) |
-| `beer-zwickl*`, `beer-marzen*` | Brauhaus cards: Zwickl and Märzen glasses (portrait, 1:2), plain `<picture>` markup |
+| `gallery-mariensaeule*` | Gallery: the historic inn with its chapel gable (wide, 2:1) |
 
 ## Photos made by `scripts/optimize-photos.mjs`
 
 `hero`, `gallery-garden`, `gallery-prost`, `gallery-arrival`, `gallery-kettle`, `gallery-backhendl`,
-`food-schweinsbraten`, `beer-zwickl` and `beer-marzen` are generated from the originals (never committed) with
+`food-schweinsbraten` and `gallery-mariensaeule` are generated from the originals (never committed) with
 `node scripts/optimize-photos.mjs <folder with the originals>`: EXIF rotation, a gentle warm white
-balance (skipped for indoor food and beer shots, `warm: false`), no metadata, WebP and JPEG at 640/1280 px
-(hero also 1920; `food-schweinsbraten` 480/960; the beer glasses at 320 and their full width). The widest size has no width suffix (`hero.jpg`, `hero.webp`); the markup
+balance (skipped for indoor food shots, `warm: false`), no metadata, WebP and JPEG at 640/1280 px
+(hero also 1920; `food-schweinsbraten` 480/960). The widest size has no width suffix (`hero.jpg`, `hero.webp`); the markup
 points at that JPEG and `src/features/photos.ts` derives the other file names, so adding a
 photo means adding an entry to the script and a `data-photo` + `data-photo-widths` pair on the
-tile; the beer cards spell out their `srcset` in `index.html`. `public/assets/img/` is what Vite serves at `assets/img/`; there is no second copy.
+tile. `public/assets/img/` is what Vite serves at `assets/img/`; there is no second copy.

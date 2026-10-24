@@ -65,22 +65,6 @@ const PHOTOS = [
     widths: [640, 1280],
     crop: { ratio: 1.0, left: 0.1 },
   },
-  // cloudy golden Zwickl in a dimpled mug: Brauhaus card 1 (already cleaned, so no warm shift)
-  {
-    source: 'beer-zwickl-clean.jpg',
-    name: 'beer-zwickl',
-    widths: [320, 640],
-    crop: { ratio: 0.5 },
-    warm: false,
-  },
-  // amber Märzen in the Marienbräu crest glass: Brauhaus card 2 (460 px wide once cropped)
-  {
-    source: 'beer-marzen-clean.jpg',
-    name: 'beer-marzen',
-    widths: [320, 460],
-    crop: { ratio: 0.5, left: 0.02 },
-    warm: false,
-  },
   // Steirisches Backhendl on a white plate with lemon: "Original Steirisches Backhendl"
   {
     source: 'gallery-backhendl-wide.jpg',
@@ -96,6 +80,13 @@ const PHOTOS = [
     widths: [480, 960],
     crop: { ratio: 1.0 },
     warm: false,
+  },
+  // the historic inn with its chapel gable, seen from the road: "Historisches Anwesen"
+  {
+    source: 'PXL_20261023_105552522.jpg',
+    name: 'gallery-mariensaeule',
+    widths: [640, 1280],
+    crop: { ratio: 2.0, top: 0.03 },
   },
 ];
 
