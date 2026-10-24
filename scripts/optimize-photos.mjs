@@ -23,7 +23,8 @@ const OUT_DIR = path.join(path.dirname(fileURLToPath(import.meta.url)), '../publ
  * `crop` is the part of the upright original to keep: `top` and `left` are fractions
  * of the height and width, `ratio` is width / height. The crop spans the full width
  * when the source is too tall for `ratio`, and the full height when it is too wide, in
- * which case `left` picks the horizontal slice.
+ * which case `left` picks the horizontal slice. `warm: false` skips the white-balance
+ * shift for photos whose colour is already right.
  */
 const PHOTOS = [
   // tavern facade with the garden umbrellas: hero background (full 4:3 frame)
@@ -61,6 +62,22 @@ const PHOTOS = [
     widths: [640, 1280],
     crop: { ratio: 1.0, left: 0.1 },
   },
+  // cloudy golden Zwickl in a dimpled mug: Brauhaus card 1 (already cleaned, so no warm shift)
+  {
+    source: 'beer-zwickl-clean.jpg',
+    name: 'beer-zwickl',
+    widths: [320, 640],
+    crop: { ratio: 0.5 },
+    warm: false,
+  },
+  // amber Märzen in the Marienbräu crest glass: Brauhaus card 2 (460 px wide once cropped)
+  {
+    source: 'beer-marzen-clean.jpg',
+    name: 'beer-marzen',
+    widths: [320, 460],
+    crop: { ratio: 0.5, left: 0.02 },
+    warm: false,
+  },
 ];
 
 /** Gentle white-balance shift: a touch more red, a touch less blue, a little more colour. */
@@ -85,11 +102,17 @@ async function renderPhoto(dir, photo) {
   const cropHeight = Math.min(sourceHeight, Math.round(cropWidth / ratio));
   const cropTop = Math.min(sourceHeight - cropHeight, Math.round(top * sourceHeight));
   const cropLeft = Math.min(sourceWidth - cropWidth, Math.round(left * sourceWidth));
-  const cropped = await upright
-    .extract({ left: cropLeft, top: cropTop, width: cropWidth, height: cropHeight })
-    .linear(WARM_GAIN, [0, 0, 0])
-    .modulate({ saturation: SATURATION })
-    .toBuffer();
+  const extracted = upright.extract({
+    left: cropLeft,
+    top: cropTop,
+    width: cropWidth,
+    height: cropHeight,
+  });
+  const cropped = await (
+    photo.warm === false
+      ? extracted
+      : extracted.linear(WARM_GAIN, [0, 0, 0]).modulate({ saturation: SATURATION })
+  ).toBuffer();
 
   const widest = Math.max(...photo.widths);
   const written = [];

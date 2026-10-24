@@ -93,10 +93,12 @@ export const it: Messages = {
   'brew.b1.style': 'torbida naturale · non filtrata',
   'brew.b1.desc':
     'Lievitosa, fresca e beverina, con una delicata nota di pane e un morbido aroma di luppolo. La preferita del giardino della birra.',
+  'brew.b1.photo': 'Marienbräu Zwickl, torbida e dorata, nel boccale a nido d’ape',
   'brew.b2.name': 'Marienbräu Märzen',
   'brew.b2.style': 'ambrata · corposa',
   'brew.b2.desc':
     'La classica birra da osteria austriaca: rotonda e maltata, con un accenno di caramello e un finale piacevolmente morbido.',
+  'brew.b2.photo': 'Marienbräu Märzen, ambrata, nel bicchiere con lo stemma Marienbräu',
   'brew.b3.name': 'Bock stagionale',
   'brew.b3.style': 'forte · solo di stagione',
   'brew.b3.desc':

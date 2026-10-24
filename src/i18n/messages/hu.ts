@@ -92,10 +92,12 @@ export const hu: Messages = {
   'brew.b1.style': 'természetesen zavaros · szűretlen',
   'brew.b1.desc':
     'Élesztős, friss és könnyen iható, finom kenyeres jeggyel és lágy komlóaromával. A sörkert kedvence.',
+  'brew.b1.photo': 'Marienbräu Zwickl, zavaros aranysárga, recés korsóban',
   'brew.b2.name': 'Marienbräu Märzen',
   'brew.b2.style': 'borostyán · testes',
   'brew.b2.desc':
     'A klasszikus osztrák vendéglői sör: kerek és malátás, egy csipetnyi karamellel és kellemesen lágy lecsengéssel.',
+  'brew.b2.photo': 'Marienbräu Märzen, borostyánszínű, Marienbräu-címeres pohárban',
   'brew.b3.name': 'Szezonális bak',
   'brew.b3.style': 'erős · csak szezonban',
   'brew.b3.desc':
