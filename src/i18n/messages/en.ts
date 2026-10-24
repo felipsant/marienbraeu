@@ -123,7 +123,7 @@ export const en = {
   'gallery.c3d': 'Zwickl straight from the barrel',
   'gallery.c4': 'Prost & Gemütlichkeit',
   'gallery.c4d': 'Styrian hospitality',
-  'gallery.c5': 'Original Styrian Backhendl',
+  'gallery.c5': 'Original Styrian Fried Chicken (Backhendl)',
   'gallery.c5d': 'With potato & lamb’s lettuce salad and pumpkin seed oil',
   'gallery.c6': 'The historic estate',
   'gallery.c6d': 'Traditional inn with a chapel gable, since c. 1850',
@@ -304,8 +304,10 @@ export const en = {
     '<p><em>Note: this page is a template. Please insert complete details before publishing.</em></p>',
   'legal.privacy.title': 'Privacy',
   'legal.privacy.body':
-    '<h3>Your data</h3><p>We process personal data solely in accordance with the GDPR and the Austrian Data Protection Act. Data from the reservation form (name, email, phone, requested date) is used only to handle your request.</p>' +
-    '<h3>Google Maps</h3><p>The map is only embedded after you click “Load map”. Doing so transfers data (including your IP address) to Google.</p>' +
-    '<h3>Fonts</h3><p>This template loads fonts from Google Fonts. For production we recommend self-hosting them.</p>' +
-    '<p><em>Note: this page is a template. Please insert a complete privacy policy before publishing.</em></p>',
+    '<h3>Your data</h3><p>We process personal data solely in accordance with the GDPR and the Austrian Data Protection Act. The controller is Marienbräu, Rupertistraße 80, 8075 Hart bei Graz (marienbraeu@gmx.at). Data from the reservation form (name, email, phone, requested date) is used only to handle your request.</p>' +
+    '<h3>Hosting</h3><p>This website is served by GitHub Pages, a service of GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. When you visit, GitHub processes technically necessary access data (including your IP address, date and time, the page requested and your browser type) to deliver the site and protect it from abuse. The legal basis is our legitimate interest in a secure and reliable website (Art. 6(1)(f) GDPR). GitHub is certified under the EU-U.S. Data Privacy Framework; the transfer to the USA relies on the European Commission’s adequacy decision (Art. 45 GDPR).</p>' +
+    '<h3>Google Maps</h3><p>The map is only embedded after you click “Load map”. Doing so transfers data (including your IP address) to Google. The legal basis is the consent you give with that click (Art. 6(1)(a) GDPR).</p>' +
+    '<h3>Fonts, cookies &amp; analytics</h3><p>All fonts are hosted locally and delivered together with this website; no connection is made to Google Fonts. We set no tracking cookies and run no external analytics or statistics scripts. Only your chosen language is stored locally in your browser, and it is never sent to us.</p>' +
+    '<h3>Your rights</h3><p>You have the right of access (Art. 15 GDPR), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18), data portability (Art. 20) and objection (Art. 21). You may withdraw any consent you have given at any time, with effect for the future. Just email us at marienbraeu@gmx.at.</p>' +
+    '<h3>Right to lodge a complaint</h3><p>If you believe that the processing of your data violates data protection law, you can lodge a complaint with the supervisory authority: Österreichische Datenschutzbehörde (Austrian Data Protection Authority), Barichgasse 40-42, 1030 Wien, email: dsb@dsb.gv.at.</p>',
 } as const;

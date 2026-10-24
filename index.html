@@ -3,6 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- Everything is first-party except the click-to-load Google Maps iframe. Keep this in step
+       with the privacy notice (legal.privacy.body) when adding any third-party resource. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; frame-src https://www.google.com; connect-src 'self';">
   <title>Marienbräu — Gasthaus &amp; Brauhaus in Hart bei Graz</title>
   <meta name="description" content="Marienbräu in Hart bei Graz: steirisches Gasthaus &amp; Hausbrauerei mit frischem Bier aus dem Kupferkessel, knusprigem Backhendl und idyllischem Gastgarten. Rupertistraße 80, 8075 Hart bei Graz.">
   <meta name="theme-color" content="#1e130c">
@@ -21,11 +24,7 @@
 
   <script>document.documentElement.classList.remove('no-js');</script>
 
-  <!-- Fonts: Playfair Display (display) + Inter (text) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
-
+  <!-- Fonts: Playfair Display (display) + Inter (text), self-hosted in public/fonts via src/styles/fonts.css -->
   <link rel="stylesheet" href="src/styles/index.css">
 
   <!-- Structured data for search engines -->
@@ -1231,7 +1230,5 @@
   </div>
 
   <script type="module" src="src/main.ts"></script>
-  <!-- GoatCounter: cookie-free, so no consent banner; it skips localhost by itself -->
-  <script data-goatcounter="https://akatsuky.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>

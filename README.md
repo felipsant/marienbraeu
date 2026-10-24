@@ -29,7 +29,10 @@ npm run preview   # serve dist/ locally
 sub-path such as `https://<user>.github.io/marienbraeu/`. Pushing to `main` deploys it via
 `.github/workflows/pages.yml` (Settings → Pages → Source must be "GitHub Actions").
 
-The page still needs an internet connection for Google Fonts.
+Everything is self-hosted, fonts included (`public/fonts/`, declared in `src/styles/fonts.css`):
+the page makes no third-party request until a visitor clicks to load the Google Maps embed. The
+Content-Security-Policy `<meta>` in `index.html` enforces that; update it together with the
+privacy notice if a third-party resource is ever added.
 
 ## Structure
 
@@ -66,5 +69,4 @@ tests/                     unit (Vitest) and e2e (Playwright) tests
 - **Reservations:** the form does not send anything yet. Wire it to a mail service or booking API in the `submit` handler in `src/features/reservation.ts`.
 - **Reviews:** the texts in `src/data/reviews.ts` are illustrative samples written for this template. Replace them with verbatim Google reviews.
 - **Menu & prices:** the dishes beyond the core list, and all prices, are realistic placeholders. Confirm them with the owner.
-- **Impressum / Datenschutz:** placeholder texts are in `src/i18n/messages/`. Fill in the legally required details.
-- **Fonts:** for production, consider self-hosting the fonts instead of loading them from Google Fonts.
+- **Impressum:** the company details in `legal.imprint.body` (`src/i18n/messages/`) are still placeholders. Fill in the legally required details.

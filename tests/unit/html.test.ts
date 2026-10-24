@@ -27,9 +27,16 @@ describe('index.html', () => {
     expect(local).toContain('src/main.ts');
   });
 
-  it('loads the cookie-free GoatCounter script, async', () => {
-    expect(html).toContain(
-      '<script data-goatcounter="https://akatsuky.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>',
+  it('loads no third-party fonts or analytics', () => {
+    expect(html).not.toMatch(/fonts\.(?:googleapis|gstatic)\.com|goatcounter|gc\.zgo\.at/);
+    for (const m of html.matchAll(/<script\b[^>]*\bsrc="([^"]+)"/g))
+      expect(m[1], m[1]).not.toMatch(/^https?:/);
+  });
+
+  it('sets a Content-Security-Policy that only lets in the Google Maps iframe', () => {
+    const csp = html.match(/<meta http-equiv="Content-Security-Policy" content="([^"]+)">/)?.[1];
+    expect(csp).toBe(
+      "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; frame-src https://www.google.com; connect-src 'self';",
     );
   });
 
@@ -118,6 +125,13 @@ describe('index.html', () => {
 });
 
 describe('styles.css', () => {
+  it('self-hosts every web font it declares', () => {
+    const fonts = [...css.matchAll(/url\('(\/fonts\/[^']+\.woff2)'\)/g)].map((m) => m[1] ?? '');
+    expect(fonts).toHaveLength(6);
+    for (const font of fonts)
+      expect(existsSync(resolve(ROOT, 'public', font.slice(1))), font).toBe(true);
+  });
+
   it('positions the mobile drawer with position: fixed', () => {
     const rule = css.match(/\.mobile-nav\s*\{[^}]*\}/)![0];
     expect(rule).toMatch(/position:\s*fixed/);

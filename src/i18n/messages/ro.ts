@@ -126,7 +126,7 @@ export const ro: Messages = {
   'gallery.c3d': 'Zwickl direct din butoi',
   'gallery.c4': 'Prost & Gemütlichkeit',
   'gallery.c4d': 'Ospitalitate stiriană',
-  'gallery.c5': 'Backhendl stirian original',
+  'gallery.c5': 'Pui prăjit stirian tradițional (Backhendl)',
   'gallery.c5d': 'Cu salată de cartofi și fetică, cu ulei de semințe de dovleac',
   'gallery.c6': 'Conacul istoric',
   'gallery.c6d': 'Han tradițional cu fronton de capelă, din cca. 1850',
@@ -306,8 +306,10 @@ export const ro: Messages = {
     '<p><em>Notă: această pagină este un șablon. Vă rugăm să completați datele integrale înainte de publicare.</em></p>',
   'legal.privacy.title': 'Confidențialitate',
   'legal.privacy.body':
-    '<h3>Datele dumneavoastră</h3><p>Prelucrăm datele cu caracter personal exclusiv în temeiul GDPR și al legii austriece privind protecția datelor. Datele din formularul de rezervare (nume, e-mail, telefon, data dorită) le folosim doar pentru a vă procesa solicitarea.</p>' +
-    '<h3>Google Maps</h3><p>Harta este încorporată doar după ce dați clic pe „Încarcă harta”. Atunci sunt transmise date (inclusiv adresa IP) către Google.</p>' +
-    '<h3>Fonturi</h3><p>Acest șablon încarcă fonturi de la Google Fonts. Pentru utilizarea în producție recomandăm găzduirea lor locală.</p>' +
-    '<p><em>Notă: această pagină este un șablon. Vă rugăm să inserați o politică de confidențialitate completă înainte de publicare.</em></p>',
+    '<h3>Datele dumneavoastră</h3><p>Prelucrăm datele cu caracter personal exclusiv în temeiul GDPR și al legii austriece privind protecția datelor. Operatorul de date este Marienbräu, Rupertistraße 80, 8075 Hart bei Graz (marienbraeu@gmx.at). Datele din formularul de rezervare (nume, e-mail, telefon, data dorită) le folosim doar pentru a vă procesa solicitarea.</p>' +
+    '<h3>Găzduire</h3><p>Acest site este furnizat prin GitHub Pages, un serviciu al GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, SUA. La accesarea site-ului, GitHub prelucrează datele de acces necesare din punct de vedere tehnic (inclusiv adresa IP, data și ora, pagina accesată și tipul de browser) pentru a livra site-ul și a-l proteja împotriva abuzurilor. Temeiul juridic este interesul nostru legitim pentru un site sigur și fiabil (art. 6 alin. (1) lit. (f) GDPR). GitHub este certificat în cadrul EU-U.S. Data Privacy Framework; transferul către SUA se bazează pe decizia de adecvare a Comisiei Europene (art. 45 GDPR).</p>' +
+    '<h3>Google Maps</h3><p>Harta este încorporată doar după ce dați clic pe „Încarcă harta”. Atunci sunt transmise date (inclusiv adresa IP) către Google. Temeiul juridic este consimțământul pe care îl exprimați prin acest clic (art. 6 alin. (1) lit. (a) GDPR).</p>' +
+    '<h3>Fonturi, cookie-uri și analiză</h3><p>Toate fonturile sunt găzduite local și livrate împreună cu acest site; nu se stabilește nicio conexiune cu Google Fonts. Nu folosim cookie-uri de urmărire și nu rulăm scripturi externe de analiză sau statistică. Doar limba aleasă este salvată local în browserul dumneavoastră și nu ne este transmisă niciodată.</p>' +
+    '<h3>Drepturile dumneavoastră</h3><p>Aveți dreptul de acces (art. 15 GDPR), de rectificare (art. 16), de ștergere (art. 17), de restricționare a prelucrării (art. 18), la portabilitatea datelor (art. 20) și de opoziție (art. 21). Vă puteți retrage oricând consimțământul acordat, cu efect pentru viitor. Este suficient să ne scrieți la marienbraeu@gmx.at.</p>' +
+    '<h3>Dreptul de a depune o plângere</h3><p>Dacă considerați că prelucrarea datelor dumneavoastră încalcă legislația privind protecția datelor, puteți depune o plângere la autoritatea de supraveghere: Österreichische Datenschutzbehörde (Autoritatea austriacă pentru protecția datelor), Barichgasse 40-42, 1030 Wien, e-mail: dsb@dsb.gv.at.</p>',
 };
