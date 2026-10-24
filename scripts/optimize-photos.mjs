@@ -20,6 +20,9 @@ import sharp from 'sharp';
 const OUT_DIR = path.join(path.dirname(fileURLToPath(import.meta.url)), '../public/assets/img');
 
 /**
+ * `warm: false` skips the warm white balance, for shots taken indoors under warm light
+ * (the food photos) that the shift would push too orange.
+ *
  * `crop` is the part of the upright original to keep: `top` and `left` are fractions
  * of the height and width, `ratio` is width / height. The crop spans the full width
  * when the source is too tall for `ratio`, and the full height when it is too wide, in
@@ -76,6 +79,22 @@ const PHOTOS = [
     name: 'beer-marzen',
     widths: [320, 460],
     crop: { ratio: 0.5, left: 0.02 },
+    warm: false,
+  },
+  // Steirisches Backhendl on a white plate with lemon: "Original Steirisches Backhendl"
+  {
+    source: 'gallery-backhendl-wide.jpg',
+    name: 'gallery-backhendl',
+    widths: [640, 1280],
+    crop: { ratio: 2.0 },
+    warm: false,
+  },
+  // Schweinsbraten with Semmelknödel, sauerkraut and a beer: group feasts banner
+  {
+    source: 'food-schweinsbraten-clean.jpg',
+    name: 'food-schweinsbraten',
+    widths: [480, 960],
+    crop: { ratio: 1.0 },
     warm: false,
   },
 ];

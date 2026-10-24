@@ -39,6 +39,7 @@ describe('index.html', () => {
     );
     expect(photos.sort()).toEqual([
       'assets/img/gallery-arrival.jpg',
+      'assets/img/gallery-backhendl.jpg',
       'assets/img/gallery-garden.jpg',
       'assets/img/gallery-kettle.jpg',
       'assets/img/gallery-prost.jpg',
@@ -81,6 +82,14 @@ describe('index.html', () => {
     );
     expect(cards).toEqual(['zwickl', 'marzen', 'bock']);
     expect(html.match(/class="beer-swatch"/g)).toHaveLength(3);
+  });
+
+  it('shows the Schweinsbraten photo in the group banner, in every size the srcset names', () => {
+    const groups = html.slice(html.indexOf('id="gruppen"'));
+    const picture = groups.slice(groups.indexOf('<picture'), groups.indexOf('</picture>'));
+    expect(picture).toContain('src="assets/img/food-schweinsbraten.jpg"');
+    for (const [, file] of picture.matchAll(/(assets\/img\/[^\s"]+) \d+w/g))
+      expect(existsSync(resolve(ROOT, 'public', file ?? '')), file).toBe(true);
   });
 
   it('is built with a relative base so any sub-path works', () => {

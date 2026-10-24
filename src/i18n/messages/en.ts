@@ -255,9 +255,9 @@ export const en = {
   'groups.f1.title': 'Space for up to 80 Guests at Once',
   'groups.f1.desc':
     'Cozy wood-paneled parlors and a spacious shady beer garden under chestnut trees. Fast, coordinated service so everyone dines together.',
-  'groups.f2.title': 'Great Bus Connection & Access',
+  'groups.f2.title': 'Easy Access & On-Site Parking',
   'groups.f2.desc':
-    'Located right outside Graz in Hart bei Graz, easily accessible by public transit buses and directly reachable from Graz city center in minutes.',
+    'Located right outside Graz in Hart bei Graz: Just 12–15 minutes by car or charter bus from Graz city centre, with generous on-site parking and regional transit connections.',
   'groups.f3.title': 'Dedicated Bus & Car Parking',
   'groups.f3.desc':
     'Generous parking directly at the inn for tour buses and cars – smooth and barrier-free boarding and arrival for travel groups.',
@@ -268,6 +268,7 @@ export const en = {
   'groups.bannerTitle': 'Planning a tour group trip or celebration?',
   'groups.bannerLead':
     'We coordinate custom menus, scheduling and seating individually for your travel group or celebration. Warm, straightforward and reliable.',
+  'groups.bannerPhotoAlt': 'Styrian roast pork with bread dumplings, sauerkraut and a mug of beer',
   'groups.cta': 'Inquire for Group Reservation',
   'res.seat': 'Preferred seating',
   'res.seatIn': 'Tavern',
