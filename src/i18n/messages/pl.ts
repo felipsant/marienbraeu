@@ -125,8 +125,8 @@ export const pl: Messages = {
   'gallery.c4d': 'Styryjska gościnność',
   'gallery.c5': 'Oryginalny styryjski Backhendl',
   'gallery.c5d': 'Z sałatką ziemniaczaną i roszponką z olejem z pestek dyni',
-  'gallery.c6': 'Kolumna maryjna',
-  'gallery.c6d': 'Barokowy zabytek przed naszymi drzwiami, ok. 1670–1680',
+  'gallery.c6': 'Historyczna posiadłość',
+  'gallery.c6d': 'Tradycyjna gospoda z kaplicznym szczytem, od ok. 1850 r.',
   'gallery.c7': 'Przyjazd do Hart bei Graz',
   'gallery.c7d': 'Ostatni zakręt przed ogródkiem piwnym',
 

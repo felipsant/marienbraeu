@@ -61,7 +61,7 @@ const PHOTOS = [
     widths: [640, 1280],
     crop: { ratio: 1.0, left: 0.1 },
   },
-  // the baroque Marian column in front of the tavern, statue tip to base: "Die Mariensäule"
+  // the historic inn with its chapel gable, seen from the road: "Historisches Anwesen"
   {
     source: 'PXL_20261023_105552522.jpg',
     name: 'gallery-mariensaeule',

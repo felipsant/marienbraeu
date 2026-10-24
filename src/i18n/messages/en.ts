@@ -123,8 +123,8 @@ export const en = {
   'gallery.c4d': 'Styrian hospitality',
   'gallery.c5': 'Original Styrian Backhendl',
   'gallery.c5d': 'With potato & lamb’s lettuce salad and pumpkin seed oil',
-  'gallery.c6': 'The Marian column',
-  'gallery.c6d': 'Baroque landmark outside our door, c. 1670–1680',
+  'gallery.c6': 'The historic estate',
+  'gallery.c6d': 'Traditional inn with a chapel gable, since c. 1850',
   'gallery.c7': 'Arriving in Hart bei Graz',
   'gallery.c7d': 'The last bend before the beer garden',
 

@@ -13,7 +13,7 @@ Until a file exists, the matching hand-drawn illustration is shown instead.
 | `gallery-prost*` | Gallery: Prost & Gemütlichkeit (about 1.15:1) |
 | `gallery-arrival*` | Gallery: arriving in Hart bei Graz (large tile, about 1:1) |
 | `gallery-backhendl.jpg` | Gallery: Backhendl (wide, 2:1) |
-| `gallery-mariensaeule*` | Gallery: the Marian column (wide, 2:1) |
+| `gallery-mariensaeule*` | Gallery: the historic inn with its chapel gable (wide, 2:1) |
 
 ## Photos made by `scripts/optimize-photos.mjs`
 

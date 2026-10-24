@@ -124,8 +124,8 @@ export const hu: Messages = {
   'gallery.c4d': 'Stájer vendégszeretet',
   'gallery.c5': 'Eredeti stájer Backhendl',
   'gallery.c5d': 'Burgonya- és galambbegysalátával, tökmagolajjal',
-  'gallery.c6': 'A Mária-oszlop',
-  'gallery.c6d': 'Barokk emlékmű az ajtónk előtt, kb. 1670–1680',
+  'gallery.c6': 'A történelmi birtok',
+  'gallery.c6d': 'Hagyományos fogadó kápolnaoromzattal, kb. 1850 óta',
   'gallery.c7': 'Érkezés Hart bei Grazba',
   'gallery.c7d': 'Az utolsó kanyar a sörkert előtt',
 
