@@ -255,9 +255,9 @@ export const it: Messages = {
   'groups.f1.title': 'Fino a 80 Ospiti in contemporanea',
   'groups.f1.desc':
     'Accoglienti sale tradizionali in legno e un ampio giardino all’ombra dei castagni. Servizio veloce e coordinato per tutti i partecipanti.',
-  'groups.f2.title': 'Ottimi collegamenti in Bus da Graz',
+  'groups.f2.title': 'Facile da raggiungere e parcheggio in loco',
   'groups.f2.desc':
-    'Alle porte di Graz (Hart bei Graz), ottimamente collegato con i mezzi pubblici e raggiungibile in pochi minuti dal centro città.',
+    'Alle porte di Graz, a Hart bei Graz: solo 12–15 minuti in auto o in pullman dal centro di Graz, ampio parcheggio proprio davanti al locale e collegamenti con gli autobus regionali.',
   'groups.f3.title': 'Parcheggio Bus e Auto riservato',
   'groups.f3.desc':
     'Ampi parcheggi direttamente davanti al locale per autobus gran turismo e automobili – salita e discesa comoda e senza barriere.',
@@ -268,6 +268,7 @@ export const it: Messages = {
   'groups.bannerTitle': 'State organizzando una gita in pullman o una festa?',
   'groups.bannerLead':
     'Concordiamo menù personalizzati, orari e tavoli dedicati per la vostra comitiva. Con la tipica accoglienza calorosa austriaca.',
+  'groups.bannerPhotoAlt': 'Arrosto di maiale stiriano con canederli, crauti e un boccale di birra',
   'groups.cta': 'Richiedi disponibilità per gruppi',
   'res.seat': 'Posto preferito',
   'res.seatIn': 'Osteria',

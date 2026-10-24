@@ -252,9 +252,9 @@ export const hu: Messages = {
   'groups.f1.title': 'Hely egyszerre 80 vendég számára',
   'groups.f1.desc':
     'Meghitt, faburkolatú termek és tágas, árnyas sörkert gesztenyefák alatt. Gyors, összehangolt kiszolgálás, hogy mindenki együtt étkezhessen.',
-  'groups.f2.title': 'Kiváló buszos megközelítés',
+  'groups.f2.title': 'Könnyű megközelítés & saját parkoló',
   'groups.f2.desc':
-    'Közvetlenül Graz mellett, Hart bei Grazban, helyi buszjáratokkal jól elérhető, Graz belvárosából pár perc alatt.',
+    'Közvetlenül Graz mellett, Hart bei Grazban: Graz belvárosából mindössze 12–15 perc autóval vagy autóbusszal, tágas parkoló közvetlenül a ház mellett, valamint regionális buszjáratok.',
   'groups.f3.title': 'Saját busz- és autóparkoló',
   'groups.f3.desc':
     'Bőséges parkoló közvetlenül a fogadónál turistabuszoknak és autóknak — kényelmes, akadálymentes be- és kiszállás utazócsoportok számára.',
@@ -265,6 +265,8 @@ export const hu: Messages = {
   'groups.bannerTitle': 'Buszos utat vagy ünnepséget tervez?',
   'groups.bannerLead':
     'Egyedi menüt, időbeosztást és ültetést egyeztetünk utazócsoportja vagy ünnepsége számára. Melegen, egyszerűen és megbízhatóan.',
+  'groups.bannerPhotoAlt':
+    'Stájer sertéssült zsemlegombóccal, savanyú káposztával és egy korsó sörrel',
   'groups.cta': 'Csoportos foglalás kérése',
   'res.seat': 'Ülőhely kívánság',
   'res.seatIn': 'Söntés',

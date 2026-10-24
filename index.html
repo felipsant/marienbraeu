@@ -681,7 +681,7 @@
             <figcaption><strong data-i18n="gallery.c7">Ankommen in Hart bei Graz</strong><span data-i18n="gallery.c7d">Die letzte Kurve vor dem Gastgarten</span></figcaption>
           </figure>
 
-          <figure class="g-item g-wide reveal" >
+          <figure class="g-item g-wide reveal" data-photo="assets/img/gallery-backhendl.jpg" data-photo-widths="640 1280" data-photo-ratio="2.0">
             <svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
               <defs>
                 <linearGradient id="g5-wood" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#4a2e1a"/><stop offset="1" stop-color="#2a1b11"/></linearGradient>
@@ -789,13 +789,13 @@
             <p class="text-sm mt-2 leading-relaxed" style="color:var(--muted)" data-i18n="groups.f1.desc">Großzügige holzgetäfelte Stuben und ein herrlicher Kastaniengarten für geschlossene Gesellschaften oder große Runden. Eingespieltes Küchen- und Serviceteam für zügige Bewirtung.</p>
           </div>
 
-          <!-- Feature 2: Great bus connection from city center -->
+          <!-- Feature 2: Easy access by car or coach, regional bus -->
           <div class="card p-6 rounded-2xl flex flex-col items-start transition-all duration-300 hover:shadow-lg reveal" style="background:#fff;border:1px solid rgba(44,24,16,0.08)">
             <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background:rgba(200,109,59,0.12);color:var(--copper)">
               <svg style="width:24px;height:24px"><use href="#i-nav"/></svg>
             </div>
-            <h3 class="font-display text-xl font-bold" style="color:var(--walnut)" data-i18n="groups.f2.title">Top-Verbindung aus Graz</h3>
-            <p class="text-sm mt-2 leading-relaxed" style="color:var(--muted)" data-i18n="groups.f2.desc">Vor den Toren der Stadt (Hart bei Graz): Hervorragende öffentliche Busverbindungen und schnelle Erreichbarkeit in nur 12–15 Minuten direkt aus dem Grazer Stadtzentrum.</p>
+            <h3 class="font-display text-xl font-bold" style="color:var(--walnut)" data-i18n="groups.f2.title">Bequeme Erreichbarkeit &amp; Parken</h3>
+            <p class="text-sm mt-2 leading-relaxed" style="color:var(--muted)" data-i18n="groups.f2.desc">Vor den Toren von Graz (Hart bei Graz): Schnelle Anfahrt mit Pkw oder Reisebus in nur 12–15 Minuten aus dem Grazer Stadtzentrum, großzügige Parkplätze direkt am Haus sowie regionale Busanbindung.</p>
           </div>
 
           <!-- Feature 3: Dedicated Bus Parking -->
@@ -818,15 +818,19 @@
         </div>
 
         <!-- Group Call-to-action Banner -->
-        <div class="mt-12 p-8 md:p-10 rounded-3xl reveal flex flex-col md:flex-row items-center justify-between gap-6" style="background:linear-gradient(135deg, #24140b 0%, #3a2215 100%);color:#faf6f0;box-shadow:0 12px 36px rgba(36,20,11,0.25)">
-          <div class="max-w-xl text-center md:text-left">
+        <div class="mt-12 p-8 md:p-10 rounded-3xl reveal flex flex-col lg:flex-row items-center justify-between gap-6" style="background:linear-gradient(135deg, #24140b 0%, #3a2215 100%);color:#faf6f0;box-shadow:0 12px 36px rgba(36,20,11,0.25)">
+          <picture class="shrink-0">
+            <source type="image/webp" srcset="assets/img/food-schweinsbraten-480.webp 480w, assets/img/food-schweinsbraten.webp 960w" sizes="176px">
+            <img src="assets/img/food-schweinsbraten.jpg" srcset="assets/img/food-schweinsbraten-480.jpg 480w, assets/img/food-schweinsbraten.jpg 960w" sizes="176px" alt="Steirischer Schweinsbraten mit Semmelknödel, Sauerkraut und einem Krügerl Bier" data-i18n-attr="alt:groups.bannerPhotoAlt" class="block w-44 h-44 rounded-2xl object-cover" style="box-shadow:0 8px 24px rgba(0,0,0,0.35);border:2px solid rgba(229,169,59,0.35)" width="960" height="960" loading="lazy" decoding="async">
+          </picture>
+          <div class="max-w-xl text-center lg:text-left">
             <span class="badge text-xs" style="background:rgba(200,109,59,0.25);color:var(--amber);border:1px solid rgba(200,109,59,0.4)">
               <svg style="width:12px;height:12px"><use href="#i-calendar"/></svg><span data-i18n="groups.bannerBadge">Reisegruppen &amp; Feiern</span>
             </span>
             <h3 class="font-display text-2xl md:text-3xl font-bold mt-2.5 text-copper-gradient" data-i18n="groups.bannerTitle">Planen Sie einen Gruppenausflug oder eine Feier?</h3>
             <p class="text-sm mt-2 leading-relaxed" style="color:rgba(250,246,240,0.8)" data-i18n="groups.bannerLead">Wir stimmen Menü, Zeitplan und Platzierung ganz individuell auf Ihre Reisegruppe oder Gesellschaft ab. Unkompliziert und herzlich.</p>
           </div>
-          <div class="flex flex-col sm:flex-row flex-wrap items-center gap-3 w-full md:w-auto">
+          <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 w-full lg:w-auto">
             <button type="button" class="btn btn-amber w-full sm:w-auto justify-center text-center" data-open-reservation-group="80">
               <svg><use href="#i-calendar"/></svg><span data-i18n="groups.cta">Gruppenanfrage senden</span>
             </button>

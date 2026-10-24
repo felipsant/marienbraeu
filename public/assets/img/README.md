@@ -12,15 +12,17 @@ Until a file exists, the matching hand-drawn illustration is shown instead.
 | `gallery-beer.jpg` | Gallery: freshly tapped beer (square) |
 | `gallery-prost*` | Gallery: Prost & Gemütlichkeit (about 1.15:1) |
 | `gallery-arrival*` | Gallery: arriving in Hart bei Graz (large tile, about 1:1) |
-| `gallery-backhendl.jpg` | Gallery: Backhendl (wide, 2:1) |
+| `gallery-backhendl*` | Gallery: Backhendl (wide, 2:1) |
+| `food-schweinsbraten*` | Groups banner: Schweinsbraten with beer (square, 480/960 px, plain `<picture>`) |
 | `gallery-mariensaeule.jpg` | Gallery: the Marian column (wide, 2:1) |
 
 ## Photos made by `scripts/optimize-photos.mjs`
 
-`hero`, `gallery-garden`, `gallery-prost`, `gallery-arrival` and `gallery-kettle` are generated from the phone
-originals (never committed) with `node scripts/optimize-photos.mjs <folder with the originals>`:
-EXIF rotation, a gentle warm white balance, no metadata, WebP and JPEG at 640/1280 px
-(hero also 1920). The widest size has no width suffix (`hero.jpg`, `hero.webp`); the markup
+`hero`, `gallery-garden`, `gallery-prost`, `gallery-arrival`, `gallery-kettle`, `gallery-backhendl` and
+`food-schweinsbraten` are generated from the originals (never committed) with
+`node scripts/optimize-photos.mjs <folder with the originals>`: EXIF rotation, a gentle warm white
+balance (skipped for the indoor food shots, `warm: false`), no metadata, WebP and JPEG at 640/1280 px
+(hero also 1920; `food-schweinsbraten` 480/960). The widest size has no width suffix (`hero.jpg`, `hero.webp`); the markup
 points at that JPEG and `src/features/photos.ts` derives the other file names, so adding a
 photo means adding an entry to the script and a `data-photo` + `data-photo-widths` pair on the
 tile. `public/assets/img/` is what Vite serves at `assets/img/`; there is no second copy.

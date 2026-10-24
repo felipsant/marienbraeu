@@ -254,9 +254,9 @@ export const pl: Messages = {
   'groups.f1.title': 'Miejsce dla 80 gości jednocześnie',
   'groups.f1.desc':
     'Przytulne sale wyłożone drewnem i przestronny, cienisty ogródek piwny pod kasztanowcami. Szybka, skoordynowana obsługa, aby wszyscy jedli razem.',
-  'groups.f2.title': 'Dobry dojazd autobusem',
+  'groups.f2.title': 'Łatwy dojazd i parking na miejscu',
   'groups.f2.desc':
-    'Tuż za Grazem, w Hart bei Graz — łatwo dostępne komunikacją miejską i osiągalne z centrum Grazu w kilka minut.',
+    'Tuż za Grazem, w Hart bei Graz: zaledwie 12–15 minut samochodem lub autokarem z centrum Grazu, obszerny parking tuż przy gospodzie oraz regionalne połączenia autobusowe.',
   'groups.f3.title': 'Własny parking dla autokarów i samochodów',
   'groups.f3.desc':
     'Duży parking bezpośrednio przy gospodzie dla autokarów i samochodów — wygodne i bezbarierowe wsiadanie i wysiadanie dla grup podróżnych.',
@@ -267,6 +267,7 @@ export const pl: Messages = {
   'groups.bannerTitle': 'Planujesz wycieczkę grupową lub uroczystość?',
   'groups.bannerLead':
     'Indywidualnie ustalamy menu, harmonogram i rozmieszczenie miejsc dla Twojej grupy lub uroczystości. Serdecznie, prosto i niezawodnie.',
+  'groups.bannerPhotoAlt': 'Styryjska pieczeń wieprzowa z knedlami, kiszoną kapustą i kuflem piwa',
   'groups.cta': 'Zapytaj o rezerwację grupową',
   'res.seat': 'Preferowane miejsce',
   'res.seatIn': 'Izba gościnna',

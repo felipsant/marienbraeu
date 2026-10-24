@@ -255,9 +255,9 @@ export const ro: Messages = {
   'groups.f1.title': 'Loc pentru 80 de oaspeți deodată',
   'groups.f1.desc':
     'Săli primitoare îmbrăcate în lemn și o grădină de bere spațioasă, umbrită de castani. Servire rapidă și coordonată, ca toată lumea să mănânce împreună.',
-  'groups.f2.title': 'Acces excelent cu autobuzul',
+  'groups.f2.title': 'Acces ușor și parcare proprie',
   'groups.f2.desc':
-    'Chiar lângă Graz, în Hart bei Graz, ușor accesibil cu autobuzele de transport public și la doar câteva minute de centrul orașului.',
+    'Chiar lângă Graz, în Hart bei Graz: doar 12–15 minute cu mașina sau cu autocarul din centrul orașului Graz, parcare generoasă chiar lângă local și legături cu autobuzele regionale.',
   'groups.f3.title': 'Parcare dedicată pentru autocare și mașini',
   'groups.f3.desc':
     'Parcare generoasă direct la han pentru autocare și mașini — urcare și coborâre comodă și fără bariere pentru grupurile de călători.',
@@ -268,6 +268,8 @@ export const ro: Messages = {
   'groups.bannerTitle': 'Plănuiți o excursie de grup sau o petrecere?',
   'groups.bannerLead':
     'Stabilim individual meniuri, program și așezarea la masă pentru grupul sau petrecerea dumneavoastră. Cald, simplu și de încredere.',
+  'groups.bannerPhotoAlt':
+    'Friptură de porc stiriană cu găluște de pâine, varză murată și o halbă de bere',
   'groups.cta': 'Solicitați o rezervare de grup',
   'res.seat': 'Loc preferat',
   'res.seatIn': 'Sala hanului',

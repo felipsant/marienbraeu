@@ -39,6 +39,7 @@ describe('index.html', () => {
     );
     expect(photos.sort()).toEqual([
       'assets/img/gallery-arrival.jpg',
+      'assets/img/gallery-backhendl.jpg',
       'assets/img/gallery-garden.jpg',
       'assets/img/gallery-kettle.jpg',
       'assets/img/gallery-prost.jpg',
@@ -49,6 +50,13 @@ describe('index.html', () => {
       for (const file of [photo, `${stem}.webp`, `${stem}-640.jpg`, `${stem}-640.webp`])
         expect(existsSync(resolve(ROOT, 'public', file)), file).toBe(true);
     }
+  });
+
+  it('shows the Schweinsbraten photo in the group banner, in every size the srcset names', () => {
+    const picture = html.slice(html.indexOf('<picture'), html.indexOf('</picture>'));
+    expect(picture).toContain('src="assets/img/food-schweinsbraten.jpg"');
+    for (const [, file] of picture.matchAll(/(assets\/img\/[^\s"]+) \d+w/g))
+      expect(existsSync(resolve(ROOT, 'public', file ?? '')), file).toBe(true);
   });
 
   it('is built with a relative base so any sub-path works', () => {
