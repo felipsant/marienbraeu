@@ -378,3 +378,61 @@ describe('page chrome', () => {
     expect(p.$('[data-year]').textContent).toBe('2026');
   });
 });
+
+describe('photos', () => {
+  /** Records the URL of every image the page asks the browser for. */
+  function spyOnImageRequests(): string[] {
+    const requested: string[] = [];
+    const src = Object.getOwnPropertyDescriptor(HTMLImageElement.prototype, 'src');
+    vi.spyOn(HTMLImageElement.prototype, 'src', 'set').mockImplementation(function (
+      this: HTMLImageElement,
+      value: string,
+    ) {
+      requested.push(value);
+      src?.set?.call(this, value);
+    });
+    return requested;
+  }
+
+  afterEach(() => {
+    vi.restoreAllMocks();
+  });
+
+  it('fetches the hero at once but each gallery photo only as its tile nears the viewport', async () => {
+    const requested = spyOnImageRequests();
+    const p = await boot();
+    expect(requested).toEqual(['assets/img/hero.jpg']);
+
+    const kettle = p.$('[data-photo="assets/img/gallery-kettle.jpg"]');
+    p.intersect(kettle);
+    expect(requested).toEqual(['assets/img/hero.jpg', 'assets/img/gallery-kettle.jpg']);
+    p.intersect(kettle);
+    expect(requested).toHaveLength(2);
+  });
+
+  it('offers AVIF, then WebP, then JPEG at every listed width', async () => {
+    const created: HTMLPictureElement[] = [];
+    const createElement = document.createElement.bind(document);
+    vi.spyOn(document, 'createElement').mockImplementation((tag: string) => {
+      const el = createElement(tag);
+      if (el instanceof HTMLPictureElement) created.push(el);
+      return el;
+    });
+    await boot();
+    const [hero] = created;
+    const sources = [...(hero?.querySelectorAll('source') ?? [])].map((s) => [s.type, s.srcset]);
+    expect(sources).toEqual([
+      [
+        'image/avif',
+        'assets/img/hero-640.avif 640w, assets/img/hero-1280.avif 1280w, assets/img/hero.avif 1920w',
+      ],
+      [
+        'image/webp',
+        'assets/img/hero-640.webp 640w, assets/img/hero-1280.webp 1280w, assets/img/hero.webp 1920w',
+      ],
+    ]);
+    expect(hero?.querySelector('img')?.srcset).toBe(
+      'assets/img/hero-640.jpg 640w, assets/img/hero-1280.jpg 1280w, assets/img/hero.jpg 1920w',
+    );
+  });
+});

@@ -49,7 +49,14 @@ describe('index.html', () => {
     ]);
     for (const photo of photos) {
       const stem = photo.replace(/\.jpg$/, '');
-      for (const file of [photo, `${stem}.webp`, `${stem}-640.jpg`, `${stem}-640.webp`])
+      for (const file of [
+        photo,
+        `${stem}.webp`,
+        `${stem}.avif`,
+        `${stem}-640.jpg`,
+        `${stem}-640.webp`,
+        `${stem}-640.avif`,
+      ])
         expect(existsSync(resolve(ROOT, 'public', file)), file).toBe(true);
     }
   });

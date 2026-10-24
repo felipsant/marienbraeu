@@ -21,6 +21,8 @@ export interface Page {
   click: (el: Element) => void;
   submit: (form: Element) => void;
   change: (el: Element) => void;
+  /** Tells every IntersectionObserver watching `el` that it has come into view. */
+  intersect: (el: Element) => void;
 }
 
 export async function boot(options: BootOptions = {}): Promise<Page> {
@@ -41,12 +43,19 @@ export async function boot(options: BootOptions = {}): Promise<Page> {
   document.body.innerHTML = parsed.body.innerHTML;
 
   // jsdom has no layout engine; stub the observers and scrolling the page relies on.
+  const observers: { callback: IntersectionObserverCallback; targets: Set<Element> }[] = [];
   vi.stubGlobal(
     'IntersectionObserver',
     class {
-      observe = vi.fn();
-      unobserve = vi.fn();
-      disconnect = vi.fn();
+      private targets = new Set<Element>();
+      constructor(callback: IntersectionObserverCallback) {
+        observers.push({ callback, targets: this.targets });
+      }
+      observe = vi.fn((el: Element) => this.targets.add(el));
+      unobserve = vi.fn((el: Element) => this.targets.delete(el));
+      disconnect = vi.fn(() => {
+        this.targets.clear();
+      });
     },
   );
   window.matchMedia = vi.fn().mockReturnValue({ matches: false });
@@ -74,5 +83,11 @@ export async function boot(options: BootOptions = {}): Promise<Page> {
     click: (el) => el.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true })),
     submit: (form) => form.dispatchEvent(new Event('submit', { bubbles: true, cancelable: true })),
     change: (el) => el.dispatchEvent(new Event('change', { bubbles: true })),
+    intersect: (el) => {
+      for (const { callback } of observers.filter((o) => o.targets.has(el))) {
+        const entry = { target: el, isIntersecting: true } as IntersectionObserverEntry;
+        callback([entry], {} as IntersectionObserver);
+      }
+    },
   };
 }
