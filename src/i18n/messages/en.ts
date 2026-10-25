@@ -47,7 +47,7 @@ export const en = {
   'about.ownerAlt': 'Your host at Marienbräu',
   'about.ownerSlotTitle': 'Your host',
   'about.ownerSlotHint': 'Space for the innkeeper’s portrait',
-  'about.ratingNote': 'from 450+ Google reviews',
+  'about.ratingNote': 'from over 400 Google reviews',
 
   'menu.eyebrow': 'From kitchen & cellar',
   'menu.title': 'Our Menu',
@@ -132,7 +132,7 @@ export const en = {
 
   'reviews.eyebrow': 'Reviews',
   'reviews.title': 'What our guests say',
-  'reviews.count': '450+ Google reviews',
+  'reviews.count': 'Over 400 Google reviews',
   'reviews.region': 'Google reviews',
   'reviews.prev': 'Previous review',
   'reviews.next': 'Next review',
@@ -172,7 +172,7 @@ export const en = {
   'contact.eyebrow': 'Directions & Contact',
   'contact.title': 'How to find us',
   'contact.intro':
-    'Just a few minutes from the edge of Graz — with parking right next to the house.',
+    'About 15 minutes by car from Graz — with parking right next to the house.',
   'contact.consent': 'Loading the map transfers data to Google.',
   'contact.loadMap': 'Load map',
   'contact.route': 'Get directions',
@@ -203,7 +203,7 @@ export const en = {
   'nearby.c3.tag': 'Family & Dining',
   'nearby.c4.tag': 'UNESCO Heritage & Dining',
   'nearby.c4.title': 'Graz Schlossberg & Inn Finale',
-  'nearby.c4.dist': '12–15 min from Graz centre',
+  'nearby.c4.dist': 'about 15 minutes by car from Graz',
   'nearby.c4.desc':
     'From the iconic Graz Clock Tower straight into nature: Fast access via St. Peter, leafy chestnut beer garden, safe play space for kids, and hearty tavern dining.',
 
@@ -257,7 +257,7 @@ export const en = {
     'Cozy wood-paneled parlors and a spacious shady beer garden under chestnut trees. Fast, coordinated service so everyone dines together.',
   'groups.f2.title': 'Easy Access & On-Site Parking',
   'groups.f2.desc':
-    'Located right outside Graz in Hart bei Graz: Just 12–15 minutes by car or charter bus from Graz city centre, with generous on-site parking and regional transit connections.',
+    'Located right outside Graz in Hart bei Graz: About 15 minutes by car or charter bus from Graz, with generous on-site parking and regional transit connections.',
   'groups.f3.title': 'Dedicated Bus & Car Parking',
   'groups.f3.desc':
     'Generous parking directly at the inn for tour buses and cars – smooth and barrier-free boarding and arrival for travel groups.',
@@ -300,8 +300,7 @@ export const en = {
     '<p>Phone: <a href="tel:+436642031953">+43 664 2031953</a><br>Email: <a href="mailto:marienbraeu@gmx.at">marienbraeu@gmx.at</a></p>' +
     '<p>Source code &amp; repository: <a href="https://github.com/felipsant/marienbraeu" target="_blank" rel="noopener">github.com/felipsant/marienbraeu</a></p>' +
     '<p>Website design &amp; development: <a href="https://blog.santicartoons.ai/whoami/" target="_blank" rel="noopener">santicartoons</a></p>' +
-    '<h3>Company details</h3><p>Legal form, company register number, VAT ID, trade authority and Chamber of Commerce membership to be completed by the operator (§ 5 ECG, § 25 MedienG).</p>' +
-    '<p><em>Note: this page is a template. Please insert complete details before publishing.</em></p>',
+    '<h3>Company details</h3><p>Legal form, company register number, VAT ID, trade authority and Chamber of Commerce membership to be completed by the operator (§ 5 ECG, § 25 MedienG).</p>',
   'legal.privacy.title': 'Privacy',
   'legal.privacy.body':
     '<h3>Your data</h3><p>We process personal data solely in accordance with the GDPR and the Austrian Data Protection Act. The controller is Marienbräu, Rupertistraße 80, 8075 Hart bei Graz (marienbraeu@gmx.at). Data from the reservation form (name, email, phone, requested date) is used only to handle your request.</p>' +

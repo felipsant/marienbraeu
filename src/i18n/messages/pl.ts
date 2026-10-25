@@ -49,7 +49,7 @@ export const pl: Messages = {
   'about.ownerAlt': 'Państwa gospodarz w Marienbräu',
   'about.ownerSlotTitle': 'Państwa gospodarz',
   'about.ownerSlotHint': 'Miejsce na portret gospodarza',
-  'about.ratingNote': 'z ponad 450 opinii Google',
+  'about.ratingNote': 'z ponad 400 opinii Google',
 
   'menu.eyebrow': 'Z kuchni & piwnicy',
   'menu.title': 'Nasze menu',
@@ -134,7 +134,7 @@ export const pl: Messages = {
 
   'reviews.eyebrow': 'Opinie',
   'reviews.title': 'Co mówią nasi goście',
-  'reviews.count': 'Ponad 450 opinii Google',
+  'reviews.count': 'Ponad 400 opinii Google',
   'reviews.region': 'Opinie Google',
   'reviews.prev': 'Poprzednia opinia',
   'reviews.next': 'Następna opinia',
@@ -173,7 +173,7 @@ export const pl: Messages = {
 
   'contact.eyebrow': 'Dojazd & kontakt',
   'contact.title': 'Jak do nas trafić',
-  'contact.intro': 'Zaledwie kilka minut od granic Grazu — z parkingiem tuż obok domu.',
+  'contact.intro': 'Ok. 15 minut samochodem z Grazu — z parkingiem tuż obok domu.',
   'contact.consent': 'Załadowanie mapy przesyła dane do Google.',
   'contact.loadMap': 'Załaduj mapę',
   'contact.route': 'Wyznacz trasę',
@@ -204,7 +204,7 @@ export const pl: Messages = {
   'nearby.c3.tag': 'Rodzina & kuchnia',
   'nearby.c4.tag': 'Dziedzictwo UNESCO & kuchnia',
   'nearby.c4.title': 'Schlossberg w Grazu & finał w gospodzie',
-  'nearby.c4.dist': '12–15 min od centrum Grazu',
+  'nearby.c4.dist': 'ok. 15 minut samochodem z Grazu',
   'nearby.c4.desc':
     'Od słynnej wieży zegarowej w Grazu prosto na łono natury: szybki dojazd przez St. Peter, cienisty ogródek piwny pod kasztanowcami, bezpieczne miejsce zabaw dla dzieci i sycąca kuchnia karczemna.',
 
@@ -258,7 +258,7 @@ export const pl: Messages = {
     'Przytulne sale wyłożone drewnem i przestronny, cienisty ogródek piwny pod kasztanowcami. Szybka, skoordynowana obsługa, aby wszyscy jedli razem.',
   'groups.f2.title': 'Łatwy dojazd i parking na miejscu',
   'groups.f2.desc':
-    'Tuż za Grazem, w Hart bei Graz: zaledwie 12–15 minut samochodem lub autokarem z centrum Grazu, obszerny parking tuż przy gospodzie oraz regionalne połączenia autobusowe.',
+    'Tuż za Grazem, w Hart bei Graz: ok. 15 minut samochodem lub autokarem z Grazu, obszerny parking tuż przy gospodzie oraz regionalne połączenia autobusowe.',
   'groups.f3.title': 'Własny parking dla autokarów i samochodów',
   'groups.f3.desc':
     'Duży parking bezpośrednio przy gospodzie dla autokarów i samochodów — wygodne i bezbarierowe wsiadanie i wysiadanie dla grup podróżnych.',
@@ -300,8 +300,7 @@ export const pl: Messages = {
     '<h3>Właściciel &amp; operator</h3><p>Marienbräu<br>Rupertistraße 80<br>8075 Hart bei Graz, Austria</p>' +
     '<p>Telefon: <a href="tel:+436642031953">+43 664 2031953</a><br>E-mail: <a href="mailto:marienbraeu@gmx.at">marienbraeu@gmx.at</a></p>' +
     '<p>Projekt i wykonanie strony internetowej: <a href="https://blog.santicartoons.ai/whoami/" target="_blank" rel="noopener">santicartoons</a></p>' +
-    '<h3>Dane firmy</h3><p>Forma prawna, numer w rejestrze handlowym, NIP UE, organ nadzoru handlowego i członkostwo w Izbie Gospodarczej Styrii zostaną uzupełnione przez operatora (§ 5 ECG, § 25 MedienG).</p>' +
-    '<p><em>Uwaga: ta strona jest szablonem. Przed publikacją należy uzupełnić pełne dane.</em></p>',
+    '<h3>Dane firmy</h3><p>Forma prawna, numer w rejestrze handlowym, NIP UE, organ nadzoru handlowego i członkostwo w Izbie Gospodarczej Styrii zostaną uzupełnione przez operatora (§ 5 ECG, § 25 MedienG).</p>',
   'legal.privacy.title': 'Prywatność',
   'legal.privacy.body':
     '<h3>Twoje dane</h3><p>Dane osobowe przetwarzamy wyłącznie na podstawie RODO i austriackiej ustawy o ochronie danych. Administratorem danych jest Marienbräu, Rupertistraße 80, 8075 Hart bei Graz (marienbraeu@gmx.at). Dane z formularza rezerwacji (imię, e-mail, telefon, wybrany termin) wykorzystujemy wyłącznie do obsługi Twojej prośby.</p>' +
