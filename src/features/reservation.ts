@@ -1,6 +1,7 @@
 import { HOURS } from '../data/hours';
 import { getLang, onLanguageChange, t, type MessageKey } from '../i18n';
 import { $, $$, escapeHtml } from '../lib/dom';
+import { isAustrianHoliday } from '../lib/holidays';
 import { formatMinutes, parseIsoDate, viennaNow } from '../lib/time';
 import { closeModal, openModal } from './modal';
 import { buildReservationMail, MAX_EXACT_GUESTS } from './reservationMail';
@@ -15,10 +16,17 @@ const MIN_LEAD_TIME = 30; // minutes, for same-day bookings
 const DEFAULT_GUESTS = '2';
 const DEFAULT_GROUP_SIZE = '80';
 
-function dateProblem(iso: string): Problem {
+/** Seating on public holidays that fall on the Monday Ruhetag; exact hours are still to be confirmed. */
+const HOLIDAY_HOURS = { open: 11 * 60 + 30, close: 20 * 60 + LAST_SEATING_BEFORE_CLOSE };
+
+function hoursFor(iso: string): { open: number; close: number } | null {
+  return HOURS[parseIsoDate(iso).getDay()] ?? (isAustrianHoliday(iso) ? HOLIDAY_HOURS : null);
+}
+
+export function dateProblem(iso: string): Problem {
   if (!iso) return 'err.date';
   if (iso < viennaNow().iso) return 'err.past';
-  if (!HOURS[parseIsoDate(iso).getDay()]) return 'err.monday';
+  if (!hoursFor(iso)) return 'err.monday';
   return null;
 }
 
@@ -90,7 +98,7 @@ export function initReservation(): void {
   const renderTimes = (): void => {
     const iso = dateInput.value;
     const previous = timeSelect.value;
-    const hours = iso && !dateProblem(iso) ? HOURS[parseIsoDate(iso).getDay()] : null;
+    const hours = iso && !dateProblem(iso) ? hoursFor(iso) : null;
     if (!hours) {
       timeSelect.innerHTML = `<option value="">${escapeHtml(t('res.timePick'))}</option>`;
       return;

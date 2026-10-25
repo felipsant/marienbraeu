@@ -5,7 +5,8 @@ import { read } from '../support/files';
 
 const TUE_EVENING = '2026-10-20T14:00:00Z'; // Tue 16:00 Vienna
 const TUE_LATE = '2026-10-20T21:30:00Z'; // Tue 23:30 Vienna
-const MON_NOON = '2026-10-26T11:00:00Z'; // Mon 12:00 Vienna (rest day)
+const MON_NOON = '2026-11-02T11:00:00Z'; // Mon 12:00 Vienna (rest day)
+const MON_HOLIDAY_NOON = '2026-10-26T11:00:00Z'; // Mon 12:00 Vienna, Nationalfeiertag
 const WED_MORNING = '2026-10-21T08:00:00Z'; // Wed 10:00 Vienna, before opening
 const originalTimeZone = process.env.TZ;
 
@@ -126,6 +127,12 @@ describe('live opening status', () => {
     const s = status(await boot({ now: MON_NOON }));
     expect(s.classes).toEqual(['is-closed']);
     expect(s.text).toContain('15:00');
+  });
+
+  it('on a Monday public holiday shows open, not Ruhetag', async () => {
+    const s = status(await boot({ now: MON_HOLIDAY_NOON }));
+    expect(s.classes).toEqual(['is-open']);
+    expect(s.text).toBe('Heute Feiertag · Geöffnet');
   });
 
   it('highlights today in the hours table (Vienna weekday)', async () => {
@@ -271,9 +278,17 @@ describe('reservation form', () => {
     ]);
   });
 
-  it('Monday: shows the rest-day error', async () => {
+  it('Monday public holiday: accepted, with daytime slots 11:30–20:00', async () => {
     const p = await open();
     setDate(p, '2026-10-26');
+    expect(fieldOf(p, '#r-date').classList.contains('has-error')).toBe(false);
+    const slots = timeOptions(p);
+    expect([slots[0], slots[slots.length - 1]]).toEqual(['11:30', '20:00']);
+  });
+
+  it('Monday: shows the rest-day error', async () => {
+    const p = await open();
+    setDate(p, '2026-11-02');
     expect(fieldOf(p, '#r-date').classList.contains('has-error')).toBe(true);
     expect(fieldOf(p, '#r-date').querySelector('.error')?.textContent).toMatch(/Montag|Ruhetag/);
     expect(timeOptions(p)).toEqual([]);

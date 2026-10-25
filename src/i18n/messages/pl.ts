@@ -145,11 +145,11 @@ export const pl: Messages = {
   'hours.eyebrow': 'Kiedy jesteśmy dla Państwa',
   'hours.title': 'Godziny otwarcia',
   'hours.caption': 'Godziny otwarcia Marienbräu',
-  'hours.rest': 'Nieczynne',
+  'hours.rest': 'Dzień wolny (otwarte w święta)',
   'day.holiday': 'Święta',
   'hours.holiday': 'Otwarte',
   'hours.note':
-    'Kuchnia czynna do ok. godziny przed zamknięciem. W święta również jesteśmy otwarci!',
+    'Kuchnia czynna do ok. godziny przed zamknięciem. W święta również jesteśmy otwarci, także gdy wypadają w poniedziałek!',
   'hours.live': 'Status na żywo',
   'hours.tz': 'Obliczane według czasu lokalnego Austrii (Europe/Vienna).',
   'hours.today': 'Dziś',
@@ -169,6 +169,8 @@ export const pl: Messages = {
   'headline.soon': 'Jeszcze jeden ostatni kufel? Zapraszamy!',
   'headline.closed': 'Czekamy na Państwa następną wizytę!',
   'today.closed': 'Dziś nieczynne',
+  'today.holiday': 'Święto · otwarte',
+  'status.holiday': 'Dziś święto · Otwarte',
   'today.hours': '{open} – {close}',
 
   'contact.eyebrow': 'Dojazd & kontakt',
