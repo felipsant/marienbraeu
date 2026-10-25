@@ -302,8 +302,7 @@ export const ro: Messages = {
     '<h3>Proprietar &amp; operator</h3><p>Marienbräu<br>Rupertistraße 80<br>8075 Hart bei Graz, Austria</p>' +
     '<p>Telefon: <a href="tel:+436642031953">+43 664 2031953</a><br>E-mail: <a href="mailto:marienbraeu@gmx.at">marienbraeu@gmx.at</a></p>' +
     '<p>Design și dezvoltare site web: <a href="https://blog.santicartoons.ai/whoami/" target="_blank" rel="noopener">santicartoons</a></p>' +
-    '<h3>Date despre firmă</h3><p>Forma juridică, numărul de înregistrare, codul de TVA, autoritatea comercială și apartenența la Camera de Comerț a Stiriei vor fi completate de operator (§ 5 ECG, § 25 MedienG).</p>' +
-    '<p><em>Notă: această pagină este un șablon. Vă rugăm să completați datele integrale înainte de publicare.</em></p>',
+    '<h3>Date despre firmă</h3><p>Forma juridică, numărul de înregistrare, codul de TVA, autoritatea comercială și apartenența la Camera de Comerț a Stiriei vor fi completate de operator (§ 5 ECG, § 25 MedienG).</p>',
   'legal.privacy.title': 'Confidențialitate',
   'legal.privacy.body':
     '<h3>Datele dumneavoastră</h3><p>Prelucrăm datele cu caracter personal exclusiv în temeiul GDPR și al legii austriece privind protecția datelor. Operatorul de date este Marienbräu, Rupertistraße 80, 8075 Hart bei Graz (marienbraeu@gmx.at). Datele din formularul de rezervare (nume, e-mail, telefon, data dorită) le folosim doar pentru a vă procesa solicitarea.</p>' +

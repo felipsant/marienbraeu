@@ -300,8 +300,7 @@ export const en = {
     '<p>Phone: <a href="tel:+436642031953">+43 664 2031953</a><br>Email: <a href="mailto:marienbraeu@gmx.at">marienbraeu@gmx.at</a></p>' +
     '<p>Source code &amp; repository: <a href="https://github.com/felipsant/marienbraeu" target="_blank" rel="noopener">github.com/felipsant/marienbraeu</a></p>' +
     '<p>Website design &amp; development: <a href="https://blog.santicartoons.ai/whoami/" target="_blank" rel="noopener">santicartoons</a></p>' +
-    '<h3>Company details</h3><p>Legal form, company register number, VAT ID, trade authority and Chamber of Commerce membership to be completed by the operator (§ 5 ECG, § 25 MedienG).</p>' +
-    '<p><em>Note: this page is a template. Please insert complete details before publishing.</em></p>',
+    '<h3>Company details</h3><p>Legal form, company register number, VAT ID, trade authority and Chamber of Commerce membership to be completed by the operator (§ 5 ECG, § 25 MedienG).</p>',
   'legal.privacy.title': 'Privacy',
   'legal.privacy.body':
     '<h3>Your data</h3><p>We process personal data solely in accordance with the GDPR and the Austrian Data Protection Act. The controller is Marienbräu, Rupertistraße 80, 8075 Hart bei Graz (marienbraeu@gmx.at). Data from the reservation form (name, email, phone, requested date) is used only to handle your request.</p>' +

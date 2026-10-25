@@ -62,8 +62,7 @@ export const de: Partial<Messages> = {
     '<p>Telefon: <a href="tel:+436642031953">+43 664 2031953</a><br>E-Mail: <a href="mailto:marienbraeu@gmx.at">marienbraeu@gmx.at</a></p>' +
     '<p>Quellcode &amp; Repository: <a href="https://github.com/felipsant/marienbraeu" target="_blank" rel="noopener">github.com/felipsant/marienbraeu</a></p>' +
     '<p>Webdesign &amp; Entwicklung: <a href="https://blog.santicartoons.ai/whoami/" target="_blank" rel="noopener">santicartoons</a></p>' +
-    '<h3>Unternehmensangaben</h3><p>Rechtsform, Firmenbuchnummer, UID-Nummer, Gewerbebehörde und Mitgliedschaft bei der WKO Steiermark werden vom Betreiber ergänzt (§ 5 ECG, § 25 MedienG).</p>' +
-    '<p><em>Hinweis: Diese Seite ist eine Vorlage. Bitte vor Veröffentlichung vollständige Angaben einsetzen.</em></p>',
+    '<h3>Unternehmensangaben</h3><p>Rechtsform, Firmenbuchnummer, UID-Nummer, Gewerbebehörde und Mitgliedschaft bei der WKO Steiermark werden vom Betreiber ergänzt (§ 5 ECG, § 25 MedienG).</p>',
   'legal.privacy.title': 'Datenschutz',
   'legal.privacy.body':
     '<h3>Ihre Daten bei uns</h3><p>Wir verarbeiten personenbezogene Daten ausschließlich auf Grundlage der DSGVO und des österreichischen DSG. Verantwortlich ist das Marienbräu, Rupertistraße 80, 8075 Hart bei Graz (marienbraeu@gmx.at). Daten aus dem Reservierungsformular (Name, E-Mail, Telefon, Wunschtermin) verwenden wir nur zur Bearbeitung Ihrer Anfrage.</p>' +
