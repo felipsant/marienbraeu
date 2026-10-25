@@ -49,7 +49,7 @@ export const ro: Messages = {
   'about.ownerAlt': 'Gazda dumneavoastră la Marienbräu',
   'about.ownerSlotTitle': 'Gazda dumneavoastră',
   'about.ownerSlotHint': 'Loc pentru portretul hangiului',
-  'about.ratingNote': 'din peste 450 de recenzii Google',
+  'about.ratingNote': 'din peste 400 de recenzii Google',
 
   'menu.eyebrow': 'Din bucătărie & pivniță',
   'menu.title': 'Meniul nostru',
@@ -135,7 +135,7 @@ export const ro: Messages = {
 
   'reviews.eyebrow': 'Recenzii',
   'reviews.title': 'Ce spun oaspeții noștri',
-  'reviews.count': 'Peste 450 de recenzii Google',
+  'reviews.count': 'Peste 400 de recenzii Google',
   'reviews.region': 'Recenzii Google',
   'reviews.prev': 'Recenzia anterioară',
   'reviews.next': 'Recenzia următoare',
@@ -174,7 +174,7 @@ export const ro: Messages = {
 
   'contact.eyebrow': 'Acces & contact',
   'contact.title': 'Cum ne găsiți',
-  'contact.intro': 'La doar câteva minute de marginea orașului Graz — cu parcare chiar lângă casă.',
+  'contact.intro': 'Aprox. 15 minute cu mașina din Graz — cu parcare chiar lângă casă.',
   'contact.consent': 'Încărcarea hărții transmite date către Google.',
   'contact.loadMap': 'Încarcă harta',
   'contact.route': 'Planifică traseul',
@@ -205,7 +205,7 @@ export const ro: Messages = {
   'nearby.c3.tag': 'Familie & masă',
   'nearby.c4.tag': 'Patrimoniu UNESCO & masă',
   'nearby.c4.title': 'Schlossberg din Graz & final la han',
-  'nearby.c4.dist': '12–15 min de centrul orașului Graz',
+  'nearby.c4.dist': 'aprox. 15 minute cu mașina din Graz',
   'nearby.c4.desc':
     'De la celebrul Turn cu Ceas din Graz direct în natură: acces rapid prin St. Peter, grădină de bere umbrită de castani, loc de joacă sigur pentru copii și mâncare consistentă de han.',
 
@@ -259,7 +259,7 @@ export const ro: Messages = {
     'Săli primitoare îmbrăcate în lemn și o grădină de bere spațioasă, umbrită de castani. Servire rapidă și coordonată, ca toată lumea să mănânce împreună.',
   'groups.f2.title': 'Acces ușor și parcare proprie',
   'groups.f2.desc':
-    'Chiar lângă Graz, în Hart bei Graz: doar 12–15 minute cu mașina sau cu autocarul din centrul orașului Graz, parcare generoasă chiar lângă local și legături cu autobuzele regionale.',
+    'Chiar lângă Graz, în Hart bei Graz: aprox. 15 minute cu mașina sau cu autocarul din Graz, parcare generoasă chiar lângă local și legături cu autobuzele regionale.',
   'groups.f3.title': 'Parcare dedicată pentru autocare și mașini',
   'groups.f3.desc':
     'Parcare generoasă direct la han pentru autocare și mașini — urcare și coborâre comodă și fără bariere pentru grupurile de călători.',

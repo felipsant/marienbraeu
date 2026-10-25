@@ -48,7 +48,7 @@ export const hu: Messages = {
   'about.ownerAlt': 'Vendéglátója a Marienbräuban',
   'about.ownerSlotTitle': 'Vendéglátója',
   'about.ownerSlotHint': 'Hely a vendéglős portréja számára',
-  'about.ratingNote': 'több mint 450 Google-vélemény alapján',
+  'about.ratingNote': 'több mint 400 Google-vélemény alapján',
 
   'menu.eyebrow': 'Konyhából & pincéből',
   'menu.title': 'Étlapunk',
@@ -133,7 +133,7 @@ export const hu: Messages = {
 
   'reviews.eyebrow': 'Vélemények',
   'reviews.title': 'Amit vendégeink mondanak',
-  'reviews.count': 'Több mint 450 Google-vélemény',
+  'reviews.count': 'Több mint 400 Google-vélemény',
   'reviews.region': 'Google-vélemények',
   'reviews.prev': 'Előző vélemény',
   'reviews.next': 'Következő vélemény',
@@ -171,7 +171,7 @@ export const hu: Messages = {
 
   'contact.eyebrow': 'Megközelítés & kapcsolat',
   'contact.title': 'Így talál meg minket',
-  'contact.intro': 'Csak néhány percre Graz szélétől — parkolóval közvetlenül a ház mellett.',
+  'contact.intro': 'Kb. 15 perc autóval Graztól — parkolóval közvetlenül a ház mellett.',
   'contact.consent': 'A térkép betöltésekor adatok kerülnek a Google-hoz.',
   'contact.loadMap': 'Térkép betöltése',
   'contact.route': 'Útvonaltervezés',
@@ -202,7 +202,7 @@ export const hu: Messages = {
   'nearby.c3.tag': 'Család & vendéglátás',
   'nearby.c4.tag': 'UNESCO-örökség & vendéglátás',
   'nearby.c4.title': 'Grazi Schlossberg & fogadói zárás',
-  'nearby.c4.dist': '12–15 perc Graz belvárosától',
+  'nearby.c4.dist': 'kb. 15 perc autóval Graztól',
   'nearby.c4.desc':
     'A híres grazi Óratoronytól egyenesen a természetbe: gyors elérés St. Peteren át, árnyas gesztenyés sörkert, biztonságos játszótér a gyerekeknek és kiadós vendéglői konyha.',
 
@@ -256,7 +256,7 @@ export const hu: Messages = {
     'Meghitt, faburkolatú termek és tágas, árnyas sörkert gesztenyefák alatt. Gyors, összehangolt kiszolgálás, hogy mindenki együtt étkezhessen.',
   'groups.f2.title': 'Könnyű megközelítés & saját parkoló',
   'groups.f2.desc':
-    'Közvetlenül Graz mellett, Hart bei Grazban: Graz belvárosából mindössze 12–15 perc autóval vagy autóbusszal, tágas parkoló közvetlenül a ház mellett, valamint regionális buszjáratok.',
+    'Közvetlenül Graz mellett, Hart bei Grazban: Graztól kb. 15 perc autóval vagy autóbusszal, tágas parkoló közvetlenül a ház mellett, valamint regionális buszjáratok.',
   'groups.f3.title': 'Saját busz- és autóparkoló',
   'groups.f3.desc':
     'Bőséges parkoló közvetlenül a fogadónál turistabuszoknak és autóknak — kényelmes, akadálymentes be- és kiszállás utazócsoportok számára.',
