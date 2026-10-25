@@ -28,7 +28,3 @@ points at that JPEG and `src/features/photos.ts` derives the other file names, s
 photo means adding an entry to the script and a `data-photo` + `data-photo-widths` pair on the
 tile. The hero loads at once; gallery tiles load as they come within 300 px of the viewport.
 `public/assets/img/` is what Vite serves at `assets/img/`; there is no second copy.
-
-The "Ausflugsziele" photos (`basilika-mariatrost`, `rupertikirche`, `schloss-lustbuehel`,
-`grazer-schlossberg`) fill cards about 350 px wide, so they are kept at 800 px wide, JPEG
-quality 72 progressive.
