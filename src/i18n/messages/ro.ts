@@ -148,7 +148,7 @@ export const ro: Messages = {
   'hours.caption': 'Programul Marienbräu',
   'hours.rest': 'Zi de odihnă (deschis în zilele de sărbătoare)',
   'day.holiday': 'Zile de sărbătoare',
-  'hours.holiday': 'Deschis',
+  'hours.holiday': 'Deschis · Programul poate varia',
   'hours.note':
     'Bucătăria este deschisă până cu aproximativ o oră înainte de închidere. Suntem deschiși și în zilele de sărbătoare, chiar dacă acestea cad într-o zi de luni!',
   'hours.live': 'Stare în timp real',
@@ -170,7 +170,7 @@ export const ro: Messages = {
   'headline.soon': 'Încă un ultim pahar? Vă așteptăm cu drag!',
   'headline.closed': 'Vă așteptăm la următoarea vizită!',
   'today.closed': 'Azi închis',
-  'today.holiday': 'Sărbătoare · deschis',
+  'today.holiday': 'Deschis · Programul poate varia',
   'status.holiday': 'Azi sărbătoare · Deschis',
   'today.hours': '{open} – {close}',
 
