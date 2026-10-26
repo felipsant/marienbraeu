@@ -148,7 +148,7 @@ export const it: Messages = {
   'hours.caption': 'Orari di apertura del Marienbräu',
   'hours.rest': 'Giorno di riposo (aperto nei giorni festivi)',
   'day.holiday': 'Giorni festivi',
-  'hours.holiday': 'Aperto',
+  'hours.holiday': 'Aperto · Gli orari potrebbero variare',
   'hours.note':
     'Cucina aperta fino a circa un’ora prima della chiusura. Siamo aperti anche nei giorni festivi, anche se cadono di lunedì!',
   'hours.live': 'Stato in tempo reale',
@@ -170,7 +170,7 @@ export const it: Messages = {
   'headline.soon': 'Ancora un ultimo bicchiere? Vi aspettiamo!',
   'headline.closed': 'Vi aspettiamo alla prossima visita!',
   'today.closed': 'Oggi chiuso',
-  'today.holiday': 'Giorno festivo · aperto',
+  'today.holiday': 'Aperto · Gli orari potrebbero variare',
   'status.holiday': 'Oggi giorno festivo · Aperto',
   'today.hours': '{open} – {close}',
 

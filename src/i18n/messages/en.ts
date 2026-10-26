@@ -145,7 +145,7 @@ export const en = {
   'hours.caption': 'Marienbräu opening hours',
   'hours.rest': 'Closed (open on public holidays)',
   'day.holiday': 'Public Holidays',
-  'hours.holiday': 'Open',
+  'hours.holiday': 'Open · Hours might differ',
   'hours.note':
     'Kitchen open until approx. one hour before closing. We are open on public holidays, even when they fall on a Monday!',
   'hours.live': 'Live status',
@@ -167,7 +167,7 @@ export const en = {
   'headline.soon': 'Time for one last glass? We’d love to see you!',
   'headline.closed': 'We look forward to your next visit!',
   'today.closed': 'Closed today',
-  'today.holiday': 'Public holiday · open',
+  'today.holiday': 'Open · Hours might differ',
   'status.holiday': 'Public holiday today · Open',
   'today.hours': '{open} – {close}',
 
