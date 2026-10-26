@@ -144,10 +144,11 @@ export const hu: Messages = {
   'hours.eyebrow': 'Amikor itt vagyunk Önökért',
   'hours.title': 'Nyitvatartás',
   'hours.caption': 'A Marienbräu nyitvatartása',
-  'hours.rest': 'Szünnap',
+  'hours.rest': 'Szünnap (ünnepnapokon nyitva)',
   'day.holiday': 'Ünnepnapok',
   'hours.holiday': 'Nyitva',
-  'hours.note': 'A konyha kb. egy órával zárás előttig üzemel. Ünnepnapokon is nyitva tartunk!',
+  'hours.note':
+    'A konyha kb. egy órával zárás előttig üzemel. Ünnepnapokon is nyitva tartunk, akkor is, ha hétfőre esnek!',
   'hours.live': 'Élő állapot',
   'hours.tz': 'Osztrák helyi idő szerint számítva (Europe/Vienna).',
   'hours.today': 'Ma',
@@ -167,6 +168,8 @@ export const hu: Messages = {
   'headline.soon': 'Még egy utolsó pohárra? Szeretettel várjuk!',
   'headline.closed': 'Várjuk következő látogatását!',
   'today.closed': 'Ma zárva',
+  'today.holiday': 'Ünnepnap · nyitva',
+  'status.holiday': 'Ma ünnepnap · Nyitva',
   'today.hours': '{open} – {close}',
 
   'contact.eyebrow': 'Megközelítés & kapcsolat',

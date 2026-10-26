@@ -150,7 +150,7 @@ async function pickDate(page: Page, iso: string) {
 
 test('reservation: Monday shows the rest-day message', async ({ page }) => {
   await openSite(page);
-  await pickDate(page, '2026-10-26');
+  await pickDate(page, '2026-11-02');
   const field = page.locator('.field', { has: page.locator('#r-date') });
   await expect(field).toHaveClass(/has-error/);
   await expect(field.locator('.error')).toContainText(/Ruhetag|Montag/);
